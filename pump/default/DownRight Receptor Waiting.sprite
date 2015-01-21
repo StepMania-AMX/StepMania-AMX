@@ -1,0 +1,5 @@
+[Sprite]
+Texture=_Common Receptor go 2x1.png
+BaseRotationZDegrees=270
+Frame0000=1
+Delay0000=1
