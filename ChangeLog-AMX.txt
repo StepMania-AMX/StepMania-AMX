@@ -5,6 +5,322 @@ I have the intention to rewrite the changelog to English in a tidy way, but it w
  ********************************************************************
  ********************************************************************/
 
+// Junio 26, 2010, 07:20:29 pm
+// http://mxpumpers.com/index.php?topic=613.msg12331#msg12331
+
+Sacado parche 2.3:
+
+http://stepmania.aldo.mx/parches/SMA4-Beta2.1-a-2.3.rar
+
+Ora si tan largos los apuntes xD, y editare tema explicando bonito:
+
+ (click to show/hide)
+- SONGMAN->GetExtraStageInfo() busca la canción más difícil entre las canciones restantes primero (ej. shortcuts)
+- GAMESTATE->GetNumStagesLeft() devuelve el menor valor entre PREFSMAN->m_iDefaultStagesPerSong y 1 para extra stage
+- Wheel de velocidad en aumento (hardcodeada de momento)
+- GetMetricB, GetMetricI y GetMetricF pueden llevar una condicion LUA, sin embargo, solo puede devolver 0 o 1
+- Nuevos comandos:
+  - diffusegroupcolor
+  - diffusesongcolor
+  - condition/cond
+- Cache guarda como rows siempre
+- soporte para (doubleres)
+
+- StepMania.ini:
+[Options]
+AllowExtraStage2=1
+AlwaysAllowExtraStage2=0
+DarkExtraStage2=1
+ExtraStage2ChecksDifficulty=1
+ExtraStage2ChecksDifficultyAllStages=0
+ExtraStage2ChecksGrade=1
+ExtraStage2ChecksGradeAllStages=0
+ExtraStage2ChecksNumberOfPlayedSongs=0
+ExtraStage2ForcePreferredGroup=1
+ExtraStage2MaxDifficulty=Challenge
+ExtraStage2MaxPlayedSongs=4
+ExtraStage2MinDifficulty=Hard
+ExtraStage2MinGrade=AA
+ExtraStage2MinPlayedSongs=3
+ExtraStageChecksDifficulty=1
+ExtraStageChecksDifficultyAllStages=0
+ExtraStageChecksGrade=1
+ExtraStageChecksGradeAllStages=0
+ExtraStageChecksNumberOfPlayedSongs=0
+ExtraStageForcePreferredGroup=1
+ExtraStageMaxDifficulty=Challenge
+ExtraStageMaxPlayedSongs=3
+ExtraStageMinDifficulty=Hard
+ExtraStageMinGrade=AA
+ExtraStageMinPlayedSongs=2
+LockExtraStage2Difficulty=1
+PickExtraStage2=0
+PickModsForExtraStage2=0
+SetPlayerOptionsInExtraStage=1
+SetPlayerOptionsInExtraStage2=1
+SetSongOptionsInExtraStage=1
+SetSongOptionsInExtraStage2=1
+SkipSongsHarderThanInExtraStage2=9
+
+[CodeDetector]
+PreviousBannerGroup=
+PreviousBannerGroup2=
+
+[MusicWheel]
+ShowSections=0   // -1: Never Show, 0 = Based on preferences, 1 = Always Show
+HideSectionItems=0
+UseSplitWheel=0
+SplitWheelOffsetClampPositive=
+SplitWheelOffsetClampNegative=
+SplitWheelRotationXPositive=
+SplitWheelRotationXNegative=
+SplitWheelRotationYPositive=
+SplitWheelRotationYNegative=
+SplitWheelRotationZPositive=
+SplitWheelRotationZNegative=
+SplitWheelSpacingXPositive=
+SplitWheelSpacingXNegative=
+SplitWheelSpacingYPositive=
+SplitWheelSpacingYNegative=
+SplitWheelSpacingZPositive=
+SplitWheelSpacingZNegative=
+SplitWheelZoomXPositive=
+SplitWheelZoomXNegative=
+SplitWheelZoomYPositive=
+SplitWheelZoomYNegative=
+SplitWheelZoomZPositive=
+SplitWheelZoomZNegative=
+
+[MusicWheelItem]
+BarUnderItem=
+BarUsesItemColor=
+
+[SongManager]
+HiddenColor=0.5,0.5,0.5,1
+
+[ScreenEdit]
+BGATextColor=0,1,0,1
+BGATextX=0
+BGATextZoom=1
+
+[ScreenSelectMusic]
+ResizeCDTitles=
+CDTitleHeight=
+CDTitleWidth=
+
+Disable2PInputInDoubles=
+
+ShowBackgrounds=
+ShowBanners=
+ShowDiscs=
+
+DiscX=
+DiscY=
+DiscWidth=
+DiscHeight=
+DiscOnCommand=
+DiscOffCommand=
+
+DiscFrameX=
+DiscFrameY=
+DiscFrameOnCommand=
+DiscFrameOffCommand=
+
+DrawPreviewInSprite=
+ExtendedDifficultyList=
+MenuDownChangesGroup=
+MenuUpChangesGroup=
+PortalDisplaysSong=
+ResetKeyTimerAfterSectionChange=
+ReverseOrderDifficultyChange=
+ReverseOrderSectionChange=
+SectionChangeSavesPosition=
+
+TweenWhileMovingAndSettled=
+MovingCommandRepeats=
+TweenWhenSectionChanges=
+
+ArtistDisplayMovingCommand=
+ArtistDisplaySettledCommand=
+ArtistDisplaySectionCommand=
+AutoGenIconP1MovingCommand=
+AutoGenIconP1SettledCommand=
+AutoGenIconP1SectionCommand=
+AutoGenIconP2MovingCommand=
+AutoGenIconP2SettledCommand=
+AutoGenIconP2SectionCommand=
+BackgroundFrameMovingCommand=
+BackgroundFrameSettledCommand=
+BackgroundFrameSectionCommand=
+BackgroundMovingCommand=
+BackgroundSettledCommand=
+BackgroundSectionCommand=
+BalloonMovingCommand=
+BalloonSettledCommand=
+BalloonSectionCommand=
+BannerFrameMovingCommand=
+BannerFrameSettledCommand=
+BannerFrameSectionCommand=
+BannerMovingCommand=
+BannerSettledCommand=
+BannerSectionCommand=
+BPMDisplayMovingCommand=
+BPMDisplaySettledCommand=
+BPMDisplaySectionCommand=
+CDTitleBackMovingCommand=
+CDTitleBackSettledCommand=
+CDTitleBackSectionCommand=
+CDTitleFrontMovingCommand=
+CDTitleFrontSettledCommand=
+CDTitleFrontSectionCommand=
+CharacterIconP1MovingCommand=
+CharacterIconP1SettledCommand=
+CharacterIconP1SectionCommand=
+CharacterIconP2MovingCommand=
+CharacterIconP2SettledCommand=
+CharacterIconP2SectionCommand=
+CourseContentsMovingCommand=
+CourseContentsSettledCommand=
+CourseContentsSectionCommand=
+CourseHasModsMovingCommand=
+CourseHasModsSettledCommand=
+CourseHasModsSectionCommand=
+CurModeMovingCommand=
+CurModeSettledCommand=
+CurModeSectionCommand=
+DifficultyDisplayMovingCommand=
+DifficultyDisplaySettledCommand=
+DifficultyDisplaySectionCommand=
+DifficultyFrameP1MovingCommand=
+DifficultyFrameP1SettledCommand=
+DifficultyFrameP1SectionCommand=
+DifficultyFrameP2MovingCommand=
+DifficultyFrameP2SettledCommand=
+DifficultyFrameP2SectionCommand=
+DifficultyIconP1MovingCommand=
+DifficultyIconP1SettledCommand=
+DifficultyIconP1SectionCommand=
+DifficultyIconP2MovingCommand=
+DifficultyIconP2SettledCommand=
+DifficultyIconP2SectionCommand=
+DifficultyMeterP1MovingCommand=
+DifficultyMeterP1SettledCommand=
+DifficultyMeterP1SectionCommand=
+DifficultyMeterP2MovingCommand=
+DifficultyMeterP2SettledCommand=
+DifficultyMeterP2SectionCommand=
+DiscFrameMovingCommand=
+DiscFrameSettledCommand=
+DiscFrameSectionCommand=
+DiscMovingCommand=
+DiscSettledCommand=
+DiscSectionCommand=
+ExplanationMovingCommand=
+ExplanationSettledCommand=
+ExplanationSectionCommand=
+GraphMovingCommand=
+GraphSettledCommand=
+GraphSectionCommand=
+GroupNameMovingCommand=
+GroupNameSettledCommand=
+GroupNameSectionCommand=
+MachineRankMovingCommand=
+MachineRankSettledCommand=
+MachineRankSectionCommand=
+MeterFrameP1MovingCommand=
+MeterFrameP1SettledCommand=
+MeterFrameP1SectionCommand=
+MeterFrameP2MovingCommand=
+MeterFrameP2SettledCommand=
+MeterFrameP2SectionCommand=
+NonPresenceP1MovingCommand=
+NonPresenceP1SettledCommand=
+NonPresenceP1SectionCommand=
+NonPresenceP2MovingCommand=
+NonPresenceP2SettledCommand=
+NonPresenceP2SectionCommand=
+NumSongsMovingCommand=
+NumSongsSettledCommand=
+NumSongsSectionCommand=
+OptionIconsP1MovingCommand=
+OptionIconsP1SettledCommand=
+OptionIconsP1SectionCommand=
+OptionIconsP2MovingCommand=
+OptionIconsP2SettledCommand=
+OptionIconsP2SectionCommand=
+OverlayMovingCommand=
+OverlaySettledCommand=
+OverlaySectionCommand=
+PaneDisplayP1MovingCommand=
+PaneDisplayP1SettledCommand=
+PaneDisplayP1SectionCommand=
+PaneDisplayP2MovingCommand=
+PaneDisplayP2SettledCommand=
+PaneDisplayP2SectionCommand=
+PreviewFrameMovingCommand=
+PreviewFrameSettledCommand=
+PreviewFrameSectionCommand=
+PreviewMovingCommand=
+PreviewSettledCommand=
+PreviewSectionCommand=
+RadarMovingCommand=
+RadarSettledCommand=
+RadarSectionCommand=
+ScoreFrameP1MovingCommand=
+ScoreFrameP1SettledCommand=
+ScoreFrameP1SectionCommand=
+ScoreFrameP2MovingCommand=
+ScoreFrameP2SettledCommand=
+ScoreFrameP2SectionCommand=
+ScoreP1MovingCommand=
+ScoreP1SettledCommand=
+ScoreP1SectionCommand=
+ScoreP2MovingCommand=
+ScoreP2SettledCommand=
+ScoreP2SectionCommand=
+SongOptionsMovingCommand=
+SongOptionsSettledCommand=
+SongOptionsSectionCommand=
+SortIconMovingCommand=
+SortIconSettledCommand=
+SortIconSectionCommand=
+StageMovingCommand=
+StageSettledCommand=
+StageSectionCommand=
+TextBannerMovingCommand=
+TextBannerSettledCommand=
+TextBannerSectionCommand=
+TotalTimeMovingCommand=
+TotalTimeSettledCommand=
+TotalTimeSectionCommand=
+WheelMovingCommand=
+WheelSettledCommand=
+WheelUnderMovingCommand=
+WheelUnderSettledCommand=
+WheelUnderSectionCommand=
+WheelSectionCommand=
+
+
+Graphics/ScreenSelectMusic disc frame
+Graphics/ScreenSelectMusic disc mask
+Graphics/ScreenSelectMusic fallback preview
+Graphics/MusicWheelItem glow
+Sounds/MusicWheel section
+
+LUA Bindings Nuevos:
+StageNumber()
+NumSongsLeft()
+IsHiddenDifficulty(p)   // cambiar p por 1 o 2
+MusicWheelDirection()
+
+En fin, un video dice mal que mil palabras :hee:
+
+http://www.youtube.com/watch?v=dR8bxVGcFnU
+
+/********************************************************************
+ ********************************************************************
+ ********************************************************************/
+
 // Junio 20, 2010, 08:01:35 pm
 // http://mxpumpers.com/index.php?topic=613.msg11920#msg11920
 
