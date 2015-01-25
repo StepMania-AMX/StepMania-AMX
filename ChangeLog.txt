@@ -1,6 +1,231 @@
+﻿* 3.9 PLUS
+Fixed bug in BPMDisplay random cycle code.
+Fixed bug in PlayerSongs Stepmania.ini option.
+
+Removed AutoPlay from SongOptions (it was broken anyways).
+Removed ability for AutoPlay to be loaded from attacks; it was also breaking the normal AutoPlay command.
+
+
+
+
+* 3.9 PLUS RC 5
+Fixed DWI files not being loaded as custom songs.
+Fixed bug in Edit Menu which caused game to freeze.
+Fixed bug with reverting autosync causing global offset to revert back to zero.
+
+Moved some theme options out of Stepmania.ini and into theme metrics (BPMDisplay stuff).
+
+Added ability to turn mem cards on and off via options menu.
+Added ability to not drag area selector when laying rolls in editor (ShiftIsUsedAsAreaSelector in Stepmania.ini).
+Added ability to make BPM display show up as BPS display under [BPMDisplay] in metrics.
+
+Disabled the checkpoint code outright; there are still too many unsolvable bugs in it for it to be usable in the final release of 3.9 PLUS. Anyone doing their own build can reactivate by looking for 'PIU HOLD DISABLER' in the code and reading the instructions.
+
+
+
+
+* 3.9 PLUS RC 4
+Fixed scoring bugs with hold checkpoints if not in PIU or Custom scoring modes.
+Fixed yet more bugs in the hold checkpoint code.
+
+Added option to only load existing cache files and not new songs to Stepmania.ini (FastLoadExistingCacheOnly).
+
+
+
+
+* 3.9 PLUS RC 3
+Fixed bug in custom song loader crashing when trying to create cache data.
+Fixed bugs in hold checkpoint code.
+Fixed bugs in Preview Music Mode option in ScreenSelectMusic.
+Fixed bugs in Modeswitcher for ScreenSelectMusic.
+
+Readded support for lights driver parallel for Windows; however, this is an unsupported addition and was only added due to popular demand.
+
+
+
+
+* 3.9 PLUS RC 2
+Fixed misses not resetting combo when in 'Good doesn't break combo' mode.
+Fixed minimum combo digit display not working.
+Fixed bug with certain score modes once the lifebar has been depleted.
+Fixed Nova/Nova 2 scoring with regards to combo count on jumps/triples/quads.
+Fixed more bugs with hold checkpoints.
+Fixed music not playing in ScreenSelectCourse.
+Fixed Modeswitcher crashing game in extra /extra 2 stages if autogen steps is turned off and the player attempts to switch to a mode with no steps for the selected song.
+Fixed song backgrounds not showing up in ScreenSelectMusic if the background cache is enabled.
+Fixed bugs in PreviewMusicMode in ScreenSelectMusic.
+Fixed bug in ModeSwitcher metric commands.
+Fixed DifficultyList bug when hidden difficulty is on.
+Fixed bug with PreviewMusicMode not allowing ScreenSelectMusic to switch immediately if the menutimer hits zero.
+Fixed assistticks not playing for notes on song row 0.
+
+Added in ability to override score mode defaults for how jumps/triples/quads are counted by the combo (under [ScoringOverride] in metrics).
+Added Half Mines mod (randomly removes half the mines in a chart).
+Added 'GradeTier03RequiresNoMiss' option to Stepmania.ini. This allows for a proper S rank in PIU simulation (see below). Also, other new scoring options were added related to this.
+Added in score multipliers to make PIU Scoring more accurate.
+Added in score multipliers for custom scoring.
+Added ability to edit Genre information from editor.
+Added ability to exclude the roll tapping time from judge rank effects.
+Added in ability to reverse lifebar scroll direction in metrics under [LifeMeterBar].
+Added in ability to scale text size down in options menus to make everything fit on one line (Same format as multiselect, except you add 'shrink' as the command).
+Added in ability for course mode to not be forced to use DDR Extreme scoring.
+Added in InputDebounce functionality for arcade machines.
+
+
+Note for PIU players:
+These are the settings you need for proper S ranks in PIU mode. I'm not sure what the percentages for the other tiers are.
+
+GradePercentTier01=1.000000
+GradePercentTier02=1.000000
+GradeTier02IsAllPerfects=1
+GradeTier03RequiresNoMiss=1
+
+
+
+
+* 3.9 PLUS RC 1
+Fixed BPM/Tick counts not modifying in edit mode under certain conditions.
+Fixed bug with Hidden/Sudden modifiers causing arrows not to appear at all.
+Fixed bugs with hold checkpoints.
+Fixed bug with hidden notes in regular gameplay.
+Fixed bug with toasty appearing on first Marvelous hit.
+Fixed bug with non-DDR gametypes crashing in Rave mode.
+
+Renamed Super Dizzy to Confusion.
+
+Disabled ability to set and use Attack Notes. Existing ones are ignored.
+
+Added in ability to display backgrounds on ScreenSelectGroup & ScreenSelectMusic, much like how the banners appear on them and switch depending on the selection.
+Added in ability to set life effects & custom scoring effects for hit checkpoints.
+Added in ability to specify a maximum length for combo digits & score digits.
+Added in ability for SM 4.0 behaviour where any judgment that breaks the combo contributes to the miss combo. Activated in the metrics under [Combo] with 'MissComboIncreasesOnComboBreak=' set to 1.
+Added in new fail type -> Miss Combo of 50 misses.
+
+
+
+
+* 3.9 PLUS Beta 4
+Partially fixed scoring issues with the negative BPM skips.
+Fixed small Dizzy/Super Dizzy bug.
+Fixed certain transforms in attacks causing game to screw up arrow data; these transforms in attacks are now ignored.
+Fixed small lift note not responding bug in ScreenEdit.
+
+Added in Positive Announcement Only option in Preferences.
+Added in options for Announcers and Extra Stage.
+Added in ability to hide song info & version info on ScreenTitleMenu.
+Added in ability to specify group,<groupname> as a metric conditional.
+Added in hold checkpoints in metrics.ini, under [Player]. This causes the holds to more accurately simulate those found in Pump It Up. Activated by setting 'UsePIUStyleHolds=' to 1.
+Added in tickcount for hold checkpoints. It uses a system similar to BPMs, and tickcounts can be changed mid song.
+Added in PrevScreen metric for ScreenStage.
+Added in ability to not have Hidden & Sudden effects have a fade in/out on the arrows, see [ArrowEffects] under the theme metrics.
+Added in ability to define column spacing, see [ArrowEffects] under the theme metrics.
+Added in ability to activate AutoPlay from course mods by using 'autoplay' as the mod name.
+Added in ability to make hidden songs appear from ScreenBranch conditions, command is 'showhidden=true/false'.
+Added in ability to turn AutoPlay on/off from Song Options menu.
+Added ez2SelectMusic's preview options to ScreenSelectMusic.
+Added in Custom Scoring option, controlled via [CustomScoring] in the theme metrics.
+Added in TwoPartSelection option for ScreenSelectMusic.
+
+Separated holds and rolls in terms of lifebar effects, percentage weights, etc (they now can be specified independently, rather than using common values in Stepmania.ini).
+Small changes made to Static mod.
+
+
+
+
+* 3.9 PLUS Beta 3
+Can now specify the allowed mode switcher modes via the theme metrics file.
+Can now use 3.95 styled early/late judgments, or just the regular judgements.
+
+Changed SORT LIST functions; no longer loads from SortSongs.crs (file did not load on all systems), and instead the order is specified via the .sm files of a song using the #LISTSORT tag.
+Changed TitleScreeen code; can now specify the effects on items in the main menu.
+Changed AutoPlay code; if AutoPlay is used at any point to hit a tap note, the score is frozen and the combo reset, a failed grade will be given, and the scores will not be saved
+
+Fixed CMod bug in all versions of 3.9; if a default modifier of 2x is specified, and then C200 is chosen, in game it becomes C400, With a 3x default modifier, C200 becomes C600, and so forth.
+Fixed turns in attacks causing game to screw up arrow data; turns in attacks are now ignored.
+Fixed Hold/Roll bug in the How To Play Screen; holds and rolls now behave properly.
+
+Added in Extreme 2 style hidden notes, which do not affect scoring but add life to a player that hits them. Note that if you put a regular note and a hidden note together in the same row, the hidden note will have no effect.
+Added in ability to specify whether background movies fade on transition.
+Added in ability to mask the difficulty of a stepchart; in the SM file, after the difficulty number, add a * before the : (for example, 7*:), and the difficulty will be masked ingame. Using the theme metric 'GenRandomIfHiddenDifficulty', you can set it so that a random value for the meter graphic; otherwise, no graphics will be filled.
+Added in ability to have more control over effects of judgements in NoRecover and SuddenDeath; and also the ability to specify initial lifebar start positions.
+Added in ability to specify which value constitutes a hot lifebar.
+Added in ability to go to Options Menu when in Extra Stage; controlled by StepMania.ini.
+Added in ability to change difficulty when in Extra Stage; controlled by StepMania.ini.
+Added ability to specify the minimum number of combo digits that appear onscreen at any time.
+Added in SuperNova style scoring (no score weight based on note position in song, 10,000,000 max score regardless of difficulty) and Hybrid scoring (score weight based on note position in song, 10,000,000 max score regardless of difficulty).
+
+
+
+
+* 3.9 PLUS Beta 2
+Small tweaks made to MemoryCard loader when running in Windows.
+
+Modified negative BPMs causing display errors fix; this only applies if ShowNegative=0 in the theme metrics, under [BPMDisplay].
+Modifed Attack Mines and Random Attacks so that the attack data is now loaded from an external file rather than hardcoded. The attacks to be used are set in the RandomAttacks.dat file.
+Updated MENUCOLOR with Theme Metric switches to control how it interacts when in Extra Stage mode.
+
+Overhauled part of the Roll code to eliminate the many bugs it introduced in Beta 1.
+
+Added in HoldsToRolls modifier.
+Added in ability to disable the playing of the hit mine sound effect in Stepmania.ini
+Added in ability to have non-scrolling lifebar by setting LifebarScrolls in theme metrics to 0 (1 to have scroll).
+Added in ability for sort subsection to use different fonts per sort.
+Added in ability to specify a sort list. The sort list is called via metrics by 'SORT LIST', and the sort list itself is specified in the 'SortSong.crs' file, located in the Songs directory.
+Added in modeswitcher function to ScreenSelectMusic, which allows a player to switch between game modes on that screen.
+Added in metrics related to judgment and combo positioning when using the centered mod.
+Added in banner wheel option to ScreenSelectMusic (Pump It Up style music selection).
+Added in ability to load songs via memory card. There are still many bugs in this process.
+Added in new display options (only have a song show up on final stage, extra stage, 2 stages left, etc. This is done via #SELECTABLE:1, #SELECTABLE:ES, #SELECTABLE:2, etc. One More Extra Stage would be #SELECTABLE:OMES.
+
+
+
+
+* 3.9 PLUS Beta 1
+Fixed .mpg and .mpeg videos freezing during playback when in RandomMovie mode.
+Fixed noteskin reverting back to 'default' when in Extra Stages.
+Fixed autokeysounds causing a crash by completely ignoring them.
+Fixed negative BPMs causing display errors in ScreenSelectMusic when cycling; lowest possible value on BPM display is now 0 (this does not apply to BPM ranges displayed without the cycling effect).
+Fixed negative percentages on modifiers not having any impact.
+
+Changed adjustment level of BPM in Edit Mode; using ALT + F7 or ALT + F8 now adjusts by .005 instead of by .010.
+Changed maximum step value for Extra Stage 2 auto-selection; will now select from stepcharts with difficulty 8 and 9.
+Changed maximum displayed BPM when cycling randomly; new maximum is 999 instead of 600.
+Changed music wheel code; songs will automatically switch to extra color only in current style (this means that a 10 in doubles will not cause the color change in single if the single chart is not a 10).
+Changed loader splash banner.
+Changed lighting code used to control arcade machine lights.
+Changed hidden and unlock systems to allow option for Event Mode to ignore these statuses, and show the songs anyways.
+Change in the AutoSync code.
+
+Added in fade for first video when in RandomMovie mode.
+Added in RandomColor to theme metrics; this now allows randomly cycling BPMs to have a seperate color.
+Added Static mod.
+Added Invert mod, back ported from StepMania 4.0.
+Added in AttackMines mod, which does the same thing as stepping on a mine in Mungyodance2 (instead of losing life, causes a mod to affect you). Permission to do this was given by the programmer of this feature in Mungyodance2. Stepping on these mines will not affect your lifebar, but will affect your Grade and Score.
+Added in RandomAttacks mod, which causes random attacks to play during the song, updating evey x seconds which is set via Stepmania.ini
+Added wraparound cycling in the Edit Menu.
+Added in ability to choose whether Dark will be used by default in the Extra Stages via Stepmania.ini.
+Added in support for Lift Notes; behave exactly as they do in SM 4.0.
+Added option to control the cycle speed of the Randomized BPM Display; four settings (slow, normal, fast, vfast). Normal is the SM default, and vfast is very similar to that of DDR Extreme.
+Added in ability to specify the color of a song on the MusicWheel via the #MENUCOLOR tag in a .sm file. For this to work correctly, the proper format is '#MENUCOLOR:r,g,b,a;', where r,g,b,a are values from 0.0 to 1.0. R is red, g is green, b is blue, and a is ambience. Also, specifying a valid name will work. The names are: white, black, brightred, brightgreen,brightblue, red, green, blue, yellow, pink, purple, orange, cyan, seagreen, ddrgreen, ddryellow, ddrblue, ddrpurple. Also, you can set extra (Extra Stage color) and group (set a file that defaults to Extra Stage color back to the group color).
+Added in ability to not save Catalog.xml via Stepmania.ini.
+Added in ability to have Extra1.crs and Extra2.crs in the main Songs directory, and load them if these files are not found in the song directory when ES and OMES are activated.
+Added in roll support for 3.9.
+Added in ability to not play Attack Sounds, even if the files exist for the theme.
+Added in theme option to not show '???' in BPM Display random cycle (under [BPMDisplay]).
+Added in Sort by Genre option.
+
+
+IMPORTANT! You must update the metrics for any noteskin to include rolls and lifts, or else SM 3.9 PLUS will crash! Also, the Cache must be deleted prior to the first loading!
+
+
+
+
 * 3.9 rc4
 Windows: Fixed DLL problem on older systems.
 Linux: Fix statically linked libavcodec.
+
+
+
 
 * 3.9 rc3
 Fixed change song speed menu codes starting with change difficulty menu codes.
@@ -22,6 +247,9 @@ Linux: Fixed some GCC 3.4 compilation problems.
 Linux: Added extra autoconf checks for Lua and TLS.
 OSX: Switch back to OS X installer.
 
+
+
+
 * 3.9 rc2
 Fixed stage count problems.
 Fixed crash when portal is used with no open sections.
@@ -39,6 +267,9 @@ Linux x86-64: Fixed Fedora build problems.
 Linux x86-64: Fixed crash in vssprintf.
 Linux x86-64: Fixed crash handler.
 
+
+
+
 * 3.9 rc1
 Fixed movie frame semaphore timeout.
 Fixed stretched images becoming slightly transparent.
@@ -51,6 +282,9 @@ Windows: Intel 82845G reverted back to D3D.
 OSX: Fixed "Illegal instruction" on G3s.
 Added OSC3 "Sabishii Kute Loneliness" translit.
 Added kanji for Foonmix songs.
+
+
+
 
 * Alpha 24
 Fixed music sample not starting when a song is selected quickly.
@@ -69,6 +303,9 @@ Linux: Fixed GTK window not being centered.
 Added OSC3 Red Sun translit.
 Player 2 Back button now defaults to NumLock instead of Insert.
 More options are saved to the profile.
+
+
+
 
 * Alpha 23
 Fixed garbled mono sounds.
@@ -94,6 +331,9 @@ Allow selection of both 1280x960 (for CRTs) and 1280x1024 (for LCDs).
 Fixed OSC1 "Love Hina" title.
 Added OSC2 "Dejiko to Gema" translit and correct "Assami" -> "Asami".
 Added OSC3 "E-Paksa", Naofumi Hataya, "ukifune" kanji and translits.
+
+
+
 
 * Alpha 22
 Fixed menu timer running song roulette on course selection.
@@ -122,6 +362,9 @@ When in "SM options navigation", pressing start in the options menus only moves
   that both players have a chance to set options.
 Theme change: _shared fonts in "Numbers" are now named "_numbers".  (This is to
   differentiate them from the _shared fonts in Fonts.)  .redir files need updating.
+
+
+
 
 * Alpha 21
 Fixed edits causing malformed DWI tags to be written.
@@ -156,6 +399,9 @@ Theme changes:
   metrics "ScreenGameplay::LifeFrameExtra*" are now "ScreenGameplayExtra::LifeFrame"; same for all gameplay extra stage metrics
   metric "CDTitleSpinSeconds" -> "CDTitleFrontCommand" and "CDTitleBackCommand".
 
+
+
+
 * Alpha 20
 Fixed image loading crashes.
 Fixed GIF loading.
@@ -177,6 +423,9 @@ Added Yuki Matsuoka kanji.
 Added Oni course autogen by artist.
 Courses now support the #COURSETRANSLIT tag; works identically to .SM #TITLETRANSLIT.
 
+
+
+
 * Alpha 19b
 Fixed loading images with incorrect file extensions.
 Fixed CDTitle rendering regression.
@@ -185,6 +434,9 @@ Fixed missing ScreenEditCoursesMenu metrics.
 Fixed editor menu and course editor not wrapping.
 Fixed stage screen back transition being skipped.
 Optimized Catalog.xml writing.
+
+
+
 
 * Alpha 19
 Unknown audio types in songs is no longer a fatal error.
@@ -209,6 +461,9 @@ Improvements to planted and twister transforms.
 Latency improvements in ALSA for Linux 2.4 kernels.
 Removed SaveToProfile option; it hasn't done anything for a while (options are always saved to profile).
 
+
+
+
 * Alpha 18
 Fixed "FilenameDB::AddFile()" crash.
 Fixed evaluation grade announcer not playing.
@@ -220,6 +475,9 @@ Added "kono omoi o tsutaetai" and "Ai (Chuu Seishin)" kanji.
 Editor: Fixed crash when reverting and the selected notes weren't found.
 Editor: Fixed reverting goes to the wrong song if the selected song has a blank description.
 OSX: Changes to try to fix skipping on older machines.
+
+
+
 
 * Alpha 17
 Fixed reversed NG and OK grading weights.
@@ -236,6 +494,9 @@ Theme: Reasonable defaults are now provided for OptionOrder metrics.
 Editor: Fixed crash after reverting a difficulty change.
 Duplicate step patterns for the same song are now changed to edits, instead of being shifted to the next difficulty.
 Song and course scores are no longer lost if a song is removed.
+
+
+
 
 * Alpha 16
 Fixed grade sort showing only "???".
@@ -254,6 +515,9 @@ Linux: improve crash handler behavior if libraries (eg. ALSA) fail assert().
 OSX: Fixed crashinfo.txt generation taking too long.
 OSX: Fixed system appearing to hang after generating crashinfo.txt.
 
+
+
+
 * Alpha 15
 Fixed dancing character rendering.
 Fixed not playing announcers in demonstration.
@@ -270,6 +534,9 @@ Tornado doubles is easier.
 Mac: Fixed screenshots.
 Mac: Fixed "seconds != (time_t)-1" crash.
 Linux: Fixed screensaver disabling causing screen flicker; reenabled by default.
+
+
+
 
 * Alpha 14
 Fixed evaluation voltage result.
@@ -293,6 +560,9 @@ Autoplay text no longer obscures lyrics.
 Transition between course songs slightly faster.
 Linux: Disabled code to disable X screensaver; it causes flicker.
 Linux, Mac: crashinfo.txt is now written to the user's home directory.
+
+
+
 
 * Alpha 13
 MP3s should now be read and synced identically to DWI.
@@ -328,6 +598,9 @@ Data in "memcard.ini" is now stored in profiles.
 Screenshots are now saved as JPEGs (hold left shift and press PrScr to get a BMP).
 Reload Songs/Courses now shows progress.
 
+
+
+
 * Alpha 12
 Added NoJumps, NoHands, NoQuads.
 Tweaked planted, twister, echo with mines.
@@ -356,6 +629,9 @@ Linux: Partial vsync support for nVidia cards (need to restart if changed in the
 Linux: Disable X11 screensavers.
 Linux: Center SDL loading windows.
 
+
+
+
 * Alpha 11
 Added "Fast load" option: if enabled, songs are not checked for changes on load.
 Added "Attract Sound Frequency" option.  By default, attract sounds are only played once every four cycles of the idle loop.
@@ -376,6 +652,9 @@ Added translits: Masahiro Andoh, Sakura Saku, Toshio Masuda, Tsuneo Imahori,
   Michiru Yamane, Negai, Hatsumi Morinaga, Yuzo Koshiro, Jaurim, Mirai Yosouzu II,
   Masaya Matsuura.
 
+
+
+
 * Alpha 10
 Fixed GhostArrowRow::CopyTweening crash.
 Fixed sort changing with dedicated menu buttons off.
@@ -385,6 +664,9 @@ High score saving fixes.
 Fixed cdtitles.
 Fixed options menu explanation tweening.
 Added SMZIP package support.
+
+
+
 
 * Alpha 9
 Fixed DWI writing assertion failure.
@@ -417,6 +699,9 @@ Added translits: Tsugaru Kaikyou no Onna, Black Cat, Dream Possession,
   Midsummer's Dream, Hanabi (Lange Remix), Hyakugojyuuichi, Dicky Cheung,
   Yoo Seung Jun, Journey to the West, Full Moon o Sagashite (Smile),
   Leon Lai, KOTOKO & Hiromi Sato, Syunikiss, M-FLO loves Crystal Kay.
+
+
+
 
 * Alpha 8
 Fixed hidden not turning off.
@@ -460,6 +745,9 @@ Fail-end-of-song fails after the current song in course play.
 Maintain precise sync through corruptions in Oggs.  (Can't do that with MP3!)
 Don't fail if songs refer to images that can't be loaded.
 
+
+
+
 * Alpha 7
 Fixed style and difficulty selection announcers.
 Fixed characters not showing up.
@@ -479,6 +767,9 @@ Fixed movie flushing; fixes odd 1-frame videos.
 Write #FILE tag to DWIs.
 Fixed assertion failure with joysticks with more than one hat.
 Sped up select music screen.
+
+
+
 
 * Alpha 6
 Fixed "fabs(fOffBy)<10" crash.
@@ -504,6 +795,9 @@ Movie sync fixes.
 OSX: Handle vsync.
 Theme change: Removed ScreenSelectStyle5th; use ScreenStyleMaster instead.
 Theme change: ScreenSelectStyle and ScreenSelectDifficulty graphics are now eg "icon1.png", "picture2.png", "icon2.png", not "icon single.png".
+
+
+
 
 * Alpha 5
 Fixed low-quality banners.
@@ -531,6 +825,9 @@ Improved lyrics effect.
 Harder Brake.
 Scoring fixes while using transformations.
 
+
+
+
 * Alpha 4
 Fix different taps when on the same row as a hold start.
 Fix deleting notes in the editor.
@@ -557,6 +854,9 @@ Require a combo before regaining life after bottoming out.
 Always load fonts in 16bpp.
 Fixed course writing errors.
 
+
+
+
 * Alpha 3
 Fixed courses crashing.
 Fixed extra stage crash.
@@ -564,6 +864,9 @@ Fixed errors reading sounds causing a crash.
 Fixed Caprice.
 Fixed duplicate 'jukeboxmenu right' elements.
 Fixed grading when using transforms.
+
+
+
 
 * Alpha 2
 Somewhat fixed "NORMAL/DIFFICULT" not working on course player options screen (it would default to what 2P was set to regardless of player being present or not).
@@ -575,9 +878,15 @@ Added experimental course editor.
 Music wheel now goes to first available song when you pass a long version song and have one stage left.
 Various other bugfixes.
 
+
+
+
 * Alpha 1
 Fixed Oni mode overriding chosen life meter choice.
 Fixed some select music screen speed issues.
+
+
+
 
 * 2003-08-03
 Slightly optimized wheel loading times.
@@ -585,6 +894,9 @@ Added progressive stage lifebar.
 Fixed stage counter not updating when long versions are a final stage.
 Fixed memory leaks regarding unlock screen.
 Lifebar difficulty now goes up to 16.
+
+
+
 
 * 2003-07-31
 Fixed song options screen crashing in course mdoe.
@@ -599,6 +911,9 @@ Added progressive lifebar motion.
 Added random caprice courses.
 Sound quality experiment.
 Added JUSTICE.
+
+
+
 
 * 2003-07-28
 Fixed fallback banner not always showing.
@@ -620,6 +935,9 @@ SMPackage: Uninstall packages before installing new ones.
 Evaluation radar fixes.
 Never use files listed in (otherwise unused) #DISPLAYTITLE/#DISPLAYARTIST DWI fields as song banners.
 
+
+
+
 * 2003-07-15
 Fixed "OFF" not working in player options menus.
 "Cancel all codes" code maintains default note skin.
@@ -635,6 +953,9 @@ Added Maaya Sakamoto.
 Added "e=mc² mix".
 Added threaded input.
 
+
+
+
 * 2003-07-09
 Fixed crash on extra stage.
 Fixed invalid glyph when showing negative scores in eval.
@@ -646,6 +967,9 @@ SMMAX2: Fixed menu music looping and graphics alignment.
 Support up to 32 buttons per joystick.
 Allow configuring bit depth for movies.
 Cope with broken drivers that don't support GL_UNSIGNED_SHORT_1_5_5_5_REV.
+
+
+
 
 * 2003-07-07
 Default score for non-Oni courses is 573000, not 573.
@@ -672,6 +996,9 @@ The ScreenEvaluation graphics "bar actual", "bars possible", "bonus frame",
 "grade frame", "percent frame", "survived frame", "win", and "win frame";
 and the ScreenSelectMusic graphics "difficulty frame", "meter frame" and
 "score frame" have been split into separate graphics for each player.
+
+
+
 
 * 2003-06-30
 Fixed "save changes?" not reverting.
@@ -700,6 +1027,9 @@ Return to the select course screen after name entry in event mode.
 Allow ISO-8859-1 in DWIs.
 Don't show all sorts with left-right-start; hit up-down-up-down to get the full list.
 
+
+
+
 * 2003-06-23
 Fixed music wheel sort bugs.
 Fixed OKs being worth 3 in course mode even when marvelous is off.
@@ -719,6 +1049,9 @@ Removed fade between random movies (decoding two movies is too slow).
 Removed "Use BG if no banner".
 SMPackage: compress files aren't already compressed.
 SMPackage: add comments.
+
+
+
 
 * 2003-06-18
 Fixed more GL_NO_ERROR problems.
@@ -745,6 +1078,9 @@ Detect oversize banners and rotated banners that aren't exactly square.
 Rewrite input code (again).
 Handle group banners in the parent dir.
 
+
+
+
 * 2003-06-11
 Fixed not flushing GL error state.
 Oha, Tokimeki Memorial translation fixes.
@@ -766,6 +1102,9 @@ Don't save song changes after gameplay by default.
 Added various Korean characters.
 Stop sample music when entering play or record mode.
 
+
+
+
 * 2003-05-31
 Fixed C200 and 8.0 scroll speed options loading backwards.
 Fixed movies not working in D3D.
@@ -784,6 +1123,9 @@ Removed limit of 1200 songs in the music screen.
 Only show an easy icon for songs that have beginner steps.
 Add some Korean characters.
 Add .3x and .5x music rate (sounds bad at the moment).
+
+
+
 
 * 2003-05-28
 Don't force note skin to "note" in the editor, since not all note types have a note skin by that name.
@@ -804,6 +1146,9 @@ Fixed crash pressing 0 in the editor.
 Disable banner preloading by default.
 Automatic configuration for some adapters.
 Maximum number of random backgrounds is configurable.
+
+
+
 
 * 2003-04-20
 Fix crash when lyrics are too close together.
@@ -840,6 +1185,9 @@ Fixed rate changing rounding error that caused .9 to actually play at .8.
 Don't cache banners by default.
 Fixed diagonal banners in BGAs.
 
+
+
+
 * 2003-03-27
 Fixed missing credits.
 Added lyric support.
@@ -869,6 +1217,9 @@ Hold note life fills instantly instead of gradually.
 Texture usage and loading optimizations.
 Lots of theme changes.
 Nonstop courses can be made more difficult; use the same codes as selecting a song.
+
+
+
 
 * 2003-03-06
 Fixed SaveMachineScoresToDisk crash.
@@ -900,6 +1251,9 @@ Don't change the sample position of songs that actually have a sample start of 0
 GLDirect bug workarounds.
 Remove song length limits.
 
+
+
+
 * 2003-02-21
 Fixed corrupt Joint Premium image.
 Fixed autosync.
@@ -930,6 +1284,9 @@ Fixes for guessed sample music start.
 Subst songs even if they already have a translit line; too many songs have hacked titles with transliterations that need to be substituted.
 Use DirectInput for joysticks; hopefully this will fix some of the converter problems people are having.
 
+
+
+
 * 2003-02-12
 Fixed handling of corrupted music files (was causing the radar glitch).
 Fixed edit sample fade-out.
@@ -953,6 +1310,9 @@ Don't translate a song field at all if there's already a transliteration.
 Different color for the extra stage that will lead to EX2.
 Fail mode can be set in Machine Options.
 Game options screen can be disabled.
+
+
+
 
 * 2003-02-09
 Fixed assertion failure under GLDirect.
