@@ -1,4 +1,28 @@
-﻿* 3.9 PLUS
+﻿* 3.9+ Redux
+Removed all incomplete/broken plus features from 3.9 PLUS final.
+
+Fixed bug in UnlockSystem when using CODE and RO values.
+Fixed bug in Event Mode ignoring Unlocks option.
+Fixed bug in extra stage reverting the default noteskin.
+Fixed bugs in Editor transforms menu.
+
+Added player-side autoplay to allow one player to be under autoplay while the other plays normally. This cannot be turned on or off by attacks.
+Added in theme metric to allow mines to break the combo if hit.
+Added in theme metric to increment combo on each successful roll hit.
+Added in new lua condition; EasterEggs() can now be used to see whether a player has Easter Eggs enabled.
+Added ability to set default values to difficulty list using DefaultMeterValues metric in [DifficultyList] in this format: DefaultMeterValues=0,3,6,9,10,5 [beg,easy,med,hrd,cha,edt].
+Added ability to have holds OK and NG affect combo (increment and break).
+Added Fail AAA, where anything but a Marvelous, Perfect, or OK causes an instant fail.
+Added in options to support DDR X difficulties by scaling them down to old DDR values.
+Added in MeterType option, which allows for different actions on ScreenSelectMusic (turn red point, meter flashing, etc) based on the meter value and MeterType (DDR, ITG, DDR X) selected.
+
+Rewrote roll note code for better optimization.
+
+
+
+
+
+* 3.9 PLUS
 Fixed bug in BPMDisplay random cycle code.
 Fixed bug in PlayerSongs Stepmania.ini option.
 
