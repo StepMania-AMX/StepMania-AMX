@@ -5,6 +5,89 @@ I have the intention to rewrite the changelog to English in a tidy way, but it w
  ********************************************************************
  ********************************************************************/
 
+// Junio 20, 2010, 08:01:35 pm
+// http://mxpumpers.com/index.php?topic=613.msg11920#msg11920
+
+Agregado parche 2.2.
+
+http://stepmania.aldo.mx/parches/SMA4-Beta2.1-a-2.2.rar
+
+Mismas instrucciones de antes, solo que a partir de este momento las actualizaciones utilizarán como base la versión 2.1, por lo que si aún utilizas versiones 1.x o 2.0 debes instalar primero el parche anterior.
+
+Ahora aparecen 4 patcher diferentes, elige el que se acomode a tus necesidades:
+
+Patcher.vanilla.bat = Deshabilita todas las nuevas funciones tratando de dejar el mismo comportamiento que StepMania 3.9 original.
+
+Patcher.redux.bat = Deshabilita la mayoría las nuevas funciones tratando de dejar el mismo comportamiento que StepMania 3.9+ Redux.
+
+Patcher.default.bat = Habilita algunas nuevas funciones, pero trata de dejar el comportamiento por default de StepMania.
+
+Patcher.pump.bat = Habilita todas las nuevas funciones y deshabilita algunas funciones de DDR para tener una mejor experiencia de pump.
+
+Lista de cambios:
+
+- Reemplazados Long y Marathon por "StageLength" en PrefsManager
+- Agregado "MaxSongsToPlay" en PrefsManager
+- Agregado "StagesPerPlay" en ScreenOptionsMasterPrefs
+- Corregido bug con TimingData::SetFakeAtBeat
+- PlayerMinus::GetClosestNote() ahora evade Fake Areas
+- PlayerMinus::Step() y PlayerMinus::Release() ahora buscan en todos los beats posibles.¹
+- Arreglado bug donde no se dibujaba correctamente NoteField con cMods
+- Typo en NotesWriter
+- Arreglado tentativamente bug del editor donde se borraban flechas dentro de Fake Areas.
+
+¹ Este cambio mejora significativamente la jugabilidad de la gran mayoría de las canciones, sin embargo, en canciones con BPMs elevados ( mas de 1000 bpm ) y BPMs / Stops Negativos que no utilizan Fake Areas, se pierde significativamente el rendimiento del juego.
+
+Nuevos Theme Metrics:
+
+[ScreenEvaluation]
+UseSongNumberInStage=0
+
+[ScreenEz2SelectMusic]
+StageLength*UsesBalloon=1²
+
+[ScreenGameplay]
+UseSongNumberInStage=0
+
+[ScreenSelectMusic]
+StageLength*UsesBalloon=1²
+UseSongNumberInStage=0
+
+[ScreenStage]
+UseSongNumberInStage=0
+
+[ScreenTitleMenu]
+MaxSongsOnCommand=
+MaxSongsText=
+
+
+
+Nuevos Elementos de Theme:
+
+Graphics\ScreenSelectMusic balloon stagelength *²
+Fonts\ScreenTitleMenu Max Songs
+
+² Cambiar * por el # de StageLength
+
+
+
+Nuevas Opciones en StepMania.ini:
+
+[Options]
+DefaultStagesPerSong=1
+MaxSongsToPlay=3
+NumStageLengths=*
+ProgressiveLifebarByIndex=1
+StageLength*Enabled=
+StageLength*LengthSeconds=
+StageLength*StagesPerSong=
+
+Para una mejor referencia revisa "Data\Default.pump.ini"
+
+/********************************************************************
+ ********************************************************************
+ ********************************************************************/
+
 // Junio 13, 2010, 05:43:07 pm
 // http://mxpumpers.com/index.php?topic=613.msg11161#msg11161
 
