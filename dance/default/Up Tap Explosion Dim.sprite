@@ -1,4 +1,4 @@
 [Sprite]
 Texture=Down Tap Explosion Dim.png
-BaseZoomY=-1
+BaseRotationZDegrees=180
 

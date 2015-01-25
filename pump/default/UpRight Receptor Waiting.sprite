@@ -1,5 +1,5 @@
 [Sprite]
-Texture=_Common Receptor go 2x1.png
-BaseRotationZDegrees=180
+Texture=Receptor Rojo 1x2.png
+BaseRotationZDegrees=90
 Frame0000=1
 Delay0000=1

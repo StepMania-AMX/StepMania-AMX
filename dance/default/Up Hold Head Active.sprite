@@ -1,4 +1,4 @@
 [Sprite]
 Texture=Down Hold Head Active.png
-BaseZoomY=-1
+BaseRotationZDegrees=180
 
