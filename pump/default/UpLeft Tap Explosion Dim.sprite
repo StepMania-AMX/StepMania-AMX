@@ -1,3 +1,12 @@
 [Sprite]
-Texture=_Common Tap Explosion 7x1.png
-BaseRotationZDegrees=90
+Texture=_Tap Explosion Dim
+Frame0000=0
+Delay0000=0.2
+Frame0001=1
+Delay0001=0.2
+Frame0002=2
+Delay0002=0.2
+Frame0003=3
+Delay0003=0.2
+Frame0004=4
+Delay0004=0.2
