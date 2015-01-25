@@ -1,0 +1,12 @@
+[Sprite]
+Texture=_Tap Explosion Bright
+Frame0000=0
+Delay0000=0.050
+Frame0001=1
+Delay0001=0.075
+Frame0002=2
+Delay0002=0.125
+Frame0003=3
+Delay0003=0.250
+Frame0004=4
+Delay0004=0.500
