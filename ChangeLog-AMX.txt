@@ -1,0 +1,39 @@
+Copy/paste from the Spanish release topics in the difunct mxpumpers.com / piusm.com forums.
+I have the intention to rewrite the changelog to English in a tidy way, but it won't happen soon.
+
+/********************************************************************
+ ********************************************************************
+ ********************************************************************/
+
+// Abril 15, 2010, 09:12:37 am
+// Beta 1.0
+
+Por fin, despues de una larga laaaaarga espera les traigo la primer beta de mi StepMania ^^
+
+En realidad tenía planeado soltarlo ayer, pero CH32, cesarmades, Akire-X y Terry pueden dar testimonio de que "me hicieron brujería" T.T, mi EeePC se murió repentinamente, y literalmente "mató" el src de SM (si, a justo a punto de soltarlo u_u), pero en fin, nada que no solucionara agarrar un respaldo de hace 2 semanas y meterle nuevamente los últimos cambios ^^.
+
+En fin, esta es una versión beta, por 2 sencillas razones:
+
+a) realmente no he hecho muy bien el inventario de todo lo que dejó de servir despues de "la brujería", pero estoy seguro que no hay nada que falle aparte de lo que indico
+b) ya estaba cansado de hacerlos esperar y me había hecho el firme propósito de soltarlo ayer
+
+Asi que no entraré en muchos detalles, lo único que puedo decirles sobre esta versión:
+
+1. Basada en SM+ Redux
+2. Tiene longs perfectas ^^ (Ya tampoco tienen "random perfects" para los que testearon)
+3. Tiene cambios de speed idénticos a NX2/NXA/Fiesta (premio al primero que copie los pasos de Destination xD)
+4. Funcionan TOOOOOOOOOODOS los themes, noteskins, announcers, etc, etc, etc. hechos para SM 3.9 y Redux (claro, solo no reemplacen los defaults o se enoja el SM), y de bonus, los NoteSkins hechos para todos los builds mios, de shakka y el SMNXA :wtf:
+5. Lee tags |B0| de KSFDM
+6. Tiene Delays
+7. Tiene como 50 o 60 metrics nuevos y corrije algunos metrics existentes
+8. Ahora lee DISCS y PREVIEWS (además de BANNERS y BACKGROUNDS), por lo que ordenando bonito la carpeta de songs puede lucir de maravilla con cualquier theme ya sea PIU o DDR, CDTitle ya puede volver a ser la imagencita chiquita que era antes ^^.
+
+Son tantas y tantas cosas que perdí la cuenta, pero espero que lo disfruten ;)
+
+Prometo que para la versión final incluiré un changelog con lujo de detalle, pero el último changelog (que abandoné en enero) tenía más de 380 cambios x_x.
+
+Lo que no sirve:
+- BGChanges en editor
+- Drop/Left/Right Attacks
+- No guarda .SM, solo .SMA
+- Theme SMNXA (de hecho no tengo planes de hacer la ruleta "iTunes"... aun)
