@@ -5,6 +5,523 @@ I have the intention to rewrite the changelog to English in a tidy way, but it w
  ********************************************************************
  ********************************************************************/
 
+// Junio 13, 2010, 05:43:07 pm
+// http://mxpumpers.com/index.php?topic=613.msg11161#msg11161
+
+Listo, ya saqué parche de emergencia:
+
+http://aldo.mx/SMA4-Beta1-a-Beta2.rar
+
+Supongo que pasando unas cuantas horas actualizaré correctamente el tema, de momento dejo mis apuntes:
+
+Citar
+- Comportamiento de Holds/Rolls teniendo el ultimo row en Stop
+- HoldPressed cuando Life = 0 en Player.cpp
+- Assist Tick no "aplaudía" con PIU Holds
+- Deshabilitado "late checkpoints" para "stop checkpoints".
+- Cambiado theme default por el theme default de SM 3.9a
+- Agregados varios metrics.ini preconfigurados en theme default
+- Agregados varios defaults.ini preconfigurados en data (despues de cambiar un defaults.ini poner FirstRun=1 en StepMania.ini para que surta efecto)
+
+[ScreenSelectMusic]
+- SkipMissingSongStyles
+- LoadEveryPossibleSong
+- MenuUpChangesDifficulty
+- MenuDownChangesDifficulty
+- DifficultyIconsPerStyle
+- GroupNameX
+- GroupNameY
+- GroupNameOnCommand
+- GroupNameOffCommand
+
+[DifficultyList]
+- HiddenDifficultyCharacters
+
+/********************************************************************
+ ********************************************************************
+ ********************************************************************/
+
+// Junio 10, 2010, 09:55:13 pm
+// http://mxpumpers.com/index.php?topic=613.msg10906#msg10906
+
+Agregado parche 2.0.
+
+http://aldo.mx/SMA4-Beta1-Parche6.rar (2.0)
+
+Lista de cambios:
+
+Parche 6 (Beta 2.0):
+ (click to show/hide)
+- Arreglados los siguientes problemas (Bugfixes):
+- - Steps dentro de Fake Area ya no se dibujan al utilizar cmods.
+- - Problemas de presición en TimingData.
+- - Tickcount ahora se interpreta como KSF.
+- - No se podian poner varios tickcounts en una misma hold.
+- - Adjusted Window y Adjusted Window After se encontraban invertidos.
+- - Ahora ya es posible presionar PIU Holds después de tiempo.
+- - Ahora se autodetectan wild.ksf, crazy+.ksf y nightmare+.ksf bajo dificultad challenge.
+- - Crash al dejar en blanco texto introducido por Timing Menu.
+- - Corregido bug de Holds/Rolls que permitía calificar la flecha siguiente antes que terminara el Hold/Roll.
+- - Corregido comportamiento de Holds/Rolls al finalizar sobre un delay.
+- - Corregido comportamiento de primer flecha bajo un delay.
+
+- Nuevas funciones:
+- - DDR Stops + PIU Holds
+- - Pociones
+- - Separado Adjusted Window After
+
+- Metrics Nuevos (Theme):
+[ScreenEvaluation]
+ShowHitPotionAs=HitPotion
+
+[ScreenEvaluation*]
+ShowPotions=0
+
+[Judgment]
+ShowHitPotionAs=HitPotion
+
+[ProTimingDisplay]
+HitPotionCommand=
+
+[CodeDetector]
+Potions=
+
+[CustomScoring]
+PointsHitPotion=+1000
+
+[ScreenGameplayOptions]
+LineX=conf,ComboIncreasesOnPotions
+
+[ScreenPlayerOptions]
+LineX=list,Potions
+Potions=4
+
+[ScreenOptionsMaster]
+PotionsDefault=mod,no nopotions,no halfpotions,no potions
+Potions,1=mod,nopotions;name,Off
+Potions,2=name,On
+Potions,3=mod,potions;name,Add
+Potions,4=mod,halfpotions;name,HalfPotions
+
+[PaneDisplay]
+SongPotionsTextX=110
+SongPotionsTextY=-4
+SongPotionsTextOnCommand=hidden,1
+SongPotionsTextOffCommand=
+SongPotionsTextGainFocusCommand=
+SongPotionsTextLoseFocusCommand=
+SongPotionsLabelX=15
+SongPotionsLabelY=8
+SongPotionsLabelOnCommand=hidden,1
+SongPotionsLabelOffCommand=
+SongPotionsLabelGainFocusCommand=
+SongPotionsLabelLoseFocusCommand=
+SongPotionsNumLevels=0
+CoursePotionsTextX=110 
+CoursePotionsTextY=-4
+CoursePotionsTextOnCommand=hidden,1
+CoursePotionsTextOffCommand=
+CoursePotionsTextGainFocusCommand=
+CoursePotionsTextLoseFocusCommand=
+CoursePotionsLabelX=320 
+CoursePotionsLabelY=240 
+CoursePotionsLabelOnCommand=hidden,1
+CoursePotionsLabelOffCommand=
+CoursePotionsLabelGainFocusCommand=
+CoursePotionsLabelLoseFocusCommand=
+CoursePotionsNumLevels=0
+
+- Metrics Nuevos (Noteskin):
+[NoteDisplay]
+TapPotionAnimationLengthInBeats=1
+TapPotionAnimationIsVivid=0
+TapPotionAnimationIsNoteColor=0
+TapPotionUseLighting=0
+
+[GhostArrowDim]
+HitPotionCommand=;;;;;blend,add;diffuse,1,1,1,1;zoom,1;rotationz,0;linear,0.3;rotationz,90;linear,0.3;rotationz,180;diffusealpha,0
+
+[GhostArrowBright]
+HitPotionCommand=;;;;;blend,add;diffuse,1,1,1,1;zoom,1;rotationz,0;linear,0.3;rotationz,90;linear,0.3;rotationz,180;diffusealpha,0
+
+[ReceptorArrow]
+HitPotionCommand=;;;;;zoom,1
+
+- Agregado a StepMania.ini:
+[Gameplay]
+ComboIncreasesOnPotions=0
+
+[Options]
+GradeWeightHitPotion=0
+JudgeWindowSecondsPotion=0.090000
+LifeDeltaPercentChangeHitPotion=0.016000
+LifeDeltaPercentNoRecoverChangeHitPotion=0.000000
+LifeDeltaPercentSuddenDeathChangeHitPotion=0.000000
+PercentScoreWeightHitPotion=0
+PlayPotionSound=1
+SuperMeterPercentChangeHitPotion=0.040000
+TugMeterPercentChangeHitPotion=0.004000
+
+- Elementos Nuevos (Theme):
+- - [theme]/Sounds/Player potion
+
+- Elementos Nuevos (NoteSkin):
+- - [noteskin]/[Arrow] Tap Potion
+
+- Elementos Nuevos (Theme/Languages/*.ini):
+[OptionExplanations]
+ComboIncreasesOnPotionsHelp=Turn this option &oq;ON&cq; to increase current combo when stepping a potion.
+PotionsHelp=
+
+[OptionTitles]
+ComboIncreasesOnPotionsTitle=Combo Incs.::On Potions
+PotionsTitle=Potions
+
+[OptionNames]
+HalfPotions=HALF POTIONS
+
+[RadarCategory]
+Potions=Potions
+
+[TapNoteScore]
+HitPotion=Hit Potion
+
+/********************************************************************
+ ********************************************************************
+ ********************************************************************/
+
+// Mayo 31, 2010, 09:15:59 pm
+// http://mxpumpers.com/index.php?topic=613.msg9942#msg9942
+
+Agregado parche 1.33.
+
+http://aldo.mx/SMA4-Beta1-Parche5.rar (1.33)
+
+Lista de cambios:
+
+Parche 5 (Beta 1.33):
+ (click to show/hide)
+- Arreglados los siguientes problemas (Bugfixes):
+- - Rehabilitados BGChanges via editor.
+- - Checkpoints reprogramadas (ya verán para qué en el prox. update ^^).
+- - No había soporte para Tickcount 96, a pesar de ser válido.
+- - SMAs nuevos y caché ahora guardan los pasos  ordenándolos por modo y dificultad, lo que corrige el funcionamiento extraño de ModeSwitcher. (es necesario borrar cache).
+- - Last Beat no se calculaba correctamente
+- - Mejorado el algoritmo de dibujado de flechas para utilizar ligeramente menos procesador.
+
+- Nuevas funciones:
+- - Cambio de Speed por segundo
+- - Cambio de "Beat 0 offset" para todas las dificultades al mismo tiempo en Timing Menu
+
+- Metrics Nuevos:
+[ScreenCaution]
+PrevScreen
+
+- Metrics Removidos:
+[ScreenEdit]
+ShowCombo
+
+- Agregado a StepMania.ini:¹
+[Editor]
+ShowAllStyles=1
+UseGameplayKeysToAddNotes=0
+ShowCombo=1
+HighlightEndsAtLastSecond=0
+
+[Gameplay]
+NoteFieldProbingIterations=20²
+
+[NotesWriter]
+TimingAsRows=1³
+
+¹ La mayoría de estas nuevas preferencias aparecen en el editor.
+² StepMania por default "tantea" la primera y última flecha a dibujar, si no se realiza este tanteo puede terminar dibujando flechas de más o de menos. La preferencia "NoteFieldProbingIterations" permite regular el número de tanteos y jugando con este valor puedes conseguir que SM utilice menos recursos en PCs lentas ^^, con el efecto secundario de que velocidades lentas como 0.5x o 0.25x y mods como "expand" no dibujen todas las flechas necesarias y parezca que "aparecen de la nada".
+³ Este no es nuevo, sin embargo se le ha cambiado el valor por default de 0 a 1.
+
+PD. Las opciones nuevas del editor: http://i48.tinypic.com/21meyvr.jpg
+
+/********************************************************************
+ ********************************************************************
+ ********************************************************************/
+
+// Mayo 22, 2010, 08:54:17 pm
+// http://mxpumpers.com/index.php?topic=613.msg9387#msg9387
+
+Agregado parche 1.31 (2).
+
+http://aldo.mx/SMA4-Beta1-Parche4.rar (1.31)
+
+Es exactamente lo mismo que el parche anterior, pero en este estan arregladas las NoteSkin, por lo que si bajaste el parche anterior es necesario que bajes este.
+
+Despues de reemplazar archivos ejecuta el archivo "Patcher" que se encuentra dentro de la carpeta principal de StepMania, si el archivo desaparece es que todo ha salido bien ^^.
+
+/********************************************************************
+ ********************************************************************
+ ********************************************************************/
+
+// Mayo 22, 2010, 06:34:29 pm
+// http://mxpumpers.com/index.php?topic=613.msg9378#msg9378
+
+Agregado parche 1.31.
+
+http://aldo.mx/SMA4-Beta1-Parche3.rar (1.31)
+
+Lista de cambios:
+
+ (click to show/hide)
+- Arreglados los siguientes problemas (Bugfixes):
+- - [FATAL] Crash al cargar KSFDM con cambios de speed
+- - Al cancelar trucos en CodeDetector no se reseteaba la velocidad
+- - Tickcount y Fake Areas no se respetaban en Courses y canciones con Attacks
+- - Arreglado destello del Noteskin default.
+
+- Nuevas funciones:
+- - Ícono y banners by cesarmades
+
+/********************************************************************
+ ********************************************************************
+ ********************************************************************/
+
+// Mayo 17, 2010, 10:31:20 pm
+// http://mxpumpers.com/index.php?topic=613.msg9092#msg9092
+
+Agregado parche 1.30.
+
+http://aldo.mx/SMA4-Beta1-Parche2.rar (1.30)
+
+Lista de cambios:
+
+- Arreglados los siguientes problemas (Bugfixes):
+- - Al borrar stops se quedaban como Stop de 0
+- - Preview Music se repetía después de ScreenSelectMusic con SampleMusicPlaysInfinitely
+- - Al cambiar speed via CodeDetector se iba al primero o ultimo de la lista
+- - Speed no se mostraba bien en el editor al elegir "Play Whole Song" y "Play Current Beat to End"
+- - Autoplay en SongOptions deshabilitado
+- - Meter no se guardaba en el editor
+- - El conteo de Perfects y Misses no coincidía
+- - En una canción con Holds y Rolls, algunas Holds "no funcionaban"
+- - Arreglados varios detalles gráficos de Holds y Rolls
+- - Under Attack Arreglado
+- - Drop Arreglado
+- - Optimizadas algunas partes del Gameplay (Holds y Misses)
+
+- Nuevas funciones:
+- - Fake Area
+- - ComboIncreasesOnHiddens en StepMania.ini
+- - Tags Nuevos para KSFDM
+- - - |F| (Fake expresado en filas, ej. |F4|)
+- - - |S| (Duración de speed expresado en filas, ej. |S0.5,4|)
+
+- Funciones deshabilitadas:
+- - Autoplay en SongOptions
+
+/********************************************************************
+ ********************************************************************
+ ********************************************************************/
+
+// Abril 16, 2010, 10:21:55 am
+// http://mxpumpers.com/index.php?topic=613.msg7004#msg7004
+
+Parches:
+
+http://aldo.mx/SMA4-Beta1-Parche1.rar
+
+Últimos detalles:
+
+1. No coloques la carpeta sobre otro StepMania, solo te traerá problemas
+2. Solo necesitas instalar el último parche, para instalarlo reemplaza los archivos del  StepMania por que se encuentran dentro del .rar.
+
+---
+
+Lista de cambios:
+
+Parche 1:
+
+- Arreglado NoteColor (solo mostraba hasta 16ths, ahora muestra hasta 768ths)
+- Arreglados los siquientes errores del editor:
+- - Crash al entrar con Player 2
+- - Crash al seleccionar estilos de otros juegos
+- - No se guardaba correctamente la última canción editada
+- - Se cambiaba el juego al salir del editor al elegir algún estilo de otro juego
+- Arreglados los siguientes errores de theme:
+- - Algunos videos salían a mitad de tamaño en el theme PiuSMNX2
+- - Varios redirs y sprites tenían typos en las NoteSkin DDR note y solo
+
+-----------------
+NoteSkin Metrics:
+-----------------
+
+[NoteDisplay]
+TapMissGrayPercent
+
+[GhostArrowDim]
+AlwaysShow
+CheckpointCommand
+MissCheckpointCommand
+
+[GhostArrowBright]
+AlwaysShow
+CheckpointCommand
+MissCheckpointCommand
+
+[ReceptorArrow]
+CheckpointCommand
+MissCheckpointCommand
+
+[style-name] (ex. dance-single, or pump-double. Fallbacks to [NoteDisplay])
+RowSpacing
+ColSpacing
+ArrowSize
+
+--------------
+Theme Metrics:
+--------------
+[CodeDetector]
+UseScrollSpeedList
+ScrollSpeedList
+Backwards
+Drop
+ReverseGrade
+UnderAttack
+LeftAttack
+RightAttack
+
+[Combo]
+ShowWhenRepeated
+NumberSetColor
+NumberColor
+NumberSetRainbow
+FullComboGoodsCommand
+FullComboNormalCommand
+
+[MissCombo]
+ShowComboAt
+ShowWhenRepeated
+Command
+LabelX
+LabelY
+LabelHorizAlign
+LabelVertAlign
+NumberX
+NumberY
+NumberHorizAlign
+NumberVertAlign
+NumberMinZoom
+NumberMaxZoom
+NumberMaxZoomAt
+PulseZoom
+TweenSeconds
+MinimumNumberShownDigits
+MaximumNumberShownDigits
+NumberSetColor
+NumberColor
+NumberSetRainbow
+
+[ScreenEdit]
+ShowCombo
+MeasureTextShadowLength
+TimingTextShadowLength
+BPMTextColor
+StopTextColor
+StopTextColor2
+SpeedTextColor
+SpeedTextColor2
+TickcountTextColor
+MultiplierTextColor
+MultiplierTextColor2
+BPMTextX
+StopTextX
+SpeedTextX
+TickcountTextX
+MultiplierTextX
+BPMTextZoom
+StopTextZoom
+SpeedTextZoom
+TickcountTextZoom
+MultiplierTextZoom
+DrawHalfMeasureNumbers
+DrawQuarterMeasureNumbers
+
+[NoteField]
+ReverseColumnDrawing
+ReverseRowDrawing
+ReverseHoldDrawing
+DrawHoldsFirst
+UseBGATimingForNoteAnimation
+UseBGATimingForReceptorAnimation
+
+[LifeMeterBar]
+DisableBounce
+UseBGATimingForAnimation
+
+[DifficultyMeter]
+GlowIfNX2MeterGreaterThan
+
+[EditDifficultyMeter]
+GlowIfNX2MeterGreaterThan
+
+[SongManager]
+ExtraColorMeterNX2
+
+[ProTimingDisplay]
+CheckpointCommand
+MissCheckpointCommand
+
+[ScreenEvaluationX]
+NumberShownDigits
+JudgmentDigits
+ShowCheckpoints
+ShowMissCheckpoints
+ShowNoneAs
+ShowHitMineAs
+ShowMissCheckpointAs
+ShowCheckpointAs
+ShowMissHiddenAs
+ShowHiddenAs
+ShowMissAs
+ShowBooAs
+ShowGoodAs
+ShowGreatAs
+ShowPerfectAs
+ShowMarvelousAs
+
+[Judgment]
+ShowNoneAs
+ShowHitMineAs
+ShowMissCheckpointAs
+ShowCheckpointAs
+ShowMissHiddenAs
+ShowHiddenAs
+ShowMissAs
+ShowBooAs
+ShowGoodAs
+ShowGreatAs
+ShowPerfectAs
+ShowMarvelousAs
+
+[ScreenSelectMusic]
+UseBackgroundForBannerWheel
+
+[CustomScoring]
+BaseNoteScoreMultiplier
+
+-----------------
+Language Metrics:
+-----------------
+[TapNoteScore]
+MissCheckpoint
+Checkpoint
+
+---------------
+Theme Elements:
+---------------
+Sounds/Common credit
+Fonts/MissCombo
+
+/********************************************************************
+ ********************************************************************
+ ********************************************************************/
+
 // Abril 15, 2010, 09:12:37 am
 // Beta 1.0
 
