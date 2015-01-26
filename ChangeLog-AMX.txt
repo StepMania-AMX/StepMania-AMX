@@ -1,9 +1,294 @@
-Copy/paste from the Spanish release topics in the difunct mxpumpers.com / piusm.com forums.
+﻿Copy/paste from the Spanish release topics in the difunct mxpumpers.com / piusm.com forums.
 I have the intention to rewrite the changelog to English in a tidy way, but it won't happen soon.
 
 /********************************************************************
-*********************************************************************
-********************************************************************/
+ ********************************************************************
+ ********************************************************************/
+
+// Enero 19, 2014
+// Beta 5.9
+
+Nuevas características:
+-----------------------
+- Soporte para UCS
+- Múltiples dificultades por modo (es decir, ya es posible tener Challenge 14 y Challenge 15 en el mismo SMA)
+- Routines de infinitos jugadores (aunque el editor solo permite agregar hasta 8)
+- LifeMeterGauge (Barra de vida de PIU)
+- Speed Areas Etapa 1/4 (Comportamiento de "Mystery Block")
+- Shock Arrows
+- OfficialJudgment movido de preferencias a opciones por jugador
+- Soporte para INTRO.mp3 / INTRO.ogg
+- PIU ahora es el juego default
+- BPMDisplay ahora muestra BPM de los pasos y no de la canción (aún sigue siendo seteable mediante #BPMDISPLAY:;)
+ 
+Correcciones:
+-------------
+- La ventana de crash ya permite copiar el mensaje de error
+- Los crashes ahora son más descriptivos
+- Corregida detección de teclas como Ctrl, Shift y Alt cuando se combinaban
+- Optimizada carga inicial de archivos
+- Corregido crash al cerrar el juego con alt+f4
+- Actualizadas varias dependencias como libjpeg, libpng, directinput, sdl, etc.
+- Más de 300 correcciones menores
+ 
+ 
+Metrics nuevos (Temas):
+-----------------------
+ 
+[Common]
+TouchControlP1X=GetDPIZoomX() * 75 * 1.70
+TouchControlP1Y=GetDisplayHeight() * 0.5
+TouchControlP1Zoom=1.70
+TouchControlP2X=GetDisplayWidth() - (GetDPIZoomX() * 75 * 1.70)
+TouchControlP2Y=GetDisplayHeight() * 0.5
+TouchControlP2Zoom=1.70
+ 
+[ScreenGameplay]
+LifeMeterBarSuffix=
+LifeMeterBatterySuffix=
+LifeMeterGaugeSuffix=
+StepMakerP1X=999
+StepMakerP1Y=999
+StepMakerP1OnCommand=zoom,0
+StepMakerP1OffCommand=
+StepMakerP2X=999
+StepMakerP2Y=999
+StepMakerP2OnCommand=zoom,0
+StepMakerP2OffCommand=
+StepMakerJukeboxP1X=25
+StepMakerJukeboxP1Y=390
+StepMakerJukeboxP1OnCommand=zoom,0.5;horizalign,left;vertalign,bottom;diffusealpha,0;sleep,1.0;linear,1.0;diffusealpha,1;sleep,4.0;linear,1.0;diffusealpha,0;
+StepMakerJukeboxP1OffCommand=
+StepMakerJukeboxP2X=615
+StepMakerJukeboxP2Y=390
+StepMakerJukeboxP2OnCommand=zoom,0.5;horizalign,right;vertalign,bottom;diffusealpha,0;sleep,1.0;linear,1.0;diffusealpha,1;sleep,4.0;linear,1.0;diffusealpha,0;
+StepMakerJukeboxP2OffCommand=
+StepDescriptionPrefix=Steps:
+ 
+[LifeMeterGauge]
+FrameX=0
+FrameY=0
+FrameOnCommand=zoom,0.5
+BarX=0
+BarY=0
+BarOnCommand=zoom,0.5
+BarStartX=-217
+BarEndX=217
+BarStepDistance=14
+BarBounceDistance=42
+BarBounceSpeedBeats=1
+BarSkewX=-0.6
+BarSkewY=0
+IndicatorX=0
+IndicatorY=0
+IndicatorOnCommand=zoom,0.5
+OverlayX=0
+OverlayY=0
+OverlayOnCommand=zoom,0.5
+DangerThreshold=0.333
+HotThreshold=1.000
+UseBGATimingForAnimation=0
+ShowInactivePlayers=1
+ 
+[Combo]
+UseLabelCommands=0
+LabelShadowLength=4
+NumberShadowLength=4
+// Enable UseLabelCommands first
+FullComboMarvelousesLabelCommand=
+FullComboPerfectsLabelCommand=
+FullComboGreatsLabelCommand=
+FullComboGoodsLabelCommand=
+FullComboBrokenLabelCommand=
+FullComboNormalLabelCommand=
+ 
+[MissCombo]
+LabelShadowLength=4
+NumberShadowLength=4
+// Enable [Combo] UseLabelCommands first
+LabelCommand=
+ 
+[BPMDisplay]
+Separator=-
+ 
+[CustomScoring]
+PointsShockOK=+1000
+PointsShockNG=-500
+ 
+[ScreenHowToPlay]
+UseCreditSound=1
+ 
+// Cambiar <Game> por el tipo de juego, y <Button> por todos los botones
+[TouchControl<Game>]
+<Button>X=
+<Button>Y=
+<Button>Width=
+<Button>Height=
+ 
+// Ejemplo (PIU)
+[TouchControlPump]
+DownLeftX=-44
+DownLeftY=50
+DownLeftWidth=65
+DownLeftHeight=75
+UpLeftX=-44
+UpLeftY=-50
+UpLeftWidth=65
+UpLeftHeight=75
+CenterX=0
+CenterY=0
+CenterWidth=80
+CenterHeight=80
+UpRightX=44
+UpRightY=-50
+UpRightWidth=65
+UpRightHeight=75
+DownRightX=44
+DownRightY=50
+DownRightWidth=65
+DownRightHeight=75
+ 
+ 
+Metrics nuevos (Temas-Idioma):
+------------------------------
+[OptionNames]
+Gauge=GAUGE
+ 
+ 
+Metrics eliminados (Temas):
+---------------------------
+[ScreenGameplay]
+StepMakerX=999
+StepMakerY=999
+StepMakerOnCommand=zoom,0
+StepMakerOffCommand=
+StepMakerJukeboxX=25
+StepMakerJukeboxY=375
+StepMakerJukeboxOnCommand=zoom,0.5;horizalign,left;vertalign,bottom;diffusealpha,0;sleep,1.0;linear,1.0;diffusealpha,1;sleep,4.0;linear,1.0;diffusealpha,0;
+StepMakerJukeboxOffCommand=
+ 
+ 
+Elementos nuevos (Temas):
+-------------------------
+Graphics/LifeMeterGauge bar danger
+Graphics/LifeMeterGauge bar hot
+Graphics/LifeMeterGauge bar notmal
+Graphics/LifeMeterGauge frame danger
+Graphics/LifeMeterGauge frame hot
+Graphics/LifeMeterGauge frame normal
+Graphics/LifeMeterGauge indicator danger
+Graphics/LifeMeterGauge indicator hot
+Graphics/LifeMeterGauge indicator normal
+Graphics/LifeMeterGauge overlay danger
+Graphics/LifeMeterGauge overlay hot
+Graphics/LifeMeterGauge overlay normal
+ 
+// Cambiar <Game> por el tipo de juego y <Button> por el nombre de los botones
+Graphics/TouchControl/<game>/<Button> Normal
+Graphics/TouchControl/<game>/<Button> Pressed
+ 
+// Ejemplo (PIU)
+Graphics/TouchControl/pump/DownLeft Normal
+Graphics/TouchControl/pump/DownLeft Pressed
+Graphics/TouchControl/pump/UpLeft Normal
+Graphics/TouchControl/pump/UpLeft Pressed
+Graphics/TouchControl/pump/Center Normal
+Graphics/TouchControl/pump/Center Pressed
+Graphics/TouchControl/pump/UpRight Normal
+Graphics/TouchControl/pump/UpRight Pressed
+Graphics/TouchControl/pump/DownRight Normal
+Graphics/TouchControl/pump/DownRight Pressed
+ 
+ 
+Metrics nuevos (Noteskins):
+---------------------------
+[NoteDisplay]
+EnableRoutineTap=1
+EnableRoutineHold=1
+EnableRoutineRoll=1
+EnableRoutineReceptor=0
+EnableRoutineExplosion=0
+DiffuseRoutineText=0
+ 
+NumRoutineColors=8
+RoutineColor1=0.00,0.75,1.00,1.00       // blue
+RoutineColor2=1.00,0.50,0.00,1.00       // orange
+RoutineColor3=1.00,1.00,0.00,1.00       // yellow
+RoutineColor4=0.00,1.00,0.00,1.00       // green
+RoutineColor5=1.00,0.50,1.00,1.00       // pink
+RoutineColor6=1.00,1.00,1.00,1.00       // white
+RoutineColor7=0.50,0.75,0.75,1.00       // turquoise
+RoutineColor8=0.75,0.50,0.50,1.00       // brown
+ 
+[pump-single]
+DrawOrder=1,5,2,4,3
+ 
+[pump-double]
+DrawOrder=1,5,2,4,3,6,10,7,9,8
+ 
+[pump-couple]
+DrawOrder=1,5,2,4,3,6,10,7,9,8
+ 
+ 
+Elementos nuevos (NoteSkins)
+----------------------------
+Dependiendo de las opciones EnableRoutine<Graphic> que hayan sido habilitadas en metrics.ini, repetir todos los <Graphic> agregando Routine al inicio, ej.
+// Con EnableRoutineTap=1 y TapNoteAnimationIsNoteColor=0
+default/Routine DownLeft Tap Note
+default/Routine UpLeft Tap Note
+default/Routine Center Tap Note
+default/Routine UpRight Tap Note
+default/Routine DownRight Tap Note
+ 
+ 
+Lua Binding nuevos:
+-------------------
+GetDPIZoomX()
+GetDPIZoomY()
+
+/********************************************************************
+ ********************************************************************
+ ********************************************************************/
+
+No existen versiones después de la 3.4 y antes de la 5.9, se evitó
+intencionalmente utilizar números de versiones que pudieran causar confusión con
+las versiones oficiales de StepMania.
+
+/********************************************************************
+ ********************************************************************
+ ********************************************************************/
+
+Versiones de la 3.0 a la 3.4 fuerom omitidas por la inestabilidad que causaron,
+Sin embargo, la versión 2.8 reincorporó la mayoría de los cambios (incluídos en
+la lista de cambios de la versión 2.9), solo se perdieron los siguientes
+cambios:
+
+----------
+Regresion:
+----------
+- Se perdio separacion ÷ TimingData y TimingSteps
+- Se perdio separacion ÷ NotesLoader y NotesLoaderSMA
+- Se perdieron nuevos menus de editor
+- Se perdieron mejoras de TimingData
+- Se perdio RPB (pero estaba incompleto xD)
+- Se perdio soporte hasta 3072avas (se regreso a 768avas)
+- Regresó PlayerMinus()
+- Se perdio la habilidad de seleccionar una opcion en ScreenSelectMaster repitiendo la misma tecla (Prex 3 82w)
+- Player::StepCheckpoint() paso de bool -> void
+- Actualizacion de RageDisplay_D3D (volvio a depender de Summer 2004)
+- Se perdió habilidad de omitir ScreenEvaluation presionando centro (en realidad estaba hardcodeada y la pienso replantear)
+
+--------------------
+Bugs Resueltos (3.4)
+--------------------
+- No se agregaban Multipliers
+- No se cambiaban Speeds
+- Crash contra BPM Negativo + Stop + Hold
+- Mejoradas las descripciones del Timing Menu
+
+/********************************************************************
+ ********************************************************************
+ ********************************************************************/
 
 // Diciembre 26, 2012
 // Beta 2.9
