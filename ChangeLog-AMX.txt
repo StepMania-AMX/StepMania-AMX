@@ -2,6 +2,187 @@ Copy/paste from the Spanish release topics in the difunct mxpumpers.com / piusm.
 I have the intention to rewrite the changelog to English in a tidy way, but it won't happen soon.
 
 /********************************************************************
+*********************************************************************
+********************************************************************/
+
+// Diciembre 26, 2012
+// Beta 2.9
+
+--------
+Cambios:
+--------
+- Routines
+- Shock Arrows
+- Mejoradas funciones de NoteDisplay que dibujan TapNotes e Items
+- Algunas funciones de NoteDisplay estaban refactorizadas a medias
+- Refactorizadas algunas funciones de Input de ScreenEdit
+- Mejorado manejo de teclas modificadoras (Ctrl/Shift/Alt) en varias partes del juego
+- Deshabilitados atajos de Windows SOLO durante Gameplay y Record (Editor)
+- Rehabilitado Scroll Lock en ScreenEdit
+- Cambiados hotkeys de ScreenEdit (1-0 = Taps, + Shift = Items, + Ctrl = Routine, + Menu = Menu)
+- Ya es posible utilizar Numpad para introducir texto en cualquier TextPrompt
+- Soporte para Screens de tamaños diferentes a 640x480
+- Metrics ya pueden soportar LUA Bindings numéricos (antes solo podían aceptar 0 o 1)
+- Varios elementos de theme se "deshardcodeo" su nombre (ej. MenuElements icon ---> <ScreenName> icon)
+- Cambiado el sistema de Fallback de Themes (ahora busca <ScreenName> elemento primero y despues Common elemento)
+
+--------------
+Theme Metrics:
+--------------
+[Screen*]
+ScreenWidth=640
+ScreenHeight=480
+
+[ScreenEvaluation]
+ShowHitShockAs=HitShock
+ShowShocks=0
+
+[Judgment]
+ShowHitShockAs=HitShock
+
+[ProTimingDisplay]
+HitShockCommand=
+
+[CodeDetector]
+Shocks=
+
+[CustomScoring]
+PointsHitShock=-500
+
+[ScreenHowToPlay]
+UseMenuBack=0
+
+[PaneDisplay]
+SongShocksTextX=110
+SongShocksTextY=-4
+SongShocksTextOnCommand=hidden,1
+SongShocksTextOffCommand=
+SongShocksTextGainFocusCommand=
+SongShocksTextLoseFocusCommand=
+SongShocksLabelX=15
+SongShocksLabelY=8
+SongShocksLabelOnCommand=hidden,1
+SongShocksLabelOffCommand=
+SongShocksLabelGainFocusCommand=
+SongShocksLabelLoseFocusCommand=
+SongShocksNumLevels=0
+CourseShocksTextX=110
+CourseShocksTextY=-4
+CourseShocksTextOnCommand=hidden,1
+CourseShocksTextOffCommand=
+CourseShocksTextGainFocusCommand=
+CourseShocksTextLoseFocusCommand=
+CourseShocksLabelX=320 
+CourseShocksLabelY=240 
+CourseShocksLabelOnCommand=hidden,1
+CourseShocksLabelOffCommand=
+CourseShocksLabelGainFocusCommand=
+CourseShocksLabelLoseFocusCommand=
+CourseShocksNumLevels=0
+
+-----------------
+Noteskin Metrics:
+-----------------
+[NoteDisplay]
+EnableRoutineTap=0
+EnableRoutineHold=0
+EnableRoutineRoll=0
+DiffuseRoutineText=0
+
+TapShockAnimationLengthInBeats=1
+TapShockAnimationIsVivid=0
+TapShockAnimationIsNoteColor=0
+TapShockUseLighting=0
+
+RoutineTapNoteAnimationLengthInBeats=4
+RoutineTapNoteAnimationIsVivid=1
+RoutineTapNoteAnimationIsNoteColor=0
+
+[GhostArrowDim]
+HitShockCommand=;;;;;;y,161;blend,add;draworder,90;glowmode,brighten;zoom,1;diffuse,0.47,0.98,1,1;glow,0.47,0.98,1,1;linear,0.2;zoom,1.4;y,210;glow,0.47,0.98,1,0;diffuse,0.47,0.98,1,0;
+
+[GhostArrowBright]
+HitShockCommand=;;;;;;y,161;blend,add;draworder,90;glowmode,brighten;zoom,1;diffuse,0.47,0.98,1,1;glow,0.47,0.98,1,1;linear,0.2;zoom,1.4;y,210;glow,0.47,0.98,1,0;diffuse,0.47,0.98,1,0;
+
+[ReceptorArrow]
+HitShockCommand=;;;;;;zoom,1
+
+-----------------
+Language Metrics:
+-----------------
+[OptionExplanations]
+ShocksHelp=
+
+[OptionTitles]
+ShocksTitle=Shock::Arrows
+
+[OptionNames]
+MineShocks=MINES TO SHOCKS
+HalfShocks=HALF SHOCKS
+
+[RadarCategory]
+Shocks=Shocks
+
+[TapNoteScore]
+HitShock=Hit Shock
+
+[HoldNoteScore]
+HoldNG=Hold NG
+HoldOK=Hold OK
+RollNG=Roll NG
+RollOK=Roll OK
+ShockNG=Shock NG
+ShockOK=Shock OK
+
+------------
+Preferences:
+------------
+[Debug]
+LogTextures=0
+
+[Options]
+GradeWeightHitShock=-8
+JudgeWindowSecondsShock=0.090000
+JudgeWindowSecondsShockAfter=0.090000
+LifeDeltaPercentChangeHitShock=-0.160000
+LifeDeltaPercentNoRecoverChangeHitShock=-0.160000
+LifeDeltaPercentSuddenDeathChangeHitShock=-1.000000
+PercentScoreWeightHitShock=-2
+PlayShockSound=1
+SuperMeterPercentChangeHitShock=-0.400000
+TugMeterPercentChangeHitShock=-0.040000
+
+-------------
+LUA Bindings:
+-------------
+IsEventMode()
+GetScreenWidth()
+GetScreenHeight()
+GetScreenAspectRatio()
+GetDisplayWidth()
+GetDisplayHeight()
+GetDisplayAspectRatio()
+
+------------------------
+Theme Elements (Nuevos):
+------------------------
+Fonts/TextBanner artist
+Fonts/TextBanner subtitle
+Fonts/TextBanner title
+Sounds/Player shock
+Graphics/Common splash
+Graphics/<ScreenName> icon *
+Graphics/ScreenSelectMode guide
+
+----------------------------
+Theme Elements (Eliminados):
+----------------------------
+Fonts/TextBanner
+Graphics/splash
+Graphics/MenuElements icon *
+Graphics/Select Mode guide
+
+/********************************************************************
  ********************************************************************
  ********************************************************************/
 
@@ -329,6 +510,295 @@ http://stepmania.aldo.mx/parches/SMA4-Beta2.1-a-2.5.rar
 Video donde se ven mejor algunos cambios nuevos:
 
 http://www.youtube.com/watch?v=8ylGP0ppUO8
+
+/********************************************************************
+ ********************************************************************
+ ********************************************************************/
+
+// Julio 02, 2010, 06:40:16 pm
+// http://mxpumpers.com/index.php?topic=613.msg13051#msg13051
+
+Sacado parche 2.4:
+
+http://aldo.mx/stepmania/parches/SMA4-Beta2.1-a-2.4.rar
+
+http://aldo.mx/stepmania/parches/SMA4-Beta2.3-a-2.4.rar
+
+Apuntes rápidos:
+
+- Arreglado editor
+- Arreglado error donde confundía valores de theme que comenzaban con + con instrucción LUA
+- Arreglado lectura de Speed en KSF (sorry fye :(, tenias razón, los speed no servian xD!)
+- Restaurado soporte para Legacy KSF (Bunkis y BPMs solamente, StarTimes se siguen ignorando)
+- Ahora se interpretan las siguientes flechas en KSF:
+- - P Poción
+- - M Mina
+- - L Lift
+- - 2 Cabeza Hold
+- - 3 Pie Hold
+
+
+En fin, aqui la explicación bonita que les debía:
+
+Como lo mencioné en el video de Youtube:
+
+Muy probablemente me pregunten "no que no meterias itunes wheel?" Y la realidad es que no la metí, en MusicWheel.cpp hay una funcion llamada "GetItemPosition" (o algo asi) y tiene una variable sin usar llamada "RotationX", a la que le cambie el valor y salio la wheel asi xD.
+
+En fin, metí nuevos metrics para jugar con todas las combinaciones posibles que ofrece esta función (y separado entre positivo/negativo), para que los thememakers puedan realizar wheels completamente nuevas (no solo imitar la "iWheel"), en mis pruebas conseguí algunas wheel bastante vistosas, pero bueno, en resumen los metrics son estos:
+ (click to show/hide)
+Código: [Seleccionar]
+[MusicWheel]
+UseSplitWheel=0
+SplitWheelOffsetClampPositive=
+SplitWheelOffsetClampNegative=
+SplitWheelRotationXPositive=
+SplitWheelRotationXNegative=
+SplitWheelRotationYPositive=
+SplitWheelRotationYNegative=
+SplitWheelRotationZPositive=
+SplitWheelRotationZNegative=
+SplitWheelSpacingXPositive=
+SplitWheelSpacingXNegative=
+SplitWheelSpacingYPositive=
+SplitWheelSpacingYNegative=
+SplitWheelSpacingZPositive=
+SplitWheelSpacingZNegative=
+SplitWheelZoomXPositive=
+SplitWheelZoomXNegative=
+SplitWheelZoomYPositive=
+SplitWheelZoomYNegative=
+SplitWheelZoomZPositive=
+SplitWheelZoomZNegative=
+
+Por otro lado ScreenSelectMusic (donde eliges canción) fue reprogramado por completo, la anterior revisaba los metrics cada que interactuabas con ella, cosa que no debe hacerse porque la alenta, en fin, gracias a la reprogramada la wheel se encuentra muchísimo más fluida que antes, a la par de la reprogramada agregué 2 animaciones nuevas:
+
+Moving / Settled.- Realiza una animación al mover y detener la selección de canciones
+
+Section Change.- Realiza una animación al cambiar de grupo (o sección en caso de utilizar acomodos, por ej. por título)
+
+Este simple cambio agregó más de 100 metrics nuevos, debido a que son muchos los elementos de la wheel:
+ (click to show/hide)
+Código: [Seleccionar]
+TweenWhileMovingAndSettled=0
+MovingCommandRepeats=0
+TweenWhenSectionChanges=0
+
+ArtistDisplayMovingCommand=
+ArtistDisplaySettledCommand=
+ArtistDisplaySectionCommand=
+AutoGenIconP1MovingCommand=
+AutoGenIconP1SettledCommand=
+AutoGenIconP1SectionCommand=
+AutoGenIconP2MovingCommand=
+AutoGenIconP2SettledCommand=
+AutoGenIconP2SectionCommand=
+BackgroundFrameMovingCommand=
+BackgroundFrameSettledCommand=
+BackgroundFrameSectionCommand=
+BackgroundMovingCommand=
+BackgroundSettledCommand=
+BackgroundSectionCommand=
+BalloonMovingCommand=
+BalloonSettledCommand=
+BalloonSectionCommand=
+BannerFrameMovingCommand=
+BannerFrameSettledCommand=
+BannerFrameSectionCommand=
+BannerMovingCommand=
+BannerSettledCommand=
+BannerSectionCommand=
+BPMDisplayMovingCommand=
+BPMDisplaySettledCommand=
+BPMDisplaySectionCommand=
+CDTitleBackMovingCommand=
+CDTitleBackSettledCommand=
+CDTitleBackSectionCommand=
+CDTitleFrontMovingCommand=
+CDTitleFrontSettledCommand=
+CDTitleFrontSectionCommand=
+CharacterIconP1MovingCommand=
+CharacterIconP1SettledCommand=
+CharacterIconP1SectionCommand=
+CharacterIconP2MovingCommand=
+CharacterIconP2SettledCommand=
+CharacterIconP2SectionCommand=
+CourseContentsMovingCommand=
+CourseContentsSettledCommand=
+CourseContentsSectionCommand=
+CourseHasModsMovingCommand=
+CourseHasModsSettledCommand=
+CourseHasModsSectionCommand=
+CurModeMovingCommand=
+CurModeSettledCommand=
+CurModeSectionCommand=
+DifficultyDisplayMovingCommand=
+DifficultyDisplaySettledCommand=
+DifficultyDisplaySectionCommand=
+DifficultyFrameP1MovingCommand=
+DifficultyFrameP1SettledCommand=
+DifficultyFrameP1SectionCommand=
+DifficultyFrameP2MovingCommand=
+DifficultyFrameP2SettledCommand=
+DifficultyFrameP2SectionCommand=
+DifficultyIconP1MovingCommand=
+DifficultyIconP1SettledCommand=
+DifficultyIconP1SectionCommand=
+DifficultyIconP2MovingCommand=
+DifficultyIconP2SettledCommand=
+DifficultyIconP2SectionCommand=
+DifficultyMeterP1MovingCommand=
+DifficultyMeterP1SettledCommand=
+DifficultyMeterP1SectionCommand=
+DifficultyMeterP2MovingCommand=
+DifficultyMeterP2SettledCommand=
+DifficultyMeterP2SectionCommand=
+DiscFrameMovingCommand=
+DiscFrameSettledCommand=
+DiscFrameSectionCommand=
+DiscMovingCommand=
+DiscSettledCommand=
+DiscSectionCommand=
+ExplanationMovingCommand=
+ExplanationSettledCommand=
+ExplanationSectionCommand=
+GraphMovingCommand=
+GraphSettledCommand=
+GraphSectionCommand=
+GroupNameMovingCommand=
+GroupNameSettledCommand=
+GroupNameSectionCommand=
+MachineRankMovingCommand=
+MachineRankSettledCommand=
+MachineRankSectionCommand=
+MeterFrameP1MovingCommand=
+MeterFrameP1SettledCommand=
+MeterFrameP1SectionCommand=
+MeterFrameP2MovingCommand=
+MeterFrameP2SettledCommand=
+MeterFrameP2SectionCommand=
+NonPresenceP1MovingCommand=
+NonPresenceP1SettledCommand=
+NonPresenceP1SectionCommand=
+NonPresenceP2MovingCommand=
+NonPresenceP2SettledCommand=
+NonPresenceP2SectionCommand=
+NumSongsMovingCommand=
+NumSongsSettledCommand=
+NumSongsSectionCommand=
+OptionIconsP1MovingCommand=
+OptionIconsP1SettledCommand=
+OptionIconsP1SectionCommand=
+OptionIconsP2MovingCommand=
+OptionIconsP2SettledCommand=
+OptionIconsP2SectionCommand=
+OverlayMovingCommand=
+OverlaySettledCommand=
+OverlaySectionCommand=
+PaneDisplayP1MovingCommand=
+PaneDisplayP1SettledCommand=
+PaneDisplayP1SectionCommand=
+PaneDisplayP2MovingCommand=
+PaneDisplayP2SettledCommand=
+PaneDisplayP2SectionCommand=
+PreviewFrameMovingCommand=
+PreviewFrameSettledCommand=
+PreviewFrameSectionCommand=
+PreviewMovingCommand=
+PreviewSettledCommand=
+PreviewSectionCommand=
+RadarMovingCommand=
+RadarSettledCommand=
+RadarSectionCommand=
+ScoreFrameP1MovingCommand=
+ScoreFrameP1SettledCommand=
+ScoreFrameP1SectionCommand=
+ScoreFrameP2MovingCommand=
+ScoreFrameP2SettledCommand=
+ScoreFrameP2SectionCommand=
+ScoreP1MovingCommand=
+ScoreP1SettledCommand=
+ScoreP1SectionCommand=
+ScoreP2MovingCommand=
+ScoreP2SettledCommand=
+ScoreP2SectionCommand=
+SongOptionsMovingCommand=
+SongOptionsSettledCommand=
+SongOptionsSectionCommand=
+SortIconMovingCommand=
+SortIconSettledCommand=
+SortIconSectionCommand=
+StageMovingCommand=
+StageSettledCommand=
+StageSectionCommand=
+TextBannerMovingCommand=
+TextBannerSettledCommand=
+TextBannerSectionCommand=
+TotalTimeMovingCommand=
+TotalTimeSettledCommand=
+TotalTimeSectionCommand=
+WheelMovingCommand=
+WheelSettledCommand=
+WheelUnderMovingCommand=
+WheelUnderSettledCommand=
+WheelUnderSectionCommand=
+WheelSectionCommand=
+
+Gracias a esta actualización se puede observar la gran diferencia entre SM3.9 y SM4.0, lo único que hice con estos metrics es activar animaciones al realizar ciertas condiciones, sin embargo, no es posible realizar combinaciones con ellas, ni hacer animaciones complejas, ni bastantes limitantes que en SM4.0 no existen, estos metrics aumentan el potencial de SM 3.9, pero todavía se encuentran muy lejos para tan siquiera acercársele a SM4, asi que mi recomendación para ThemeMakers que "aún con estos metrics no sea posible realizar lo que quieren hacer" es aprender LUA y aventurarse en SM-SSC.
+
+Otra actualización importante que se realiza en esta versión es la inclusión de LUA, sin embargo, es el mismo LUA que utilizan los BGAnimations, muy primitivo y solo restringido a "verdadero/falso".
+
+Esta pequeña inclusión de LUA está limitado a metrics que finalicen en "Command=", y a metrics a los que haya que introducirles valores numéricos, sin embargo, solo podrá devolver 0 o 1.
+
+Dentro de Command se utiliza de la siguiente manera:
+
+condition,LUA,command;
+
+un ejemplo de ambos casos es este:
+
+ (click to show/hide)
+Citar
+// Solo puede devolver 0 o 1
+ShowDiscs=GetSecond()<=30
+
+// Commands diferentes dependiendo de la condición que se cumpla
+DiscOnCommand=condition,GetSecond()>30,diffusealpha,0;condition,GetSecond()<=30,diffusealpha,1;
+
+Puede ser útil para pequeños ajustes, sin embargo, no cuenta con if/else (asi como en el ejemplo que tuve que utilizar 2 condiciones diferentes para simular if/else), por lo que de igual forma, para ajustes muy complejos mi sugerencia es aprender a realizar themes en SM4.
+
+Por otro lado se han agregado nuevos LUA Binding:
+
+StageNumber()
+NumSongsLeft()
+IsHiddenDifficulty(p)   // cambiar p por 1 o 2
+MusicWheelDirection() // devuelve -1 o +1 dependiendo la dirección a la que se mueve la musicwheel
+
+También agregué nuevos comandos:
+  - diffusegroupcolor
+  - diffusesongcolor
+
+Esto solo colorea los elementos dependiendo del color del grupo o del color de la canción (por ej. una canción difícil se muestra de color rojo), muy útiles para difuminar la interfaz (para simular themes de PIU Zero en adelante).
+
+Por cierto, ya es posible simular al 100% la wheel de PIU Zero y NX1 con estos metrics:
+ (click to show/hide)
+Código: [Seleccionar]
+[MusicWheel]
+ShowSections=0	// -1: Never Show, 0 = Based on preferences, 1 = Always Show
+HideSectionItems=0
+
+[ScreenSelectMusic]
+MenuDownChangesGroup=
+MenuUpChangesGroup=
+ResetKeyTimerAfterSectionChange=
+ReverseOrderDifficultyChange=
+ReverseOrderSectionChange=
+SectionChangeSavesPosition=
+
+Y por otro lado... de momento lo recomendable es no activar secciones, ni portal / random / roulette, porque estos son los que causan problemas de discs que desaparezcan, estoy trabajando en solucionar este bug.
+
+Y para finalizar...
+En StepMania.ini, ya hay variables para personalizar Extra Stage y Extra Stage 2 a tu antojo ^^.
+
+En fin, realmente dudo que haya otra actualización enfocada a thememakers, de todas formas pueden sugerir metrics / bindings nuevos.
 
 /********************************************************************
  ********************************************************************
@@ -1251,7 +1721,7 @@ Fonts/MissCombo
  ********************************************************************/
 
 // Abril 15, 2010, 09:12:37 am
-// Beta 1.0
+// -lost-
 
 Por fin, despues de una larga laaaaarga espera les traigo la primer beta de mi StepMania ^^
 
