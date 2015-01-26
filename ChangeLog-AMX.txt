@@ -5,6 +5,125 @@ I have the intention to rewrite the changelog to English in a tidy way, but it w
  ********************************************************************
  ********************************************************************/
 
+// Julio 27, 2010, 08:41:14 pm
+// http://mxpumpers.com/index.php?topic=613.msg14712#msg14712
+
+Bueno, pues ya les traigo el parche 2.7.
+
+Lista de cambios:
+
+ (click to show/hide)
+- Corregido bug de Banner y Background al tener deshabilitado cache
+
+- Corregido bug de dibujado de flechas misseadas con Speed Negativo
+
+- Corregido RadarValues para Courses con mods que eliminan flechas
+
+- Attacks separados por modo
+
+- Ahora es posible utilizar attacks y metertype dentro de edits
+
+- Eliminado ScaleMeterRatings de Preferencias
+
+- Eliminado EditModeDoesntSavePlusFeatures de Preferencias
+
+- Nuevos valores para #SELECTABLE:;
+- - NO-ES.- No se muestra la canción a partir de Extra Stage
+- - NO-OMES.- No se muestra la canción en One More Extra Stage
+
+- Jukebox Gameplay dejaba de funcionar al fallar stage
+
+- Agregado dibujado inteligente de flechas (hasta no adaptar "Seed System" no será metricable y solo funcionará con minas)
+
+- Reprogramadas partes de Jukebox, JukeboxMenu, Gameplay y Demonstration
+
+
+
+Nuevos Metrics:
+
+[PlayerContainer]
+Player1X=
+Player1Y=
+Player2X=
+Player2Y=
+TwoPlayerZoom=
+DoubleZoom=
+FirstNoteFieldY=
+SecondNoteFieldY=
+DoubleNoteFieldY=
+
+[ScreenAttract]
+UseCreditSound=
+UseMenuBack=
+ScreenMenuStartPressedHome=
+ScreenMenuStartPressedFree=
+ScreenMenuStartPressedPay=
+
+[ScreenGameplay]
+PlayerContainerX=
+PlayerContainerY=
+
+
+
+Nuevos Metrics Opcionales:
+
+[ScreenAttract]
+PrevScreen=
+ScreenMenuBackPressed=
+
+
+
+Nuevos Elementos de Theme:
+
+./BGAnimations/ScreenJukebox in
+./BGAnimations/ScreenJukebox out
+
+
+
+Nuevas Preferencias:
+
+[Options]
+ScaleDownITGMeterType=
+ScaleDownDDRXMeterType=
+ScaleDownPIUNX2MeterType=
+
+
+
+Nuevos LUA Bindings:
+
+CoinModeName()
+
+
+
+Metrics Eliminados:
+
+[ScreenGameplay]
+Player1X=
+Player1Y=
+Player2X=
+Player2Y=
+
+[Player]
+TwoPlayerZoom=
+DoubleZoom=
+FirstNoteFieldY=
+SecondNoteFieldY=
+DoubleNoteFieldY=
+
+Había grabado video del "dibujado inteligente de flechas" pero en divx termino pesando 245Mb el @#$% video y con el "todopoderoso H.264" pesaba 220Mb :S, supongo que cuando vaya a un cyber alla subo el video.
+
+2.1 a 2.7 (este sirve para todas las versiones de 2.1 en adelante):
+
+http://stepmania.aldo.mx/parches/SMA4-Beta2.1-a-2.7.rar
+
+2.6 a 2.7 (este solo sirve con la 2.6):
+
+http://stepmania.aldo.mx/parches/SMA4-Beta2.6-a-2.7.rar
+
+/********************************************************************
+ ********************************************************************
+ ********************************************************************/
+
 // Julio 18, 2010, 06:46:12 pm
 // http://mxpumpers.com/index.php?topic=613.msg14241#msg14241
 
