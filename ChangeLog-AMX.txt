@@ -5,8 +5,128 @@ I have the intention to rewrite the changelog to English in a tidy way, but it w
  ********************************************************************
  ********************************************************************/
 
+// Mayo 24, 2014
+// Beta 5.9.2 (20140524)
+
+Cambios:
+--------
+- Actualizadas URLs para reflejar el nuevo sitio http://stepmania.amx.io
+
+/********************************************************************
+ ********************************************************************
+ ********************************************************************/
+
+// Mayo 1, 2014
+// Beta 5.9.1 (20140501)
+
+---------------------
+Bugs Resueltos (5.9.1)
+---------------------
+- Problemas al tomar Screenshots
+- Problemas al reproducir videos
+
+/********************************************************************
+ ********************************************************************
+ ********************************************************************/
+
+// Mayo 1, 2014
+// Beta 5.9.1 (20140501)
+
+---------------------
+Bugs Resueltos (5.9.1)
+---------------------
+- Problemas al tomar Screenshots
+- Problemas al reproducir videos
+
+/********************************************************************
+ ********************************************************************
+ ********************************************************************/
+
+// Abril 14, 2014
+// Beta 5.9.1 (20140414)
+
+Cambios:
+--------
+- Agregado soporte para máscaras en Music Wheel (y arreglados bugs que surgieron en versiones de prueba).
+- Agregado soporte para los siguientes formatos de video:
+	- mp4
+	- m2v
+	- m4v
+	- mkv
+	- wmv
+	- flv
+	- mov (quicktime)
+	- mov (pump it up exceed a nxa)
+	- 3gp
+	- asf
+	- bik
+	- ogv
+	- webm
+	- asx
+	- nsv
+	- rm
+	- ram
+	- vob (DVD)
+	- mts (Blu-Ray)
+	- m2ts (Blu-Ray)
+
+
+Dependencias actualizadas:
+--------------------------
+- Actualizado FFMpeg a versión 2.1.4
+- Actualizado Direct3D a versión 9
+- Actualizado DirectInput a versión 8
+- Actualizado libjpeg a versión 9
+- Actualizado zlib a versión 1.2.8
+
+
+Cambios motor:
+--------------
+- Actualizados formatos de pixeles para mayor compatibilidad con Direct3D 8+ (ca. 2000), pero menor compatibilidad con OpenGL 1.1- (ca. 1997).
+
+
+Bugs corregidos:
+----------------
+- Arreglado soporte para botones en gamepads y joysticks.
+- Arreglado bug de LifeMeterBattery (no leía porcentajes correctamente).
+- Arreglado guardado de archivos .SMA cuando se importaba otro formato de pasos.
+- Arreglado respaldo de otros formatos de archivo (no se movían a la carpeta /Backups/).
+- Arreglado parser de UCS para soportar comas como decimales.
+- Arreglado parser de UCS para leer tags de conversiones de NX10 y NX20.
+
+
+Metrics nuevos (Theme):
+-----------------------
+[ScreenSelectMusic]
+DifficultyListSuffix=
+
+[DifficultyList]
+ShowDescription=0
+MaxStepsToDisplay=25
+
+
+Elementos nuevos (Theme):
+-------------------------
+Graphics/MusicWheelItem mask
+
+/********************************************************************
+ ********************************************************************
+ ********************************************************************/
+
+// Febrero 24, 2014
+// Beta 5.9 (20140224)
+
+--------------------
+Bugs Resueltos (5.9)
+--------------------
+- Problemas al detectar shoulder buttons en controles y tapetes
+
+/********************************************************************
+ ********************************************************************
+ ********************************************************************/
+
 // Enero 19, 2014
-// Beta 5.9
+// Beta 5.9 (20140111)
 
 Nuevas características:
 -----------------------
