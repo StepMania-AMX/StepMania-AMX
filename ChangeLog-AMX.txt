@@ -5,6 +5,172 @@ I have the intention to rewrite the changelog to English in a tidy way, but it w
  ********************************************************************
  ********************************************************************/
 
+// Julio 12, 2010, 08:50:01 pm
+// http://mxpumpers.com/index.php?topic=613.msg13935#msg13935
+
+Nuevo parche 2.5:
+
+Este es el primer parche que puede resultar polémico, porque se corrigen errores de los cuales incluso se han creado nuevas reglas (cdtitle), y de igual forma, a partir de ahora, una carpeta debidamente acomodada para SMA causará crash con cualquier otro SM (incluso SM4), probablemente SM-SSC quede exento (en cuanto platique con AJ de este detalle).
+
+En fin, aquí la lista de cambios:
+
+ (click to show/hide)
+- Ya no se permite utilizar videos en CDTitle, tampoco imágenes mayores a 128x128,
+a partir de ahora los CDTitles que cumplan estas condiciones serán descartados, sin
+embargo, en canciones que aún no cuenten con Preview, se les considerará como Preview.
+
+- StepMania buscaba "BUNKI1" en lugar de "BUNKI" al leer KSFs viejos.
+
+- Deshabilitado "OddDimensionWarning" en ScreenSelectMusic para los siguientes elementos:
+- - Background
+- - Banner
+- - Disc
+- - Preview
+
+
+- Deshabilitado BackgroundCache y BannerCache para videos
+
+- Agregado soporte para 384ths
+
+- Group Sounds
+- - ./Songs/Group/group.mp3, .wav o .ogg
+
+- Group Sample Music
+- - ./Songs/Group/sample.mp3, .wav o .ogg
+
+- Eliminado scoring "Pump It Up"
+
+- Nuevos Scorings:
+- - PIU NX2
+- - PIU Zero
+- - PIU Prex 3
+- - PIU Extra
+
+
+- Arreglado Grade Percent y Oni Percent con Fake Holds, Fake Steps, Potions, Mines,
+Hidden Steps y Checkpoints
+
+- Separado Autoplay por jugadores en ScreenGameplay
+- - Utiliza CTRL mientras presionas F8 para activar Autoplay con un solo jugador.
+(Izquierda = P1, Derecha = P2)
+
+
+- Arreglado CPU Autoplay
+
+- No se mostraba score en demonstration
+
+- Agregada penalización al utilizar AutoPlay
+
+- Ahora si no debería dar misses con delays en primer row
+
+- Arreglados problemas en ScreenSelectMusic con NextBannerGroup y PreviousBannerGroup
+
+- Arreglados problemas de BannerWheel con ordenamientos diferentes a GROUP y FOLDER
+
+- Renombrado "SORT LIST" por "LIST SORT", asegúrate de revisar SortMenuNames y SortMenuActions si un theme te causa crash "Assertion 'ASSERT( new_so < NUM_SORT_ORDERS )' failed".
+
+- Arreglado parpadeo de BannerWheel cuando existían secciones
+
+- Mejorado comportamiento de PreviewMusicMode=3 con TwoPartSelection=1
+
+
+Metrics Nuevos:
+
+[ScreenGameplay]
+Player1X=
+Player1Y=
+Player2X=
+Player2Y=
+ArtistX=
+ArtistY=
+ArtistOnCommand=
+ArtistOffCommand=
+StepMakerX=
+StepMakerY=
+StepMakerOnCommand=
+StepMakerOffCommand=
+GroupX=
+GroupY=
+GroupOnCommand=
+GroupOffCommand=
+SongTitleJukeboxX=
+SongTitleJukeboxY=
+SongTitleJukeboxOnCommand=
+SongTitleJukeboxOffCommand=
+ArtistJukeboxX=
+ArtistJukeboxY=
+ArtistJukeboxOnCommand=
+ArtistJukeboxOffCommand=
+StepMakerJukeboxX=
+StepMakerJukeboxY=
+StepMakerJukeboxOnCommand=
+StepMakerJukeboxOffCommand=
+GroupJukeboxX=
+GroupJukeboxY=
+GroupJukeboxOnCommand=
+GroupJukeboxOffCommand=
+SongTitleUsesFolderName=
+
+[ScreenSelectMusic]
+ShortenGroupName=
+
+[ScoreDisplayNormal]
+NumberShownDigits=
+TweenTime=
+
+
+
+Metrics Eliminados:
+
+[ScoreDisplayNormal]
+ScreenGameplayNumberShownDigits=9
+
+
+
+Elementos Nuevos:
+
+Fonts\ScreenGameplay Artist
+Fonts\ScreenGameplay StepMaker
+Fonts\ScreenGameplay Group
+Fonts\ScreenJukebox Song Title
+Fonts\ScreenJukebox Artist
+Fonts\ScreenJukebox StepMaker
+Fonts\ScreenJukebox Group
+
+
+
+Preferencias Nuevas:
+
+[Editor]
+ShowSnapBeats=
+
+[Options]
+JukeboxGameplay=
+JukeboxNonMenuButtons=
+LifeDeltaPercentChangeCheckpoint=
+LifeDeltaPercentChangeMissCheckpoint=
+LifeDeltaPercentNoRecoverChangeCheckpoint=
+LifeDeltaPercentNoRecoverChangeMissCheckpoint=
+LifeDeltaPercentSuddenDeathChangeCheckpoint=
+LifeDeltaPercentSuddenDeathChangeMissCheckpoint=
+RandomModifiersReadsRandomAttacks=
+SuperMeterPercentChangeCheckpoint=
+SuperMeterPercentChangeMissCheckpoint=
+TugMeterPercentChangeCheckpoint=
+TugMeterPercentChangeMissCheckpoint=
+
+Parche:
+
+http://stepmania.aldo.mx/parches/SMA4-Beta2.1-a-2.5.rar
+
+Video donde se ven mejor algunos cambios nuevos:
+
+http://www.youtube.com/watch?v=8ylGP0ppUO8
+
+/********************************************************************
+ ********************************************************************
+ ********************************************************************/
+
 // Junio 26, 2010, 07:20:29 pm
 // http://mxpumpers.com/index.php?topic=613.msg12331#msg12331
 
