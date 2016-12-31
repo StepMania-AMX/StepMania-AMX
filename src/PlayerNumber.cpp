@@ -5,7 +5,7 @@
 #include "CommonMetrics.h"
 
 
-RageColor PlayerToColor( PlayerNumber pn ) 
+RageColor PlayerToColor( PlayerNumber pn )
 {
 	switch( pn )
 	{
@@ -15,47 +15,47 @@ RageColor PlayerToColor( PlayerNumber pn )
 	}
 };
 
-RageColor PlayerToColor( int p ) 
-{ 
-	return PlayerToColor( (PlayerNumber)p ); 
+RageColor PlayerToColor( int p )
+{
+	return PlayerToColor( (PlayerNumber)p );
 }
 
 PlayerNumber GetNextHumanPlayer( PlayerNumber pn )
 {
-	for( PlayerNumber p=(PlayerNumber)(pn+1); p<NUM_PLAYERS; ((int&)p)++ )
+	for( enum_add(pn, 1); pn < NUM_PLAYERS; enum_add(pn, 1) )
 	{
-		if( GAMESTATE->IsHumanPlayer(p) )
-			return p;
+		if( GAMESTATE->IsHumanPlayer(pn) )
+			return pn;
 	}
 	return PLAYER_INVALID;
 }
 
 PlayerNumber GetNextEnabledPlayer( PlayerNumber pn )
 {
-	for( PlayerNumber p=(PlayerNumber)(pn+1); p<NUM_PLAYERS; ((int&)p)++ )
+	for( enum_add(pn, 1); pn < NUM_PLAYERS; enum_add(pn, 1) )
 	{
-		if( GAMESTATE->IsPlayerEnabled(p) )
-			return p;
+		if( GAMESTATE->IsPlayerEnabled(pn) )
+			return pn;
 	}
 	return PLAYER_INVALID;
 }
 
 PlayerNumber GetNextCpuPlayer( PlayerNumber pn )
 {
-	for( PlayerNumber p=(PlayerNumber)(pn+1); p<NUM_PLAYERS; ((int&)p)++ )
+	for( enum_add(pn, 1); pn < NUM_PLAYERS; enum_add(pn, 1) )
 	{
-		if( GAMESTATE->IsCpuPlayer(p) )
-			return p;
+		if( GAMESTATE->IsCpuPlayer(pn) )
+			return pn;
 	}
 	return PLAYER_INVALID;
 }
 
 PlayerNumber GetNextPotentialCpuPlayer( PlayerNumber pn )
 {
-	for( PlayerNumber p=(PlayerNumber)(pn+1); p<NUM_PLAYERS; ((int&)p)++ )
+	for( enum_add(pn, 1); pn < NUM_PLAYERS; enum_add(pn, 1) )
 	{
-		if( !GAMESTATE->IsHumanPlayer(p) )
-			return p;
+		if( !GAMESTATE->IsHumanPlayer(pn) )
+			return pn;
 	}
 	return PLAYER_INVALID;
 }
@@ -63,7 +63,7 @@ PlayerNumber GetNextPotentialCpuPlayer( PlayerNumber pn )
 /*
  * (c) 2001-2004 Chris Danford, Chris Gomez
  * All rights reserved.
- * 
+ *
  * Permission is hereby granted, free of charge, to any person obtaining a
  * copy of this software and associated documentation files (the
  * "Software"), to deal in the Software without restriction, including
@@ -73,7 +73,7 @@ PlayerNumber GetNextPotentialCpuPlayer( PlayerNumber pn )
  * copyright notice(s) and this permission notice appear in all copies of
  * the Software and that both the above copyright notice(s) and this
  * permission notice appear in supporting documentation.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
  * OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
  * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF

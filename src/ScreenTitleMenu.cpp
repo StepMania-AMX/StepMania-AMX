@@ -58,7 +58,7 @@ ScreenTitleMenu::ScreenTitleMenu( CString sClassName ) : ScreenSelect( sClassNam
 {
 	LOG->Trace( "ScreenTitleMenu::ScreenTitleMenu()" );
 
-	// Don't show screen title menu (says "Press Start") 
+	// Don't show screen title menu (says "Press Start")
 	// if there are 0 credits and inserted and CoinMode is pay.
 	if( PREFSMAN->GetCoinMode() == COIN_PAY  &&
 		GAMESTATE->m_iCoins < PREFSMAN->m_iCoinsPerCredit )
@@ -111,7 +111,7 @@ ScreenTitleMenu::ScreenTitleMenu( CString sClassName ) : ScreenSelect( sClassNam
 
 	m_textMaxStages.LoadFromFont( THEME->GetPathF(m_sName,"MaxStages") );
 	m_textMaxStages.Command( MAX_STAGES_ON_COMMAND );
-	CString sText = 
+	CString sText =
 		PREFSMAN->m_bEventMode ?
 		CString("event mode") :
 		ssprintf( "%d %s%s max", PREFSMAN->m_iNumArcadeStages, MAX_STAGES_TEXT.c_str(), (PREFSMAN->m_iNumArcadeStages>1)?"s":"" );
@@ -122,7 +122,7 @@ ScreenTitleMenu::ScreenTitleMenu( CString sClassName ) : ScreenSelect( sClassNam
 	m_textLifeDifficulty.Command( LIFE_DIFFICULTY_ON_COMMAND );
 	int iLifeDifficulty;
 	const CStringArray dummy;
-	LifeDifficulty( iLifeDifficulty, true, dummy );	
+	LifeDifficulty( iLifeDifficulty, true, dummy );
 	iLifeDifficulty++;	// LifeDifficulty returns an index
 	m_textLifeDifficulty.SetText( ssprintf( "life difficulty %d", iLifeDifficulty ) );
 	this->AddChild( &m_textLifeDifficulty );
@@ -130,7 +130,7 @@ ScreenTitleMenu::ScreenTitleMenu( CString sClassName ) : ScreenSelect( sClassNam
 	CString sCoinMode = CoinModeToString((CoinMode)PREFSMAN->GetCoinMode());
 	m_CoinMode.LoadFromAniDir( THEME->GetPathToB("ScreenTitleMenu "+sCoinMode) );
 	this->AddChild( &m_CoinMode );
-	
+
 	m_textHelp.LoadFromFont( THEME->GetPathToF("ScreenTitleMenu help") );
 	m_textHelp.SetText( HELP_TEXT((CoinMode)PREFSMAN->GetCoinMode()) );
 	m_textHelp.SetXY( HELP_X, HELP_Y );
@@ -153,7 +153,7 @@ ScreenTitleMenu::ScreenTitleMenu( CString sClassName ) : ScreenSelect( sClassNam
 				m_textChoice[i].SetXY( CHOICES_X, CHOICES_START_Y + i*CHOICES_SPACING_Y );
 				m_textChoice[i].SetShadowLength( CHOICES_SHADOW_LENGTH );
 				this->AddChild( &m_textChoice[i] );
-			}	
+			}
 		}
 		break;
 	case COIN_PAY:
@@ -174,7 +174,7 @@ ScreenTitleMenu::ScreenTitleMenu( CString sClassName ) : ScreenSelect( sClassNam
 	SOUND->PlayOnceFromAnnouncer( "title menu game name" );
 
 
-	m_soundChange.Load( THEME->GetPathToS("ScreenTitleMenu change"),true );	
+	m_soundChange.Load( THEME->GetPathToS("ScreenTitleMenu change"), true );
 
 	m_Choice = 0;
 
@@ -212,11 +212,11 @@ void ScreenTitleMenu::MoveCursor( bool up )
 		return;
 //	if( m_BeginOut.IsTransitioning() )
 //		return;
-	
+
 	TimeToDemonstration.GetDeltaTime();	/* Reset the demonstration timer when a key is pressed. */
 	LoseFocus( m_Choice );
 	m_Choice += (up? -1:+1);
-	wrap( (int&)m_Choice, m_aModeChoices.size() );
+	wrap( m_Choice, m_aModeChoices.size() );
 	m_soundChange.Play();
 	GainFocus( m_Choice );
 }
@@ -328,7 +328,7 @@ void ScreenTitleMenu::Update( float fDelta )
 	// time out on this screen and go to the attract sequence
 	if( !IsTransitioning() && TimeToDemonstration.PeekDeltaTime() >= SECONDS_BEFORE_ATTRACT)
 	{
-		// don't time out on this screen is coin mode is pay.  
+		// don't time out on this screen is coin mode is pay.
 		// If we're here, then there's a credit in the machine.
 		if( PREFSMAN->GetCoinMode() == COIN_PAY )
 			;	// do nothing
@@ -396,7 +396,7 @@ void ScreenTitleMenu::GainFocus( int iChoiceIndex )
 /*
  * (c) 2001-2004 Chris Danford
  * All rights reserved.
- * 
+ *
  * Permission is hereby granted, free of charge, to any person obtaining a
  * copy of this software and associated documentation files (the
  * "Software"), to deal in the Software without restriction, including
@@ -406,7 +406,7 @@ void ScreenTitleMenu::GainFocus( int iChoiceIndex )
  * copyright notice(s) and this permission notice appear in all copies of
  * the Software and that both the above copyright notice(s) and this
  * permission notice appear in supporting documentation.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
  * OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
  * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF

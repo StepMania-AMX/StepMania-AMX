@@ -57,10 +57,10 @@ StringToX( CourseDifficulty );
 
 CourseDifficulty GetNextShownCourseDifficulty( CourseDifficulty cd )
 {
-	for( CourseDifficulty d=(CourseDifficulty)(cd+1); d<NUM_DIFFICULTIES; ((int&)d)++ )
+	for( enum_add(cd, 1); cd < NUM_DIFFICULTIES; enum_add(cd, 1) )
 	{
-		if( GAMESTATE->IsCourseDifficultyShown(d) )
-			return d;
+		if( GAMESTATE->IsCourseDifficultyShown(cd) )
+			return cd;
 	}
 	return DIFFICULTY_INVALID;
 }
@@ -68,7 +68,7 @@ CourseDifficulty GetNextShownCourseDifficulty( CourseDifficulty cd )
 /*
  * (c) 2001-2004 Chris Danford
  * All rights reserved.
- * 
+ *
  * Permission is hereby granted, free of charge, to any person obtaining a
  * copy of this software and associated documentation files (the
  * "Software"), to deal in the Software without restriction, including
@@ -78,7 +78,7 @@ CourseDifficulty GetNextShownCourseDifficulty( CourseDifficulty cd )
  * copyright notice(s) and this permission notice appear in all copies of
  * the Software and that both the above copyright notice(s) and this
  * permission notice appear in supporting documentation.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
  * OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
  * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF

@@ -53,21 +53,33 @@ inline bool CLAMP(float &x, float l, float h)
 	return false;
 }
 
-inline void wrap( int &x, int n)
+template<class T>
+inline bool ENUM_CLAMP(T &x, T l, T h)
+{
+	if (x > h)		{ x = h; return true; }
+	else if (x < l) { x = l; return true; }
+	return false;
+}
+
+inline void wrap( int &x, int n )
 {
 	if (x<0)
 		x += ((-x/n)+1)*n;
 	x %= n;
 }
-inline void wrap( float &x, float n)
+inline void wrap( float &x, float n )
 {
 	if (x<0)
 		x += truncf(((-x/n)+1))*n;
 	x = fmodf(x,n);
 }
+inline void wrap( unsigned int &x, unsigned int n )
+{
+	x %= n;
+}
 
 /*
- * We only have unsigned swaps; byte swapping a signed value doesn't make sense. 
+ * We only have unsigned swaps; byte swapping a signed value doesn't make sense.
  *
  * Platform-specific, optimized versions are defined in arch_setup, with the names
  * ArchSwap32, ArchSwap24, and ArchSwap16; we define them to their real names here,
@@ -312,7 +324,7 @@ struct char_traits_char_nocase: public char_traits<char>
 	{
 		return uptab[(unsigned char)a];
 	}
-	
+
     static const char *find( const char* s, int n, char a )
 	{
 		a = fasttoupper(a);

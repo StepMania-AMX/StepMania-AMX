@@ -17,7 +17,7 @@
 ScreenBookkeeping::ScreenBookkeeping( CString sClassName ) : ScreenWithMenuElements( sClassName )
 {
 	LOG->Trace( "ScreenBookkeeping::ScreenBookkeeping()" );
-	
+
 	m_textTitle.LoadFromFont( THEME->GetPathToF("Common title") );
 	m_textTitle.SetText( "header" );
 	m_textTitle.SetXY( CENTER_X, 60 );
@@ -74,14 +74,14 @@ void ScreenBookkeeping::HandleScreenMessage( const ScreenMessage SM )
 void ScreenBookkeeping::MenuLeft( PlayerNumber pn )
 {
 	m_View = (View)(m_View-1);
-	CLAMP( (int&)m_View, 0, NUM_VIEWS-1 );
+	ENUM_CLAMP( m_View, View(0), View(NUM_VIEWS-1) );
 	ChangeView( m_View );
 }
 
 void ScreenBookkeeping::MenuRight( PlayerNumber pn )
 {
 	m_View = (View)(m_View+1);
-	CLAMP( (int&)m_View, 0, NUM_VIEWS-1 );
+	ENUM_CLAMP( m_View, View(0), View(NUM_VIEWS-1) );
 	ChangeView( m_View );
 }
 
@@ -90,7 +90,7 @@ void ScreenBookkeeping::MenuStart( PlayerNumber pn )
 	if( !IsTransitioning() )
 	{
 		SCREENMAN->PlayStartSound();
-		StartTransitioning( SM_GoToNextScreen );		
+		StartTransitioning( SM_GoToNextScreen );
 	}
 }
 
@@ -99,10 +99,10 @@ void ScreenBookkeeping::MenuBack( PlayerNumber pn )
 	if(!IsTransitioning())
 	{
 		SCREENMAN->PlayStartSound();
-		StartTransitioning( SM_GoToPrevScreen );		
+		StartTransitioning( SM_GoToPrevScreen );
 	}
 }
-	
+
 void ScreenBookkeeping::ChangeView( View newView )
 {
 	m_View = newView;
@@ -131,7 +131,7 @@ void ScreenBookkeeping::ChangeView( View newView )
 			sTitle += "Average\n";
 			float fAverage = iTotalLast/(float)NUM_LAST_DAYS;
 			sData += ssprintf("%.1f\n",fAverage);
-			
+
 			m_textCols[0].SetHorizAlign( Actor::align_left );
 			m_textCols[0].SetText( sTitle );
 			m_textCols[1].SetText( "" );
@@ -175,7 +175,7 @@ void ScreenBookkeeping::ChangeView( View newView )
 				sTitle += DayOfWeekToString(i) + "\n";
 				sData += ssprintf("%d",coins[i]) + "\n";
 			}
-			
+
 			m_textCols[0].SetHorizAlign( Actor::align_left );
 			m_textCols[0].SetText( sTitle );
 			m_textCols[1].SetText( "" );
@@ -199,14 +199,14 @@ void ScreenBookkeeping::ChangeView( View newView )
 				sTitle1 += HourInDayToString(i) + "\n";
 				sData1 += ssprintf("%d",coins[i]) + "\n";
 			}
-			
+
 			CString sTitle2, sData2;
 			for( i=(HOURS_IN_DAY/2); i<HOURS_IN_DAY; i++ )
 			{
 				sTitle2 += HourInDayToString(i) + "\n";
 				sData2 += ssprintf("%d",coins[i]) + "\n";
 			}
-			
+
 			m_textCols[0].SetHorizAlign( Actor::align_left );
 			m_textCols[0].SetText( sTitle1 );
 			m_textCols[1].SetHorizAlign( Actor::align_right );
@@ -225,7 +225,7 @@ void ScreenBookkeeping::ChangeView( View newView )
 /*
  * (c) 2003-2004 Chris Danford
  * All rights reserved.
- * 
+ *
  * Permission is hereby granted, free of charge, to any person obtaining a
  * copy of this software and associated documentation files (the
  * "Software"), to deal in the Software without restriction, including
@@ -235,7 +235,7 @@ void ScreenBookkeeping::ChangeView( View newView )
  * copyright notice(s) and this permission notice appear in all copies of
  * the Software and that both the above copyright notice(s) and this
  * permission notice appear in supporting documentation.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
  * OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
  * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF

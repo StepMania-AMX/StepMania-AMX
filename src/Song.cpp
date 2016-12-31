@@ -80,7 +80,7 @@ Song::~Song()
 	FOREACH( Steps*, m_vpSteps, s )
 		SAFE_DELETE( *s );
 	m_vpSteps.clear();
-	
+
 	// It's the responsibility of the owner of this Song to make sure
 	// that all pointers to this Song and its Steps are invalidated.
 }
@@ -162,7 +162,7 @@ NotesLoader *Song::MakeLoader( CString sDir ) const
 {
 	NotesLoader *ret;
 
-	/* Actually, none of these have any persistant data, so we 
+	/* Actually, none of these have any persistant data, so we
 	 * could optimize this, but since they don't have any data,
 	 * there's no real point ... */
 	ret = new SMLoader;
@@ -222,7 +222,7 @@ bool Song::LoadFromSongDir( CString sDir )
 	if( !DoesFileExist(GetCacheFilePath()) )
 		bUseCache = false;
 	if( !PREFSMAN->m_bFastLoad && GetHashForDirectory(m_sSongDir) != uDirHash )
-		bUseCache = false; // this cache is out of date 
+		bUseCache = false; // this cache is out of date
 
 	if( bUseCache )
 	{
@@ -237,7 +237,7 @@ bool Song::LoadFromSongDir( CString sDir )
 		// There was no entry in the cache for this song, or it was out of date.
 		// Let's load it from a file, then write a cache entry.
 		//
-		
+
 		NotesLoader *ld = MakeLoader( sDir );
 		if(!ld)
 		{
@@ -264,7 +264,7 @@ bool Song::LoadFromSongDir( CString sDir )
 	}
 
 
-	
+
 	for( unsigned i=0; i<m_vpSteps.size(); i++ )
 	{
 		m_vpSteps[i]->SetFile( GetCacheFilePath() );
@@ -289,10 +289,10 @@ bool Song::LoadFromSongDir( CString sDir )
 
 static void GetImageDirListing( CString sPath, CStringArray &AddTo, bool bReturnPathToo=false )
 {
-	GetDirListing( sPath + ".png", AddTo, false, bReturnPathToo ); 
-	GetDirListing( sPath + ".jpg", AddTo, false, bReturnPathToo ); 
-	GetDirListing( sPath + ".bmp", AddTo, false, bReturnPathToo ); 
-	GetDirListing( sPath + ".gif", AddTo, false, bReturnPathToo ); 
+	GetDirListing( sPath + ".png", AddTo, false, bReturnPathToo );
+	GetDirListing( sPath + ".jpg", AddTo, false, bReturnPathToo );
+	GetDirListing( sPath + ".bmp", AddTo, false, bReturnPathToo );
+	GetDirListing( sPath + ".gif", AddTo, false, bReturnPathToo );
 }
 
 static CString RemoveInitialWhitespace( CString s )
@@ -333,7 +333,7 @@ void Song::DeleteDuplicateSteps( vector<Steps*> &vSteps )
 
 			LOG->Trace("Removed %p duplicate steps in song \"%s\" with description \"%s\" and meter \"%i\"",
 				s2, this->GetSongDir().c_str(), s1->GetDescription().c_str(), s1->GetMeter() );
-				
+
 			/* Don't use RemoveSteps; autogen notes havn't yet been created and it'll
 			 * create them. */
 			FOREACH_StepsType( st )
@@ -409,7 +409,7 @@ void Song::AdjustDuplicateSteps()
  * Other than a leading "./", song paths must never contain "." or "..". */
 void FixupPath( CString &path, const CString &sSongPath )
 {
-	/* Replace backslashes with slashes in all paths. */	
+	/* Replace backslashes with slashes in all paths. */
 	FixSlashesInPlace( path );
 
 	/* Many imported files contain erroneous whitespace before or after
@@ -520,7 +520,7 @@ void Song::TidyUpData()
 
 		m_Timing.AddBPMSegment( BPMSegment(0, 60) );
 	}
-	
+
 	/* Make sure the first BPM segment starts at beat 0. */
 	if( m_Timing.m_BPMSegments[0].m_fStartBeat != 0 )
 		m_Timing.m_BPMSegments[0].m_fStartBeat = 0;
@@ -528,13 +528,13 @@ void Song::TidyUpData()
 
 	/* Only automatically set the sample time if there was no sample length
 	 * (m_fMusicSampleStartSeconds == -1). */
-	/* We don't want to test if m_fMusicSampleStartSeconds == 0, since some 
+	/* We don't want to test if m_fMusicSampleStartSeconds == 0, since some
 	 * people really do want the sample to start at the very beginning of the song. */
-	
+
 	/* Having a sample start of 0 sounds terrible for most songs because because
-	 * of the silence at the beginning.  Many of my files have a 0 for the 
+	 * of the silence at the beginning.  Many of my files have a 0 for the
 	 * sample start that was not manually set, and I assume other people have the same.
-	 * If there are complaints atou manually-set sample start at 0 is being ignored, 
+	 * If there are complaints atou manually-set sample start at 0 is being ignored,
 	 * then change this back.  -Chris */
 	if( m_fMusicSampleStartSeconds == -1 ||
 		m_fMusicSampleStartSeconds == 0 ||
@@ -554,7 +554,7 @@ void Song::TidyUpData()
 			m_fMusicSampleStartSeconds = this->GetElapsedTimeFromBeat( (float)iBeat );
 		}
 	}
-	
+
 
 	/* Some DWIs have lengths in ms when they meant seconds, eg. #SAMPLELENGTH:10;.
 	 * If the sample length is way too short, change it. */
@@ -562,7 +562,7 @@ void Song::TidyUpData()
 		m_fMusicSampleLengthSeconds = DEFAULT_MUSIC_SAMPLE_LENGTH;
 
 	//
-	// Here's the problem:  We have a directory full of images.  We want to determine which 
+	// Here's the problem:  We have a directory full of images.  We want to determine which
 	// image is the banner, which is the background, and which is the CDTitle.
 	//
 
@@ -634,7 +634,7 @@ void Song::TidyUpData()
 		// ignore DWI "-char" graphics
 		if( BlacklistedImages.find( arrayImages[i].c_str() ) != BlacklistedImages.end() )
 			continue;	// skip
-		
+
 		// Skip any image that we've already classified
 
 		if( HasBanner()  &&  stricmp(m_sBannerFile, arrayImages[i])==0 )
@@ -811,7 +811,7 @@ void Song::ReCalculateRadarValuesAndLastBeat()
 		if(tempNoteData.GetLastRow() == 0)
 			continue;
 
-		// Don't set first/last beat based on lights.  They often start very 
+		// Don't set first/last beat based on lights.  They often start very
 		// early and end very late.
 		if( pSteps->m_StepsType == STEPS_TYPE_LIGHTS_CABINET )
 			continue;
@@ -903,7 +903,7 @@ Steps* Song::GetStepsByDescription( StepsType st, CString sDescription ) const
 	GetSteps( vNotes, st, DIFFICULTY_INVALID, -1, -1, sDescription );
 	if( vNotes.size() == 0 )
 		return NULL;
-	else 
+	else
 		return vNotes[0];
 }
 
@@ -916,22 +916,22 @@ Steps* Song::GetClosestNotes( StepsType st, Difficulty dc ) const
 	if( pSteps )
 		return pSteps;
 	newDC = (Difficulty)(dc-1);
-	CLAMP( (int&)newDC, 0, NUM_DIFFICULTIES-1 );
+	ENUM_CLAMP( newDC, Difficulty(0), Difficulty(NUM_DIFFICULTIES-1) );
 	pSteps = GetStepsByDifficulty( st, newDC );
 	if( pSteps )
 		return pSteps;
 	newDC = (Difficulty)(dc+1);
-	CLAMP( (int&)newDC, 0, NUM_DIFFICULTIES-1 );
+	ENUM_CLAMP( newDC, Difficulty(0), Difficulty(NUM_DIFFICULTIES-1) );
 	pSteps = GetStepsByDifficulty( st, newDC );
 	if( pSteps )
 		return pSteps;
 	newDC = (Difficulty)(dc-2);
-	CLAMP( (int&)newDC, 0, NUM_DIFFICULTIES-1 );
+	ENUM_CLAMP( newDC, Difficulty(0), Difficulty(NUM_DIFFICULTIES-1) );
 	pSteps = GetStepsByDifficulty( st, newDC );
 	if( pSteps )
 		return pSteps;
 	newDC = (Difficulty)(dc+2);
-	CLAMP( (int&)newDC, 0, NUM_DIFFICULTIES-1 );
+	ENUM_CLAMP( newDC, Difficulty(0), Difficulty(NUM_DIFFICULTIES-1) );
 	pSteps = GetStepsByDifficulty( st, newDC );
 	return pSteps;
 }
@@ -973,7 +973,7 @@ void Song::Save()
 	CStringArray arrayOldFileNames;
 	GetDirListing( m_sSongDir + "*.bms", arrayOldFileNames );
 	GetDirListing( m_sSongDir + "*.ksf", arrayOldFileNames );
-	
+
 	for( unsigned i=0; i<arrayOldFileNames.size(); i++ )
 	{
 		const CString sOldPath = m_sSongDir + arrayOldFileNames[i];
@@ -1033,7 +1033,7 @@ void Song::AddAutoGenNotes()
 		StepsType st = m_vpSteps[i]->m_StepsType;
 		HasNotes[st] = true;
 	}
-		
+
 	FOREACH_StepsType( stMissing )
 	{
 		if( HasNotes[stMissing] )
@@ -1127,7 +1127,7 @@ bool Song::IsEasy( StepsType st ) const
 	const Steps* pBeginnerNotes = GetStepsByDifficulty( st, DIFFICULTY_BEGINNER );
 	if( pBeginnerNotes )
 		return true;
-	
+
 	const Steps* pEasyNotes = GetStepsByDifficulty( st, DIFFICULTY_EASY );
 	if( pEasyNotes && pEasyNotes->GetMeter() == 1 )
 		return true;
@@ -1160,7 +1160,7 @@ bool Song::HasEdits( StepsType st ) const
 			return true;
 		}
 	}
-	
+
 	return false;
 }
 
@@ -1377,7 +1377,7 @@ bool Song::IsEditAlreadyLoaded( Steps* pSteps ) const
 
 bool Song::HasSignificantBpmChangesOrStops() const
 {
-	// Don't consider BPM changes that only are only for maintaining sync as 
+	// Don't consider BPM changes that only are only for maintaining sync as
 	// a real BpmChange.
 	if( m_DisplayBPMType == DISPLAY_SPECIFIED )
 		return false;
@@ -1388,7 +1388,7 @@ bool Song::HasSignificantBpmChangesOrStops() const
 /*
  * (c) 2001-2004 Chris Danford, Glenn Maynard
  * All rights reserved.
- * 
+ *
  * Permission is hereby granted, free of charge, to any person obtaining a
  * copy of this software and associated documentation files (the
  * "Software"), to deal in the Software without restriction, including
@@ -1398,7 +1398,7 @@ bool Song::HasSignificantBpmChangesOrStops() const
  * copyright notice(s) and this permission notice appear in all copies of
  * the Software and that both the above copyright notice(s) and this
  * permission notice appear in supporting documentation.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
  * OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
  * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF

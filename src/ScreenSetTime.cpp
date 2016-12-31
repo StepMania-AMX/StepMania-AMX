@@ -16,12 +16,12 @@
 #include "arch/ArchHooks/ArchHooks.h"
 
 static const CString SetTimeSelectionNames[NUM_SET_TIME_SELECTIONS] = {
-	"Year", 
-	"Month", 
+	"Year",
+	"Month",
 	"Day",
-	"Hour", 
-	"Minute", 
-	"Second", 
+	"Hour",
+	"Minute",
+	"Second",
 };
 XToString( SetTimeSelection );
 #define FOREACH_SetTimeSelection( s ) FOREACH_ENUM( SetTimeSelection, NUM_SET_TIME_SELECTIONS, s )
@@ -44,7 +44,7 @@ static float GetValueY( SetTimeSelection s ) { return g_Y[s]; }
 ScreenSetTime::ScreenSetTime( CString sClassName ) : ScreenWithMenuElements( sClassName )
 {
 	LOG->Trace( "ScreenSetTime::ScreenSetTime()" );
-	
+
 	m_Selection = hour;
 
 	FOREACH_PlayerNumber( pn )
@@ -85,7 +85,7 @@ void ScreenSetTime::Update( float fDelta )
 
 	tm now;
 	localtime_r( &iNow, &now );
-	
+
 	int iPrettyHour = now.tm_hour%12;
 	if( iPrettyHour == 0 )
 		iPrettyHour = 12;
@@ -133,7 +133,7 @@ void ScreenSetTime::ChangeValue( int iDirection )
 
 	tm adjusted;
 	localtime_r( &iAdjusted, &adjusted );
-	
+
 	//tm now = GetLocalTime();
 	switch( m_Selection )
 	{
@@ -160,7 +160,7 @@ void ScreenSetTime::ChangeSelection( int iDirection )
 	SetTimeSelection OldSelection = m_Selection;
 	enum_add<SetTimeSelection>( m_Selection, iDirection );
 
-	CLAMP( (int&)m_Selection, 0, NUM_SET_TIME_SELECTIONS-1 );
+	ENUM_CLAMP( m_Selection, SetTimeSelection(0), SetTimeSelection(NUM_SET_TIME_SELECTIONS-1) );
 	if( iDirection != 0 && m_Selection == OldSelection )
 		return; // can't move any more
 
@@ -192,7 +192,7 @@ void ScreenSetTime::MenuRight( PlayerNumber pn )
 
 void ScreenSetTime::MenuStart( PlayerNumber pn )
 {
-	bool bHoldingLeftAndRight = 
+	bool bHoldingLeftAndRight =
 		INPUTMAPPER->IsButtonDown( MenuInput(pn, MENU_BUTTON_RIGHT) ) &&
 		INPUTMAPPER->IsButtonDown( MenuInput(pn, MENU_BUTTON_LEFT) );
 
@@ -228,7 +228,7 @@ void ScreenSetTime::MenuBack( PlayerNumber pn )
 /*
  * (c) 2004 Chris Danford
  * All rights reserved.
- * 
+ *
  * Permission is hereby granted, free of charge, to any person obtaining a
  * copy of this software and associated documentation files (the
  * "Software"), to deal in the Software without restriction, including
@@ -238,7 +238,7 @@ void ScreenSetTime::MenuBack( PlayerNumber pn )
  * copyright notice(s) and this permission notice appear in all copies of
  * the Software and that both the above copyright notice(s) and this
  * permission notice appear in supporting documentation.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
  * OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
  * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF

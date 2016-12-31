@@ -13,7 +13,7 @@ ISDRIVERINSTALLED* IsDriverInstalled = NULL;
 
 const int LIGHTS_PER_PARALLEL_PORT = 8;
 const int MAX_PARALLEL_PORTS = 3;
-short LPT_ADDRESS[MAX_PARALLEL_PORTS] = 
+short LPT_ADDRESS[MAX_PARALLEL_PORTS] =
 {
 	0x378,	// LPT1
 	0x278,	// LPT2
@@ -27,7 +27,7 @@ int CabinetLightToIndex( CabinetLight cl )
 
 int GameControllerAndGameButtonToIndex( GameController gc, GameButton gb )
 {
-	CLAMP( (int&)gb, 0, 3 );
+	ENUM_CLAMP( gb, GameButton(0), GameButton(3) );
 	return NUM_CABINET_LIGHTS + gc*4 + gb;
 }
 
@@ -47,7 +47,7 @@ LightsDriver_Win32Parallel::LightsDriver_Win32Parallel()
 		MessageBox(NULL, "Could not LoadLibrary( parallel_lights_io.dll ).", "ERROR", MB_OK );
 		return;
 	}
-	
+
 	//Get the function pointers
 	PortOut = (PORTOUT*) GetProcAddress(hDLL, "PortOut");
 	IsDriverInstalled = (ISDRIVERINSTALLED*) GetProcAddress(hDLL, "IsDriverInstalled");
@@ -82,7 +82,7 @@ void LightsDriver_Win32Parallel::Set( const LightsState *ls )
 				data[lpt] &= ~mask;
 		}
 	}
-	
+
 	FOREACH_GameController( gc )
 	{
 		FOREACH_GameButton( gb )
@@ -112,7 +112,7 @@ void LightsDriver_Win32Parallel::Set( const LightsState *ls )
 /*
  * (c) 2003-2004 Chris Danford
  * All rights reserved.
- * 
+ *
  * Permission is hereby granted, free of charge, to any person obtaining a
  * copy of this software and associated documentation files (the
  * "Software"), to deal in the Software without restriction, including
@@ -122,7 +122,7 @@ void LightsDriver_Win32Parallel::Set( const LightsState *ls )
  * copyright notice(s) and this permission notice appear in all copies of
  * the Software and that both the above copyright notice(s) and this
  * permission notice appear in supporting documentation.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
  * OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
  * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF
