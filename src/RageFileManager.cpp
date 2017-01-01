@@ -539,7 +539,7 @@ static bool PathUsesSlowFlush( const CString &sPath )
 		"Data/"
 	};
 
-	for( unsigned i = 0; i < ARRAYSIZE(FlushPaths); ++i )
+	for( unsigned i = 0; i < ARRAY_SIZE(FlushPaths); ++i )
 		if( !strncmp( sPath, FlushPaths[i], strlen(FlushPaths[i]) ) )
 			return true;
 	return false;

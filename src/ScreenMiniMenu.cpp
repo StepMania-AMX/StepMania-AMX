@@ -297,7 +297,7 @@ MenuRowInternal::MenuRowInternal( const MenuRow &r )
 	enabled = r.enabled;
 	defaultChoice = r.defaultChoice;
 #define PUSH( c )   if(c!=NULL) choices.push_back(c);
-	for( unsigned i = 0; i < ARRAYSIZE(r.choices); ++i )
+	for( unsigned i = 0; i < ARRAY_SIZE(r.choices); ++i )
 		PUSH( r.choices[i] );
 #undef PUSH
 }

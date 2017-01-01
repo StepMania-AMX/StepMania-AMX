@@ -71,7 +71,7 @@ static const SortOrder SORT_ORDERS[] =
 	SORT_MOST_PLAYED, 
 	SORT_ARTIST,
 };
-// use ARRAYSIZE(SortOrder)
+// use ARRAY_SIZE(SortOrder)
 
 MusicWheel::MusicWheel() 
 {
@@ -1220,12 +1220,12 @@ bool MusicWheel::NextSort()		// return true if change successful
 
 	// find the index of the current sort
 	int cur = 0;
-	while( cur < int(ARRAYSIZE(SORT_ORDERS)) && SORT_ORDERS[cur] != GAMESTATE->m_SortOrder )
+	while( cur < int(ARRAY_SIZE(SORT_ORDERS)) && SORT_ORDERS[cur] != GAMESTATE->m_SortOrder )
 		++cur;
 
 	// move to the next sort with wrapping
 	++cur;
-	wrap( cur, ARRAYSIZE(SORT_ORDERS) );
+	wrap( cur, ARRAY_SIZE(SORT_ORDERS) );
 
 	// apply new sort
 	SortOrder soNew = SORT_ORDERS[cur];

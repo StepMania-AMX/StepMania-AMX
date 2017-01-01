@@ -38,7 +38,7 @@ void OptionIcon::Load( PlayerNumber pn, CString sText, bool bHeader )
 		"OFF",
 	};
 	
-	for( unsigned i=0; i<ARRAYSIZE(sStopWords); i++ )
+	for( unsigned i=0; i<ARRAY_SIZE(sStopWords); i++ )
 		if( 0==stricmp(sText,sStopWords[i]) )
 			sText = "";
 

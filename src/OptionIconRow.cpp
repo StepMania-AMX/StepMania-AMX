@@ -73,7 +73,7 @@ int OptionToPreferredColumn( CString sOptionText )
 			return 0;
 	}
 
-	for( unsigned i=0; i<ARRAYSIZE(g_OptionColumnEntries); i++ )
+	for( unsigned i=0; i<ARRAY_SIZE(g_OptionColumnEntries); i++ )
 		if( g_OptionColumnEntries[i].szString == sOptionText )
 			return g_OptionColumnEntries[i].iSlotIndex;
 

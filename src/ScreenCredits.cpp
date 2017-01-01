@@ -228,7 +228,7 @@ ScreenCredits::ScreenCredits( CString sName ) : ScreenAttract( sName )
 	this->AddChild( &m_ScrollerTexts );
 	
 	{
-		for( unsigned i=0; i<ARRAYSIZE(CREDIT_LINES); i++ )
+		for( unsigned i=0; i<ARRAY_SIZE(CREDIT_LINES); i++ )
 		{
 			BitmapText* pText = new BitmapText;
 			pText->LoadFromFont( THEME->GetPathToF("ScreenCredits titles") );
@@ -244,7 +244,7 @@ ScreenCredits::ScreenCredits( CString sName ) : ScreenAttract( sName )
 			m_ScrollerTexts.AddChild( pText );
 		}
 
-		const int iFirst = -10, iLast = ARRAYSIZE(CREDIT_LINES)+10;
+		const int iFirst = -10, iLast = ARRAY_SIZE(CREDIT_LINES)+10;
 		m_ScrollerTexts.SetCurrentAndDestinationItem( iFirst );
 		m_ScrollerTexts.SetDestinationItem( iLast );
 		fTime = max( fTime, TEXTS_SCROLL_SECONDS_PER_ITEM*(iLast-iFirst) );

@@ -1499,7 +1499,7 @@ const ValidRow g_ValidRows[] =
 void NoteDataUtil::FixImpossibleRows( NoteData &in, StepsType st )
 {
 	vector<const ValidRow*> vpValidRowsToCheck;
-	for( unsigned i=0; i<ARRAYSIZE(g_ValidRows); i++ )
+	for( unsigned i=0; i<ARRAY_SIZE(g_ValidRows); i++ )
 	{
 		if( g_ValidRows[i].st == st )
 			vpValidRowsToCheck.push_back( &g_ValidRows[i] );
@@ -1633,7 +1633,7 @@ void NoteDataUtil::AddTapAttacks( NoteData &nd, Song* pSong )
 		Attack attack;
 		attack.fStartSecond = -1;
 		attack.fSecsRemaining = 15;
-		attack.sModifier = szAttacks[rand()%ARRAYSIZE(szAttacks)];
+		attack.sModifier = szAttacks[rand()%ARRAY_SIZE(szAttacks)];
 		attack.level = ATTACK_LEVEL_1;
 		nd.SetTapAttackNote( iTrack, BeatToNoteRow(fBeat), attack );
 	}

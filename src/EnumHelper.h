@@ -40,9 +40,9 @@ static const CString EMPTY_STRING;
 #define XToString(X)	\
 	const CString& X##ToString( X x ) \
 	{	\
-		if( x == ARRAYSIZE(X##Names)+1 ) 	\
+		if( x == ARRAY_SIZE(X##Names)+1 ) 	\
 			return EMPTY_STRING;	\
-		ASSERT(unsigned(x) < ARRAYSIZE(X##Names));	\
+		ASSERT(unsigned(x) < ARRAY_SIZE(X##Names));	\
 		return X##Names[x];	\
 	}
 
@@ -58,7 +58,7 @@ static const CString EMPTY_STRING;
 		CString s2 = s;	\
 		s2.MakeLower();	\
         unsigned i; \
-		for( i = 0; i < ARRAYSIZE(X##Names); ++i )	\
+		for( i = 0; i < ARRAY_SIZE(X##Names); ++i )	\
 			if( !s2.CompareNoCase(X##Names[i]) )	\
 				return (X)i;	\
 		return (X)(i+1); /*invalid*/	\

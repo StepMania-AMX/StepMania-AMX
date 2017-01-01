@@ -12,7 +12,7 @@
 #include "ThemeManager.h"
 #include "Foreach.h"
 
-#define ONE( arr ) { for( unsigned Z = 0; Z < ARRAYSIZE(arr); ++Z ) arr[Z]=1.0f; }
+#define ONE( arr ) { for( unsigned Z = 0; Z < ARRAY_SIZE(arr); ++Z ) arr[Z]=1.0f; }
 
 void PlayerOptions::Init()
 {
