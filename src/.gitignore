@@ -11,8 +11,7 @@
 *.sln.docstates
 
 # Build results
-[Dd]ebug/
-[Rr]elease/
+_build/
 
 # Misc files
 *.bak
@@ -77,6 +76,10 @@ Thumbs.db
 
 # Folder config file
 Desktop.ini
+
+# StepMania
+version.bin
+verstub.cpp
 
 # Sublime Text
 *.sublime-workspace

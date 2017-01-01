@@ -1,0 +1,2389 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Screens">
+      <UniqueIdentifier>{68fc9900-8966-4051-9b57-9e9f3f5a2c3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Data Structures">
+      <UniqueIdentifier>{080f1d2f-9a96-4512-aae4-bc3135bb28e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="File Types">
+      <UniqueIdentifier>{05e6081c-d5e5-431b-96ba-74bf41fdb6b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StepMania">
+      <UniqueIdentifier>{75b0f58b-edd7-42ef-99fb-9aec62e5fe1b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StepMania\arch">
+      <UniqueIdentifier>{af81d745-3294-42df-8639-2763f398fb39}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StepMania\arch\LoadingWindow">
+      <UniqueIdentifier>{4c43aa9f-1475-44ea-8e36-7157e8dc11b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StepMania\arch\Sound">
+      <UniqueIdentifier>{5ef8f52f-4f58-4e74-9cf8-8e38f8251821}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StepMania\arch\ArchHooks">
+      <UniqueIdentifier>{41d821c7-5808-45bf-b778-a0d8a94ecfe9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StepMania\arch\InputHandler">
+      <UniqueIdentifier>{9765b4f4-a5ad-4939-b6e5-9a1442d0c205}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StepMania\arch\MovieTexture">
+      <UniqueIdentifier>{7c4936ba-93c9-431d-8849-fed7469d9a88}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StepMania\arch\LowLevelWindow">
+      <UniqueIdentifier>{a7bbd46e-0328-4c0e-84d4-05d4ae496735}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StepMania\arch\Lights">
+      <UniqueIdentifier>{aa74fd9f-17c5-4927-82ab-88db2b7ee5ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StepMania\arch\MemoryCard">
+      <UniqueIdentifier>{934b82ce-bef9-485c-abe7-d7aa3c78359e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StepMania\arch\Dialog">
+      <UniqueIdentifier>{16e83a00-5f1a-4b32-93b2-f45928df04c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StepMania\arch\Threads">
+      <UniqueIdentifier>{48341c4c-029d-4607-a849-e5830b551630}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StepMania\system">
+      <UniqueIdentifier>{d1cbb55b-8803-451d-a97a-8086b3e3b3da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Actors used in Gameplay and Menus">
+      <UniqueIdentifier>{4dc37960-990b-4fe6-b6d8-91610dc55710}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Actors used in Menus">
+      <UniqueIdentifier>{ff5ec884-d168-4aaf-9cb4-4ccb0ef69434}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Actors used in Gameplay">
+      <UniqueIdentifier>{00987d1d-d240-4916-9c43-ef0f1205716d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rage">
+      <UniqueIdentifier>{d0076918-986c-44cb-9a8c-b65c177ce027}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rage\Helpers">
+      <UniqueIdentifier>{dfd191e1-e725-46b0-81fc-b84e64c23ecd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rage\Helpers\pcre">
+      <UniqueIdentifier>{0c6c014e-80c4-4bf1-ae6b-47bd5a7c8667}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Actors">
+      <UniqueIdentifier>{c140e843-ee0a-43fd-bb41-5320f0777e05}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Global Singletons">
+      <UniqueIdentifier>{2e778a22-97d9-430a-8f12-33da68485b5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Crypto">
+      <UniqueIdentifier>{d2f3dfa7-5d82-4388-98fa-4dcd213e5e25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Crypto\crypto++">
+      <UniqueIdentifier>{71038b3c-68ed-4916-8e06-66b1f9e1e631}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Screen.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenAttract.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenBookkeeping.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenBranch.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenCaution.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenCenterImage.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenClearBookkeepingData.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenClearMachineStats.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenCredits.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenDemonstration.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenDownloadMachineStats.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenEdit.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenEditCoursesMenu.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenEditMenu.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenEnding.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenEvaluation.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenExit.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenEz2SelectMusic.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenEz2SelectPlayer.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenGameOver.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenGameplay.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenHowToPlay.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenInsertCredit.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenInstructions.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenJukebox.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenJukeboxMenu.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenLogo.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenMapControllers.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenMiniMenu.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenMusicScroll.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenNameEntry.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenNameEntryTraditional.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenNetEvaluation.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenNetSelectMusic.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenNetworkOptions.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenOptions.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenOptionsMaster.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenOptionsMasterPrefs.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenPlayerOptions.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenProfileOptions.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenPrompt.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenRanking.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenReloadSongs.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenResetToDefaults.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenSandbox.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenSelect.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenSelectCharacter.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenSelectDifficulty.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenSelectGroup.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenSelectMaster.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenSelectMode.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenSelectMusic.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenSelectStyle.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenSetTime.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenSongOptions.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenStage.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenStyleSplash.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenTest.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenTestFonts.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenTestInput.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenTestLights.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenTestSound.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenTextEntry.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenTitleMenu.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenUnlock.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenWithMenuElements.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="Attack.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="BannerCache.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="CatalogXml.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="Character.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="CodeDetector.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="Course.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="CourseUtil.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="DateTime.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="Difficulty.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="EnumHelper.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="Font.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="FontCharAliases.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="FontCharmaps.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="GameConstantsAndTypes.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="GameInput.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="Grade.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="HighScore.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="Inventory.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaHelpers.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="LyricsLoader.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="ModeChoice.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="NoteData.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="NoteDataUtil.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="NoteDataWithScoring.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="NoteFieldPositioning.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="NotesLoader.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="NotesLoaderBMS.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="NotesLoaderDWI.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="NotesLoaderKSF.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="NotesLoaderSM.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="NotesWriterDWI.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="NotesWriterSM.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="NoteTypes.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerAI.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerNumber.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerOptions.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="Profile.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="RadarValues.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="RandomSample.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="ScoreKeeperMAX2.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="ScoreKeeperRave.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="Song.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="SongCacheIndex.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="SongOptions.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="SongUtil.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="StageStats.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="Steps.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="StepsUtil.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="Style.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="StyleUtil.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="TimingData.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="TitleSubstitution.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="Trail.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="TrailUtil.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="IniFile.cpp">
+      <Filter>File Types</Filter>
+    </ClCompile>
+    <ClCompile Include="MsdFile.cpp">
+      <Filter>File Types</Filter>
+    </ClCompile>
+    <ClCompile Include="XmlFile.cpp">
+      <Filter>File Types</Filter>
+    </ClCompile>
+    <ClCompile Include="global.cpp">
+      <Filter>StepMania</Filter>
+    </ClCompile>
+    <ClCompile Include="StepMania.cpp">
+      <Filter>StepMania</Filter>
+    </ClCompile>
+    <ClCompile Include="arch\arch.cpp">
+      <Filter>StepMania\arch</Filter>
+    </ClCompile>
+    <ClCompile Include="arch\LoadingWindow\LoadingWindow_Win32.cpp">
+      <Filter>StepMania\arch\LoadingWindow</Filter>
+    </ClCompile>
+    <ClCompile Include="arch\Sound\DSoundHelpers.cpp">
+      <Filter>StepMania\arch\Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="arch\Sound\RageSoundDriver_DSound.cpp">
+      <Filter>StepMania\arch\Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="arch\Sound\RageSoundDriver_DSound_Software.cpp">
+      <Filter>StepMania\arch\Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="arch\Sound\RageSoundDriver_Generic_Software.cpp">
+      <Filter>StepMania\arch\Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="arch\Sound\RageSoundDriver_Null.cpp">
+      <Filter>StepMania\arch\Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="arch\Sound\RageSoundDriver_WaveOut.cpp">
+      <Filter>StepMania\arch\Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="arch\ArchHooks\ArchHooks.cpp">
+      <Filter>StepMania\arch\ArchHooks</Filter>
+    </ClCompile>
+    <ClCompile Include="arch\ArchHooks\ArchHooks_Win32.cpp">
+      <Filter>StepMania\arch\ArchHooks</Filter>
+    </ClCompile>
+    <ClCompile Include="arch\InputHandler\InputHandler.cpp">
+      <Filter>StepMania\arch\InputHandler</Filter>
+    </ClCompile>
+    <ClCompile Include="arch\InputHandler\InputHandler_DirectInput.cpp">
+      <Filter>StepMania\arch\InputHandler</Filter>
+    </ClCompile>
+    <ClCompile Include="arch\InputHandler\InputHandler_DirectInputHelper.cpp">
+      <Filter>StepMania\arch\InputHandler</Filter>
+    </ClCompile>
+    <ClCompile Include="arch\InputHandler\InputHandler_Win32_Para.cpp">
+      <Filter>StepMania\arch\InputHandler</Filter>
+    </ClCompile>
+    <ClCompile Include="arch\InputHandler\InputHandler_Win32_Pump.cpp">
+      <Filter>StepMania\arch\InputHandler</Filter>
+    </ClCompile>
+    <ClCompile Include="arch\MovieTexture\MovieTexture.cpp">
+      <Filter>StepMania\arch\MovieTexture</Filter>
+    </ClCompile>
+    <ClCompile Include="arch\MovieTexture\MovieTexture_DShow.cpp">
+      <Filter>StepMania\arch\MovieTexture</Filter>
+    </ClCompile>
+    <ClCompile Include="arch\MovieTexture\MovieTexture_DShowHelper.cpp">
+      <Filter>StepMania\arch\MovieTexture</Filter>
+    </ClCompile>
+    <ClCompile Include="arch\MovieTexture\MovieTexture_FFMpeg.cpp">
+      <Filter>StepMania\arch\MovieTexture</Filter>
+    </ClCompile>
+    <ClCompile Include="arch\MovieTexture\MovieTexture_Null.cpp">
+      <Filter>StepMania\arch\MovieTexture</Filter>
+    </ClCompile>
+    <ClCompile Include="arch\LowLevelWindow\LowLevelWindow_SDL.cpp">
+      <Filter>StepMania\arch\LowLevelWindow</Filter>
+    </ClCompile>
+    <ClCompile Include="arch\Lights\LightsDriver.cpp">
+      <Filter>StepMania\arch\Lights</Filter>
+    </ClCompile>
+    <ClCompile Include="arch\Lights\LightsDriver_SystemMessage.cpp">
+      <Filter>StepMania\arch\Lights</Filter>
+    </ClCompile>
+    <ClCompile Include="arch\Lights\LightsDriver_Win32Parallel.cpp">
+      <Filter>StepMania\arch\Lights</Filter>
+    </ClCompile>
+    <ClCompile Include="arch\MemoryCard\MemoryCardDriver.cpp">
+      <Filter>StepMania\arch\MemoryCard</Filter>
+    </ClCompile>
+    <ClCompile Include="arch\MemoryCard\MemoryCardDriverThreaded.cpp">
+      <Filter>StepMania\arch\MemoryCard</Filter>
+    </ClCompile>
+    <ClCompile Include="arch\MemoryCard\MemoryCardDriverThreaded_Windows.cpp">
+      <Filter>StepMania\arch\MemoryCard</Filter>
+    </ClCompile>
+    <ClCompile Include="arch\Dialog\Dialog.cpp">
+      <Filter>StepMania\arch\Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="arch\Dialog\DialogDriver_Win32.cpp">
+      <Filter>StepMania\arch\Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="arch\Threads\Threads_Win32.cpp">
+      <Filter>StepMania\arch\Threads</Filter>
+    </ClCompile>
+    <ClCompile Include="archutils\Win32\AppInstance.cpp">
+      <Filter>StepMania\system</Filter>
+    </ClCompile>
+    <ClCompile Include="archutils\Win32\arch_setup.cpp">
+      <Filter>StepMania\system</Filter>
+    </ClCompile>
+    <ClCompile Include="archutils\Win32\Crash.cpp">
+      <Filter>StepMania\system</Filter>
+    </ClCompile>
+    <ClCompile Include="archutils\Win32\DebugInfoHunt.cpp">
+      <Filter>StepMania\system</Filter>
+    </ClCompile>
+    <ClCompile Include="archutils\Win32\GetFileInformation.cpp">
+      <Filter>StepMania\system</Filter>
+    </ClCompile>
+    <ClCompile Include="archutils\Win32\GotoURL.cpp">
+      <Filter>StepMania\system</Filter>
+    </ClCompile>
+    <ClCompile Include="archutils\Win32\RegistryAccess.cpp">
+      <Filter>StepMania\system</Filter>
+    </ClCompile>
+    <ClCompile Include="archutils\Win32\RestartProgram.cpp">
+      <Filter>StepMania\system</Filter>
+    </ClCompile>
+    <ClCompile Include="archutils\Win32\USB.cpp">
+      <Filter>StepMania\system</Filter>
+    </ClCompile>
+    <ClCompile Include="archutils\Win32\VideoDriverInfo.cpp">
+      <Filter>StepMania\system</Filter>
+    </ClCompile>
+    <ClCompile Include="Banner.cpp">
+      <Filter>Actors used in Gameplay and Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="BGAnimation.cpp">
+      <Filter>Actors used in Gameplay and Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="BGAnimationLayer.cpp">
+      <Filter>Actors used in Gameplay and Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="ConditionalBGA.cpp">
+      <Filter>Actors used in Gameplay and Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="DifficultyIcon.cpp">
+      <Filter>Actors used in Gameplay and Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="MeterDisplay.cpp">
+      <Filter>Actors used in Gameplay and Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="Transition.cpp">
+      <Filter>Actors used in Gameplay and Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="BPMDisplay.cpp">
+      <Filter>Actors used in Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="ComboGraph.cpp">
+      <Filter>Actors used in Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="CourseContentsList.cpp">
+      <Filter>Actors used in Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="CourseEntryDisplay.cpp">
+      <Filter>Actors used in Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="DifficultyDisplay.cpp">
+      <Filter>Actors used in Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="DifficultyList.cpp">
+      <Filter>Actors used in Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="DifficultyMeter.cpp">
+      <Filter>Actors used in Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="DifficultyRating.cpp">
+      <Filter>Actors used in Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="DualScrollBar.cpp">
+      <Filter>Actors used in Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="EditCoursesMenu.cpp">
+      <Filter>Actors used in Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="EditCoursesSongMenu.cpp">
+      <Filter>Actors used in Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="EditMenu.cpp">
+      <Filter>Actors used in Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="FadingBanner.cpp">
+      <Filter>Actors used in Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="GradeDisplay.cpp">
+      <Filter>Actors used in Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphDisplay.cpp">
+      <Filter>Actors used in Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="GrooveGraph.cpp">
+      <Filter>Actors used in Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="GrooveRadar.cpp">
+      <Filter>Actors used in Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="GroupList.cpp">
+      <Filter>Actors used in Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="HelpDisplay.cpp">
+      <Filter>Actors used in Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="JukeboxMenu.cpp">
+      <Filter>Actors used in Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="ListDisplay.cpp">
+      <Filter>Actors used in Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="MemoryCardDisplay.cpp">
+      <Filter>Actors used in Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuTimer.cpp">
+      <Filter>Actors used in Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="ModeSwitcher.cpp">
+      <Filter>Actors used in Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="MusicBannerWheel.cpp">
+      <Filter>Actors used in Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="MusicList.cpp">
+      <Filter>Actors used in Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="MusicSortDisplay.cpp">
+      <Filter>Actors used in Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="MusicWheel.cpp">
+      <Filter>Actors used in Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="MusicWheelItem.cpp">
+      <Filter>Actors used in Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="OptionIcon.cpp">
+      <Filter>Actors used in Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="OptionIconRow.cpp">
+      <Filter>Actors used in Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="OptionsCursor.cpp">
+      <Filter>Actors used in Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="PaneDisplay.cpp">
+      <Filter>Actors used in Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="ScrollBar.cpp">
+      <Filter>Actors used in Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="ScrollingList.cpp">
+      <Filter>Actors used in Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="SnapDisplay.cpp">
+      <Filter>Actors used in Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="SongCreditDisplay.cpp">
+      <Filter>Actors used in Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="TextBanner.cpp">
+      <Filter>Actors used in Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="WheelNotifyIcon.cpp">
+      <Filter>Actors used in Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="ActiveAttackList.cpp">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="ArrowBackdrop.cpp">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="ArrowEffects.cpp">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="AttackDisplay.cpp">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="Background.cpp">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="BeginnerHelper.cpp">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="CharacterHead.cpp">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="CombinedLifeMeterTug.cpp">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="Combo.cpp">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="DancingCharacters.cpp">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="Foreground.cpp">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="GhostArrow.cpp">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="GhostArrowRow.cpp">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="HoldGhostArrow.cpp">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="HoldJudgment.cpp">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="Judgment.cpp">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="LifeMeterBar.cpp">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="LifeMeterBattery.cpp">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="LyricDisplay.cpp">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="NoteDisplay.cpp">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="NoteField.cpp">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="PercentageDisplay.cpp">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="ProTimingDisplay.cpp">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="ReceptorArrow.cpp">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="ReceptorArrowRow.cpp">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="ScoreDisplay.cpp">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="ScoreDisplayBattle.cpp">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="ScoreDisplayNormal.cpp">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="ScoreDisplayOni.cpp">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="ScoreDisplayPercentage.cpp">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="ScoreDisplayRave.cpp">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="RageBitmapTexture.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageDisplay.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageDisplay_D3D.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageDisplay_Null.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageDisplay_OGL.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageException.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageFile.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageFileDriver.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageFileDriverDirect.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageFileDriverDirectHelpers.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageFileDriverMemory.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageFileDriverZip.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageFileManager.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageInput.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageInputDevice.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageLog.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageMath.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageModelGeometry.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageSound.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageSoundManager.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageSoundPosMap.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageSoundReader_FileReader.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageSoundReader_MP3.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageSoundReader_Preload.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageSoundReader_Resample.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageSoundReader_Resample_Fast.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageSoundReader_Resample_Good.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageSoundReader_Vorbisfile.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageSoundReader_WAV.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageSoundResampler.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageSurface.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageSurface_Load.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageSurface_Load_BMP.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageSurface_Load_GIF.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageSurface_Load_JPEG.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageSurface_Load_PNG.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageSurface_Load_XPM.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageSurface_Save_BMP.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageSurfaceUtils.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageSurfaceUtils_Palettize.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageTexture.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageTextureID.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageTextureManager.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageThreads.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageTimer.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageUtil.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageUtil_BackgroundLoader.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageUtil_CharConversions.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageUtil_FileDB.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="ezsockets.cpp">
+      <Filter>Rage\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="SDL_dither.cpp">
+      <Filter>Rage\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="SDL_rotozoom.cpp">
+      <Filter>Rage\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="SDL_SaveJPEG.cpp">
+      <Filter>Rage\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="SDL_utils.cpp">
+      <Filter>Rage\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="pcre\get.c">
+      <Filter>Rage\Helpers\pcre</Filter>
+    </ClCompile>
+    <ClCompile Include="pcre\maketables.c">
+      <Filter>Rage\Helpers\pcre</Filter>
+    </ClCompile>
+    <ClCompile Include="pcre\pcre.c">
+      <Filter>Rage\Helpers\pcre</Filter>
+    </ClCompile>
+    <ClCompile Include="pcre\study.c">
+      <Filter>Rage\Helpers\pcre</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor.cpp">
+      <Filter>Actors</Filter>
+    </ClCompile>
+    <ClCompile Include="ActorCommands.cpp">
+      <Filter>Actors</Filter>
+    </ClCompile>
+    <ClCompile Include="ActorFrame.cpp">
+      <Filter>Actors</Filter>
+    </ClCompile>
+    <ClCompile Include="ActorScroller.cpp">
+      <Filter>Actors</Filter>
+    </ClCompile>
+    <ClCompile Include="ActorUtil.cpp">
+      <Filter>Actors</Filter>
+    </ClCompile>
+    <ClCompile Include="BitmapText.cpp">
+      <Filter>Actors</Filter>
+    </ClCompile>
+    <ClCompile Include="Model.cpp">
+      <Filter>Actors</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelManager.cpp">
+      <Filter>Actors</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelTypes.cpp">
+      <Filter>Actors</Filter>
+    </ClCompile>
+    <ClCompile Include="Sprite.cpp">
+      <Filter>Actors</Filter>
+    </ClCompile>
+    <ClCompile Include="AnnouncerManager.cpp">
+      <Filter>Global Singletons</Filter>
+    </ClCompile>
+    <ClCompile Include="Bookkeeper.cpp">
+      <Filter>Global Singletons</Filter>
+    </ClCompile>
+    <ClCompile Include="CryptManager.cpp">
+      <Filter>Global Singletons</Filter>
+    </ClCompile>
+    <ClCompile Include="FontManager.cpp">
+      <Filter>Global Singletons</Filter>
+    </ClCompile>
+    <ClCompile Include="GameManager.cpp">
+      <Filter>Global Singletons</Filter>
+    </ClCompile>
+    <ClCompile Include="GameSoundManager.cpp">
+      <Filter>Global Singletons</Filter>
+    </ClCompile>
+    <ClCompile Include="GameState.cpp">
+      <Filter>Global Singletons</Filter>
+    </ClCompile>
+    <ClCompile Include="InputFilter.cpp">
+      <Filter>Global Singletons</Filter>
+    </ClCompile>
+    <ClCompile Include="InputMapper.cpp">
+      <Filter>Global Singletons</Filter>
+    </ClCompile>
+    <ClCompile Include="InputQueue.cpp">
+      <Filter>Global Singletons</Filter>
+    </ClCompile>
+    <ClCompile Include="LightsManager.cpp">
+      <Filter>Global Singletons</Filter>
+    </ClCompile>
+    <ClCompile Include="MemoryCardManager.cpp">
+      <Filter>Global Singletons</Filter>
+    </ClCompile>
+    <ClCompile Include="NetworkSyncManager.cpp">
+      <Filter>Global Singletons</Filter>
+    </ClCompile>
+    <ClCompile Include="NetworkSyncServer.cpp">
+      <Filter>Global Singletons</Filter>
+    </ClCompile>
+    <ClCompile Include="NoteSkinManager.cpp">
+      <Filter>Global Singletons</Filter>
+    </ClCompile>
+    <ClCompile Include="PrefsManager.cpp">
+      <Filter>Global Singletons</Filter>
+    </ClCompile>
+    <ClCompile Include="ProfileManager.cpp">
+      <Filter>Global Singletons</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenManager.cpp">
+      <Filter>Global Singletons</Filter>
+    </ClCompile>
+    <ClCompile Include="SongManager.cpp">
+      <Filter>Global Singletons</Filter>
+    </ClCompile>
+    <ClCompile Include="ThemeManager.cpp">
+      <Filter>Global Singletons</Filter>
+    </ClCompile>
+    <ClCompile Include="UnlockSystem.cpp">
+      <Filter>Global Singletons</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\CryptBn.cpp">
+      <Filter>Crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="CryptHelpers.cpp">
+      <Filter>Crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\CryptMD5.cpp">
+      <Filter>Crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\CryptNoise.cpp">
+      <Filter>Crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\CryptPrime.cpp">
+      <Filter>Crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\CryptRand.cpp">
+      <Filter>Crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\CryptRSA.cpp">
+      <Filter>Crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\CryptSH512.cpp">
+      <Filter>Crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\CryptSHA.cpp">
+      <Filter>Crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto51\algebra.cpp">
+      <Filter>Crypto\crypto++</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto51\algparam.cpp">
+      <Filter>Crypto\crypto++</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto51\asn.cpp">
+      <Filter>Crypto\crypto++</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto51\cryptlib.cpp">
+      <Filter>Crypto\crypto++</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto51\files.cpp">
+      <Filter>Crypto\crypto++</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto51\filters.cpp">
+      <Filter>Crypto\crypto++</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto51\integer.cpp">
+      <Filter>Crypto\crypto++</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto51\iterhash.cpp">
+      <Filter>Crypto\crypto++</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto51\misc.cpp">
+      <Filter>Crypto\crypto++</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto51\modes.cpp">
+      <Filter>Crypto\crypto++</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto51\mqueue.cpp">
+      <Filter>Crypto\crypto++</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto51\nbtheory.cpp">
+      <Filter>Crypto\crypto++</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto51\oaep.cpp">
+      <Filter>Crypto\crypto++</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto51\osrng.cpp">
+      <Filter>Crypto\crypto++</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto51\pkcspad.cpp">
+      <Filter>Crypto\crypto++</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto51\pubkey.cpp">
+      <Filter>Crypto\crypto++</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto51\queue.cpp">
+      <Filter>Crypto\crypto++</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto51\randpool.cpp">
+      <Filter>Crypto\crypto++</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto51\rsa.cpp">
+      <Filter>Crypto\crypto++</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto51\sha.cpp">
+      <Filter>Crypto\crypto++</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto51\strciphr.cpp">
+      <Filter>Crypto\crypto++</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Screen.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenAttract.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenBookkeeping.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenBranch.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenCaution.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenCenterImage.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenClearBookkeepingData.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenClearMachineStats.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenCredits.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenDemonstration.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenDimensions.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenDownloadMachineStats.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenEdit.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenEditCoursesMenu.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenEditMenu.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenEnding.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenEvaluation.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenExit.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenEz2SelectMusic.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenEz2SelectPlayer.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenGameOver.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenGameplay.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenHowToPlay.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenInsertCredit.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenInstructions.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenJukebox.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenJukeboxMenu.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenLogo.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenMapControllers.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenMessage.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenMiniMenu.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenMusicScroll.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenNameEntry.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenNameEntryTraditional.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenNetEvaluation.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenNetSelectMusic.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenNetworkOptions.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenOptions.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenOptionsMaster.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenOptionsMasterPrefs.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenPlayerOptions.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenProfileOptions.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenPrompt.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenRanking.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenReloadSongs.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenResetToDefaults.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenSandbox.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenSelect.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenSelectCharacter.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenSelectDifficulty.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenSelectGroup.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenSelectMaster.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenSelectMode.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenSelectMusic.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenSelectStyle.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenSetTime.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenSongOptions.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenStage.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenStyleSplash.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenTest.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenTestFonts.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenTestInput.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenTestLights.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenTestSound.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenTextEntry.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenTitleMenu.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenUnlock.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenWithMenuElements.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="Attack.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="BannerCache.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="CatalogXml.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="Character.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="CodeDetector.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="Course.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="CourseUtil.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="DateTime.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="Difficulty.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="EnumHelper.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="Font.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="FontCharAliases.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="FontCharmaps.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="GameConstantsAndTypes.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="GameInput.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="Grade.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="HighScore.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="Inventory.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaFunctions.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaHelpers.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="LyricsLoader.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuInput.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="ModeChoice.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="NoteData.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="NoteDataUtil.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="NoteDataWithScoring.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="NoteFieldPositioning.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="NotesLoader.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="NotesLoaderBMS.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="NotesLoaderDWI.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="NotesLoaderKSF.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="NotesLoaderSM.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="NotesWriterDWI.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="NotesWriterSM.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="NoteTypes.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerAI.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerNumber.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerOptions.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="Profile.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="RadarValues.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="RandomSample.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="ScoreKeeper.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="ScoreKeeperMAX2.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="ScoreKeeperRave.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="Song.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="SongCacheIndex.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="SongOptions.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="SongUtil.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="StageStats.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="Steps.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="StepsUtil.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="Style.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="StyleInput.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="StyleUtil.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="TimingData.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="TitleSubstitution.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="Trail.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="TrailUtil.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="IniFile.h">
+      <Filter>File Types</Filter>
+    </ClInclude>
+    <ClInclude Include="MsdFile.h">
+      <Filter>File Types</Filter>
+    </ClInclude>
+    <ClInclude Include="XmlFile.h">
+      <Filter>File Types</Filter>
+    </ClInclude>
+    <ClInclude Include="global.h">
+      <Filter>StepMania</Filter>
+    </ClInclude>
+    <ClInclude Include="ProductInfo.h">
+      <Filter>StepMania</Filter>
+    </ClInclude>
+    <ClInclude Include="StdString.h">
+      <Filter>StepMania</Filter>
+    </ClInclude>
+    <ClInclude Include="StepMania.h">
+      <Filter>StepMania</Filter>
+    </ClInclude>
+    <ClInclude Include="arch\arch.h">
+      <Filter>StepMania\arch</Filter>
+    </ClInclude>
+    <ClInclude Include="arch\arch_default.h">
+      <Filter>StepMania\arch</Filter>
+    </ClInclude>
+    <ClInclude Include="arch\arch_platform.h">
+      <Filter>StepMania\arch</Filter>
+    </ClInclude>
+    <ClInclude Include="arch\arch_Win32.h">
+      <Filter>StepMania\arch</Filter>
+    </ClInclude>
+    <ClInclude Include="arch\LoadingWindow\LoadingWindow.h">
+      <Filter>StepMania\arch\LoadingWindow</Filter>
+    </ClInclude>
+    <ClInclude Include="arch\LoadingWindow\LoadingWindow_Win32.h">
+      <Filter>StepMania\arch\LoadingWindow</Filter>
+    </ClInclude>
+    <ClInclude Include="arch\Sound\DSoundHelpers.h">
+      <Filter>StepMania\arch\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="arch\Sound\RageSoundDriver.h">
+      <Filter>StepMania\arch\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="arch\Sound\RageSoundDriver_DSound.h">
+      <Filter>StepMania\arch\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="arch\Sound\RageSoundDriver_DSound_Software.h">
+      <Filter>StepMania\arch\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="arch\Sound\RageSoundDriver_Generic_Software.h">
+      <Filter>StepMania\arch\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="arch\Sound\RageSoundDriver_Null.h">
+      <Filter>StepMania\arch\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="arch\Sound\RageSoundDriver_WaveOut.h">
+      <Filter>StepMania\arch\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="arch\ArchHooks\ArchHooks.h">
+      <Filter>StepMania\arch\ArchHooks</Filter>
+    </ClInclude>
+    <ClInclude Include="arch\ArchHooks\ArchHooks_Win32.h">
+      <Filter>StepMania\arch\ArchHooks</Filter>
+    </ClInclude>
+    <ClInclude Include="arch\InputHandler\InputHandler.h">
+      <Filter>StepMania\arch\InputHandler</Filter>
+    </ClInclude>
+    <ClInclude Include="arch\InputHandler\InputHandler_DirectInput.h">
+      <Filter>StepMania\arch\InputHandler</Filter>
+    </ClInclude>
+    <ClInclude Include="arch\InputHandler\InputHandler_DirectInputHelper.h">
+      <Filter>StepMania\arch\InputHandler</Filter>
+    </ClInclude>
+    <ClInclude Include="arch\InputHandler\InputHandler_Win32_Para.h">
+      <Filter>StepMania\arch\InputHandler</Filter>
+    </ClInclude>
+    <ClInclude Include="arch\InputHandler\InputHandler_Win32_Pump.h">
+      <Filter>StepMania\arch\InputHandler</Filter>
+    </ClInclude>
+    <ClInclude Include="arch\MovieTexture\MovieTexture.h">
+      <Filter>StepMania\arch\MovieTexture</Filter>
+    </ClInclude>
+    <ClInclude Include="arch\MovieTexture\MovieTexture_DShow.h">
+      <Filter>StepMania\arch\MovieTexture</Filter>
+    </ClInclude>
+    <ClInclude Include="arch\MovieTexture\MovieTexture_DShowHelper.h">
+      <Filter>StepMania\arch\MovieTexture</Filter>
+    </ClInclude>
+    <ClInclude Include="arch\MovieTexture\MovieTexture_FFMpeg.h">
+      <Filter>StepMania\arch\MovieTexture</Filter>
+    </ClInclude>
+    <ClInclude Include="arch\MovieTexture\MovieTexture_Null.h">
+      <Filter>StepMania\arch\MovieTexture</Filter>
+    </ClInclude>
+    <ClInclude Include="arch\LowLevelWindow\LowLevelWindow.h">
+      <Filter>StepMania\arch\LowLevelWindow</Filter>
+    </ClInclude>
+    <ClInclude Include="arch\LowLevelWindow\LowLevelWindow_SDL.h">
+      <Filter>StepMania\arch\LowLevelWindow</Filter>
+    </ClInclude>
+    <ClInclude Include="arch\Lights\LightsDriver.h">
+      <Filter>StepMania\arch\Lights</Filter>
+    </ClInclude>
+    <ClInclude Include="arch\Lights\LightsDriver_Null.h">
+      <Filter>StepMania\arch\Lights</Filter>
+    </ClInclude>
+    <ClInclude Include="arch\Lights\LightsDriver_SystemMessage.h">
+      <Filter>StepMania\arch\Lights</Filter>
+    </ClInclude>
+    <ClInclude Include="arch\Lights\LightsDriver_Win32Parallel.h">
+      <Filter>StepMania\arch\Lights</Filter>
+    </ClInclude>
+    <ClInclude Include="arch\MemoryCard\MemoryCardDriver.h">
+      <Filter>StepMania\arch\MemoryCard</Filter>
+    </ClInclude>
+    <ClInclude Include="arch\MemoryCard\MemoryCardDriver_Null.h">
+      <Filter>StepMania\arch\MemoryCard</Filter>
+    </ClInclude>
+    <ClInclude Include="arch\MemoryCard\MemoryCardDriverThreaded.h">
+      <Filter>StepMania\arch\MemoryCard</Filter>
+    </ClInclude>
+    <ClInclude Include="arch\MemoryCard\MemoryCardDriverThreaded_Windows.h">
+      <Filter>StepMania\arch\MemoryCard</Filter>
+    </ClInclude>
+    <ClInclude Include="arch\Dialog\Dialog.h">
+      <Filter>StepMania\arch\Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="arch\Dialog\DialogDriver.h">
+      <Filter>StepMania\arch\Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="arch\Dialog\DialogDriver_Win32.h">
+      <Filter>StepMania\arch\Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="arch\Threads\Threads.h">
+      <Filter>StepMania\arch\Threads</Filter>
+    </ClInclude>
+    <ClInclude Include="arch\Threads\Threads_Win32.h">
+      <Filter>StepMania\arch\Threads</Filter>
+    </ClInclude>
+    <ClInclude Include="archutils\Win32\AppInstance.h">
+      <Filter>StepMania\system</Filter>
+    </ClInclude>
+    <ClInclude Include="archutils\Win32\arch_setup.h">
+      <Filter>StepMania\system</Filter>
+    </ClInclude>
+    <ClInclude Include="archutils\Win32\Crash.h">
+      <Filter>StepMania\system</Filter>
+    </ClInclude>
+    <ClInclude Include="archutils\Win32\DebugInfoHunt.h">
+      <Filter>StepMania\system</Filter>
+    </ClInclude>
+    <ClInclude Include="archutils\Win32\GetFileInformation.h">
+      <Filter>StepMania\system</Filter>
+    </ClInclude>
+    <ClInclude Include="archutils\Win32\GotoURL.h">
+      <Filter>StepMania\system</Filter>
+    </ClInclude>
+    <ClInclude Include="archutils\Win32\RegistryAccess.h">
+      <Filter>StepMania\system</Filter>
+    </ClInclude>
+    <ClInclude Include="archutils\Win32\RestartProgram.h">
+      <Filter>StepMania\system</Filter>
+    </ClInclude>
+    <ClInclude Include="archutils\Win32\USB.h">
+      <Filter>StepMania\system</Filter>
+    </ClInclude>
+    <ClInclude Include="archutils\Win32\VideoDriverInfo.h">
+      <Filter>StepMania\system</Filter>
+    </ClInclude>
+    <ClInclude Include="archutils\Win32\WindowsResources.h">
+      <Filter>StepMania\system</Filter>
+    </ClInclude>
+    <ClInclude Include="Banner.h">
+      <Filter>Actors used in Gameplay and Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="BGAnimation.h">
+      <Filter>Actors used in Gameplay and Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="BGAnimationLayer.h">
+      <Filter>Actors used in Gameplay and Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="ConditionalBGA.h">
+      <Filter>Actors used in Gameplay and Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="DifficultyIcon.h">
+      <Filter>Actors used in Gameplay and Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="MeterDisplay.h">
+      <Filter>Actors used in Gameplay and Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="Transition.h">
+      <Filter>Actors used in Gameplay and Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="BPMDisplay.h">
+      <Filter>Actors used in Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="ComboGraph.h">
+      <Filter>Actors used in Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="CourseContentsList.h">
+      <Filter>Actors used in Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="CourseEntryDisplay.h">
+      <Filter>Actors used in Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="DifficultyDisplay.h">
+      <Filter>Actors used in Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="DifficultyList.h">
+      <Filter>Actors used in Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="DifficultyMeter.h">
+      <Filter>Actors used in Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="DifficultyRating.h">
+      <Filter>Actors used in Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="DualScrollBar.h">
+      <Filter>Actors used in Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="EditCoursesMenu.h">
+      <Filter>Actors used in Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="EditCoursesSongMenu.h">
+      <Filter>Actors used in Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="EditMenu.h">
+      <Filter>Actors used in Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="FadingBanner.h">
+      <Filter>Actors used in Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="GradeDisplay.h">
+      <Filter>Actors used in Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphDisplay.h">
+      <Filter>Actors used in Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="GrooveGraph.h">
+      <Filter>Actors used in Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="GrooveRadar.h">
+      <Filter>Actors used in Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="GroupList.h">
+      <Filter>Actors used in Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="HelpDisplay.h">
+      <Filter>Actors used in Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="JukeboxMenu.h">
+      <Filter>Actors used in Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="ListDisplay.h">
+      <Filter>Actors used in Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="MemoryCardDisplay.h">
+      <Filter>Actors used in Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuTimer.h">
+      <Filter>Actors used in Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="ModeSwitcher.h">
+      <Filter>Actors used in Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="MusicBannerWheel.h">
+      <Filter>Actors used in Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="MusicList.h">
+      <Filter>Actors used in Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="MusicSortDisplay.h">
+      <Filter>Actors used in Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="MusicWheel.h">
+      <Filter>Actors used in Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="MusicWheelItem.h">
+      <Filter>Actors used in Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="OptionIcon.h">
+      <Filter>Actors used in Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="OptionIconRow.h">
+      <Filter>Actors used in Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="OptionsCursor.h">
+      <Filter>Actors used in Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="PaneDisplay.h">
+      <Filter>Actors used in Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="ScrollBar.h">
+      <Filter>Actors used in Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="ScrollingList.h">
+      <Filter>Actors used in Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="SnapDisplay.h">
+      <Filter>Actors used in Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="SongCreditDisplay.h">
+      <Filter>Actors used in Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="TextBanner.h">
+      <Filter>Actors used in Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="WheelNotifyIcon.h">
+      <Filter>Actors used in Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="ActiveAttackList.h">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="ArrowBackdrop.h">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="ArrowEffects.h">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="AttackDisplay.h">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="Background.h">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="BeginnerHelper.h">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="CharacterHead.h">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="CombinedLifeMeter.h">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="CombinedLifeMeterTug.h">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="Combo.h">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="DancingCharacters.h">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="Foreground.h">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="GhostArrow.h">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="GhostArrowRow.h">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="HoldGhostArrow.h">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="HoldJudgment.h">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="Judgment.h">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="LifeMeter.h">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="LifeMeterBar.h">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="LifeMeterBattery.h">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="LyricDisplay.h">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="NoteDisplay.h">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="NoteField.h">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="PercentageDisplay.h">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="ProTimingDisplay.h">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="ReceptorArrow.h">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="ReceptorArrowRow.h">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="ScoreDisplay.h">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="ScoreDisplayBattle.h">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="ScoreDisplayNormal.h">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="ScoreDisplayOni.h">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="ScoreDisplayPercentage.h">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="ScoreDisplayRave.h">
+      <Filter>Actors used in Gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="RageBitmapTexture.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageDisplay.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageDisplay_D3D.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageDisplay_Null.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageDisplay_OGL.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageException.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageFile.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageFileDriver.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageFileDriverDirect.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageFileDriverDirectHelpers.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageFileDriverMemory.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageFileDriverZip.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageFileManager.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageInput.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageInputDevice.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageLog.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageMath.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageModelGeometry.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageSound.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageSoundManager.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageSoundPosMap.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageSoundReader.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageSoundReader_FileReader.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageSoundReader_MP3.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageSoundReader_Preload.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageSoundReader_Resample.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageSoundReader_Resample_Fast.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageSoundReader_Resample_Good.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageSoundReader_Vorbisfile.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageSoundReader_WAV.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageSoundResampler.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageSurface.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageSurface_Load.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageSurface_Load_BMP.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageSurface_Load_GIF.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageSurface_Load_JPEG.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageSurface_Load_PNG.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageSurface_Load_XPM.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageSurface_Save_BMP.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageSurfaceUtils.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageSurfaceUtils_Palettize.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageTexture.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageTextureID.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageTextureManager.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageThreads.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageTimer.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageTypes.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageUtil.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageUtil_BackgroundLoader.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageUtil_CharConversions.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageUtil_CircularBuffer.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageUtil_FileDB.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="ezsockets.h">
+      <Filter>Rage\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="glext.h">
+      <Filter>Rage\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_dither.h">
+      <Filter>Rage\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_rotozoom.h">
+      <Filter>Rage\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_SaveJPEG.h">
+      <Filter>Rage\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_utils.h">
+      <Filter>Rage\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="pcre\internal.h">
+      <Filter>Rage\Helpers\pcre</Filter>
+    </ClInclude>
+    <ClInclude Include="pcre\pcre.h">
+      <Filter>Rage\Helpers\pcre</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor.h">
+      <Filter>Actors</Filter>
+    </ClInclude>
+    <ClInclude Include="ActorCollision.h">
+      <Filter>Actors</Filter>
+    </ClInclude>
+    <ClInclude Include="ActorCommands.h">
+      <Filter>Actors</Filter>
+    </ClInclude>
+    <ClInclude Include="ActorFrame.h">
+      <Filter>Actors</Filter>
+    </ClInclude>
+    <ClInclude Include="ActorScroller.h">
+      <Filter>Actors</Filter>
+    </ClInclude>
+    <ClInclude Include="ActorUtil.h">
+      <Filter>Actors</Filter>
+    </ClInclude>
+    <ClInclude Include="BitmapText.h">
+      <Filter>Actors</Filter>
+    </ClInclude>
+    <ClInclude Include="Model.h">
+      <Filter>Actors</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelManager.h">
+      <Filter>Actors</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelTypes.h">
+      <Filter>Actors</Filter>
+    </ClInclude>
+    <ClInclude Include="Quad.h">
+      <Filter>Actors</Filter>
+    </ClInclude>
+    <ClInclude Include="Sprite.h">
+      <Filter>Actors</Filter>
+    </ClInclude>
+    <ClInclude Include="AnnouncerManager.h">
+      <Filter>Global Singletons</Filter>
+    </ClInclude>
+    <ClInclude Include="Bookkeeper.h">
+      <Filter>Global Singletons</Filter>
+    </ClInclude>
+    <ClInclude Include="CryptManager.h">
+      <Filter>Global Singletons</Filter>
+    </ClInclude>
+    <ClInclude Include="FontManager.h">
+      <Filter>Global Singletons</Filter>
+    </ClInclude>
+    <ClInclude Include="GameManager.h">
+      <Filter>Global Singletons</Filter>
+    </ClInclude>
+    <ClInclude Include="GameSoundManager.h">
+      <Filter>Global Singletons</Filter>
+    </ClInclude>
+    <ClInclude Include="GameState.h">
+      <Filter>Global Singletons</Filter>
+    </ClInclude>
+    <ClInclude Include="InputFilter.h">
+      <Filter>Global Singletons</Filter>
+    </ClInclude>
+    <ClInclude Include="InputMapper.h">
+      <Filter>Global Singletons</Filter>
+    </ClInclude>
+    <ClInclude Include="InputQueue.h">
+      <Filter>Global Singletons</Filter>
+    </ClInclude>
+    <ClInclude Include="LightsManager.h">
+      <Filter>Global Singletons</Filter>
+    </ClInclude>
+    <ClInclude Include="MemoryCardManager.h">
+      <Filter>Global Singletons</Filter>
+    </ClInclude>
+    <ClInclude Include="NetworkSyncManager.h">
+      <Filter>Global Singletons</Filter>
+    </ClInclude>
+    <ClInclude Include="NetworkSyncServer.h">
+      <Filter>Global Singletons</Filter>
+    </ClInclude>
+    <ClInclude Include="NoteSkinManager.h">
+      <Filter>Global Singletons</Filter>
+    </ClInclude>
+    <ClInclude Include="PrefsManager.h">
+      <Filter>Global Singletons</Filter>
+    </ClInclude>
+    <ClInclude Include="ProfileManager.h">
+      <Filter>Global Singletons</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenManager.h">
+      <Filter>Global Singletons</Filter>
+    </ClInclude>
+    <ClInclude Include="SongManager.h">
+      <Filter>Global Singletons</Filter>
+    </ClInclude>
+    <ClInclude Include="ThemeManager.h">
+      <Filter>Global Singletons</Filter>
+    </ClInclude>
+    <ClInclude Include="UnlockSystem.h">
+      <Filter>Global Singletons</Filter>
+    </ClInclude>
+    <ClInclude Include="crypto\CryptBn.h">
+      <Filter>Crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="CryptHelpers.h">
+      <Filter>Crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="crypto\CryptMD5.h">
+      <Filter>Crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="crypto\CryptPrime.h">
+      <Filter>Crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="crypto\CryptRand.h">
+      <Filter>Crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="crypto\CryptRSA.h">
+      <Filter>Crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="crypto\CryptSH512.h">
+      <Filter>Crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="crypto\CryptSHA.h">
+      <Filter>Crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="crypto51\algebra.h">
+      <Filter>Crypto\crypto++</Filter>
+    </ClInclude>
+    <ClInclude Include="crypto51\algparam.h">
+      <Filter>Crypto\crypto++</Filter>
+    </ClInclude>
+    <ClInclude Include="crypto51\argnames.h">
+      <Filter>Crypto\crypto++</Filter>
+    </ClInclude>
+    <ClInclude Include="crypto51\asn.h">
+      <Filter>Crypto\crypto++</Filter>
+    </ClInclude>
+    <ClInclude Include="crypto51\config.h">
+      <Filter>Crypto\crypto++</Filter>
+    </ClInclude>
+    <ClInclude Include="crypto51\cryptlib.h">
+      <Filter>Crypto\crypto++</Filter>
+    </ClInclude>
+    <ClInclude Include="crypto51\files.h">
+      <Filter>Crypto\crypto++</Filter>
+    </ClInclude>
+    <ClInclude Include="crypto51\filters.h">
+      <Filter>Crypto\crypto++</Filter>
+    </ClInclude>
+    <ClInclude Include="crypto51\fltrimpl.h">
+      <Filter>Crypto\crypto++</Filter>
+    </ClInclude>
+    <ClInclude Include="crypto51\integer.h">
+      <Filter>Crypto\crypto++</Filter>
+    </ClInclude>
+    <ClInclude Include="crypto51\iterhash.h">
+      <Filter>Crypto\crypto++</Filter>
+    </ClInclude>
+    <ClInclude Include="crypto51\mdc.h">
+      <Filter>Crypto\crypto++</Filter>
+    </ClInclude>
+    <ClInclude Include="crypto51\misc.h">
+      <Filter>Crypto\crypto++</Filter>
+    </ClInclude>
+    <ClInclude Include="crypto51\modarith.h">
+      <Filter>Crypto\crypto++</Filter>
+    </ClInclude>
+    <ClInclude Include="crypto51\modes.h">
+      <Filter>Crypto\crypto++</Filter>
+    </ClInclude>
+    <ClInclude Include="crypto51\mqueue.h">
+      <Filter>Crypto\crypto++</Filter>
+    </ClInclude>
+    <ClInclude Include="crypto51\nbtheory.h">
+      <Filter>Crypto\crypto++</Filter>
+    </ClInclude>
+    <ClInclude Include="crypto51\oaep.h">
+      <Filter>Crypto\crypto++</Filter>
+    </ClInclude>
+    <ClInclude Include="crypto51\oids.h">
+      <Filter>Crypto\crypto++</Filter>
+    </ClInclude>
+    <ClInclude Include="crypto51\osrng.h">
+      <Filter>Crypto\crypto++</Filter>
+    </ClInclude>
+    <ClInclude Include="crypto51\pch.h">
+      <Filter>Crypto\crypto++</Filter>
+    </ClInclude>
+    <ClInclude Include="crypto51\pkcspad.h">
+      <Filter>Crypto\crypto++</Filter>
+    </ClInclude>
+    <ClInclude Include="crypto51\pubkey.h">
+      <Filter>Crypto\crypto++</Filter>
+    </ClInclude>
+    <ClInclude Include="crypto51\queue.h">
+      <Filter>Crypto\crypto++</Filter>
+    </ClInclude>
+    <ClInclude Include="crypto51\randpool.h">
+      <Filter>Crypto\crypto++</Filter>
+    </ClInclude>
+    <ClInclude Include="crypto51\rng.h">
+      <Filter>Crypto\crypto++</Filter>
+    </ClInclude>
+    <ClInclude Include="crypto51\rsa.h">
+      <Filter>Crypto\crypto++</Filter>
+    </ClInclude>
+    <ClInclude Include="crypto51\secblock.h">
+      <Filter>Crypto\crypto++</Filter>
+    </ClInclude>
+    <ClInclude Include="crypto51\seckey.h">
+      <Filter>Crypto\crypto++</Filter>
+    </ClInclude>
+    <ClInclude Include="crypto51\sha.h">
+      <Filter>Crypto\crypto++</Filter>
+    </ClInclude>
+    <ClInclude Include="crypto51\simple.h">
+      <Filter>Crypto\crypto++</Filter>
+    </ClInclude>
+    <ClInclude Include="crypto51\smartptr.h">
+      <Filter>Crypto\crypto++</Filter>
+    </ClInclude>
+    <ClInclude Include="crypto51\strciphr.h">
+      <Filter>Crypto\crypto++</Filter>
+    </ClInclude>
+    <ClInclude Include="crypto51\words.h">
+      <Filter>Crypto\crypto++</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="archutils\Win32\StepMania.ico">
+      <Filter>StepMania\system</Filter>
+    </None>
+    <None Include="archutils\Win32\DialogCrashHeader.bmp" />
+    <None Include="archutils\Win32\DialogErrorHeader.bmp" />
+    <None Include="StepMania.xpm" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="archutils\Win32\WindowsResources.rc">
+      <Filter>StepMania\system</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
